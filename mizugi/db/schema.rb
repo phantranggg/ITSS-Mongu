@@ -10,6 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2019_10_23_141431) do
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.decimal "price"
+    t.text "description"
+    t.integer "category_id"
+    t.boolean "live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_products_on_category_id"
+  end
+end
+    
 ActiveRecord::Schema.define(version: 2019_10_22_155515) do
 
   create_table "admins", force: :cascade do |t|
@@ -25,5 +39,4 @@ ActiveRecord::Schema.define(version: 2019_10_22_155515) do
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
-
 end
