@@ -9,8 +9,11 @@
 Category.destroy_all
  
 Category.create!([{
-  name: "swimming suit",
+  name: "sneaker",
 },
 {
-  name: "sportwear",
+  name: "gear",
+},
+{
+  name: "clothes",
 }])
