@@ -1,5 +1,9 @@
 class ProductsController < ApplicationController
   def index
-    @message = "Hello, how are you today?"
+
+  end
+  
+  def show
+
   end
 end
