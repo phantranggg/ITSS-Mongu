@@ -5,6 +5,11 @@ Admin.create(
     role: "admin",
 )
 
+User.create(
+    email: "foo@example.com",
+    password: "foobaz"
+)
+
 num_categories = 5
 
 for _ in 1..num_categories
