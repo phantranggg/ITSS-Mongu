@@ -1,6 +1,6 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 
-input[type=email], input[type=password] {
+#new_admin input[type=email], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -9,7 +9,7 @@ input[type=email], input[type=password] {
   box-sizing: border-box;
 }
 
-input[type=submit] {
+#new_admin input[type=submit] {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -19,23 +19,10 @@ input[type=submit] {
   width: 100%;
 }
 
-input[type=submit]:hover {
+#new_admin input[type=submit]:hover {
   opacity: 0.8;
 }
 
-.container {
+#new_admin .container {
   padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
 }

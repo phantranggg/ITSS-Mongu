@@ -66,64 +66,17 @@ section
 								  a href="#tshirt" data-toggle="tab"
 								    = category.name
 					br
-					div.col-sm-4
-						div.product-image-wrapper
-							div.single-products
-								div class="productinfo text-center"
-									= image_tag("default_item.jpg", alt: "default_item")
-									h2 100.000đ
-									p Sample item
-									a href="#" class="btn btn-default add-to-cart"
-									  i class="fa fa-shopping-cart"
-									  = "Add to cart"
-					div.col-sm-4
-						div.product-image-wrapper
-							div.single-products
-								div class="productinfo text-center"
-									= image_tag("default_item.jpg", alt: "default_item")
-									h2 100.000đ
-									p Sample item
-									a href="#" class="btn btn-default add-to-cart"
-									  i class="fa fa-shopping-cart"
-									  = "Add to cart"
-					div.col-sm-4
-						div.product-image-wrapper
-							div.single-products
-								div class="productinfo text-center"
-									= image_tag("default_item.jpg", alt: "default_item")
-									h2 100.000đ
-									p Sample item
-									a href="#" class="btn btn-default add-to-cart"
-									  i class="fa fa-shopping-cart"
-									  = "Add to cart"
-					div.col-sm-4
-						div.product-image-wrapper
-							div.single-products
-								div class="productinfo text-center"
-									= image_tag("default_item.jpg", alt: "default_item")
-									h2 100.000đ
-									p Sample item
-									a href="#" class="btn btn-default add-to-cart"
-									  i class="fa fa-shopping-cart"
-									  = "Add to cart"
-					div.col-sm-4
-						div.product-image-wrapper
-							div.single-products
-								div class="productinfo text-center"
-									= image_tag("default_item.jpg", alt: "default_item")
-									h2 100.000đ
-									p Sample item
-									a href="#" class="btn btn-default add-to-cart"
-									  i class="fa fa-shopping-cart"
-									  = "Add to cart"
-					div.col-sm-4
-						div.product-image-wrapper
-							div.single-products
-								div class="productinfo text-center"
-									= image_tag("default_item.jpg", alt: "default_item")
-									h2 100.000đ
-									p Sample item
-									a href="#" class="btn btn-default add-to-cart"
-									  i class="fa fa-shopping-cart"
-									  = "Add to cart"
+					- @products.each do |product|
+					  div.col-sm-4
+						  div.product-image-wrapper
+							  div.single-products
+								  div class="productinfo text-center"
+									  = image_tag("default_item.jpg", alt: "default_item")
+									  h2
+									    = product.price
+									  p
+									    = product.name
+									  a href="#" class="btn btn-default add-to-cart"
+									    i class="fa fa-shopping-cart"
+									    = "Add to cart"
      
