@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2019_11_12_163527) do
     t.decimal "price"
     t.text "description"
     t.integer "category_id"
-    t.boolean "live"
+    t.decimal "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "images"
