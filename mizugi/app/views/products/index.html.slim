@@ -43,20 +43,12 @@ section
 				div.left-sidebar
 					h2 Category
 					div class="panel-group category-products" id="accordian"
-						div class="panel panel-default"
-							div class="panel-heading"
-								h4 class="panel-title"
-								  a href="#" Clothes
-
-						div class="panel panel-default"
-							div class="panel-heading"
-								h4 class="panel-title"
-								  a href="#" Shoes
-								  
-						div class="panel panel-default"
-							div class="panel-heading"
-								h4 class="panel-title"
-								  a href="#" Fashion
+					  - @categories.each do |category|
+						  div class="panel panel-default"
+							  div class="panel-heading"
+								  h4 class="panel-title"
+								    a href="#"
+								      = category.name
 					div.price-range
 						h2 Price Range
 						div class="well text-center"
@@ -69,16 +61,10 @@ section
 					h2 class="title text-center" Features Items
 					div.col-sm-12
 						ul class="nav nav-tabs"
-							li.active
-								a href="#tshirt" data-toggle="tab" T-Shirt
-							li
-								a href="#blazers" data-toggle="tab" Blazers
-							li
-								a href="#sunglass" data-toggle="tab" Sunglass
-							li
-								a href="#kids" data-toggle="tab" Kids
-							li
-								a href="#poloshirt" data-toggle="tab" Polo shirt
+						  - @categories.each do |category|
+							  li
+								  a href="#tshirt" data-toggle="tab"
+								    = category.name
 					br
 					div.col-sm-4
 						div.product-image-wrapper
