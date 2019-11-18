@@ -1,4 +1,4 @@
-﻿/*************************
+/*************************
 *******Typography******
 **************************/
 
@@ -201,7 +201,7 @@ a#scrollUp i {
     background: #FFFFFF;
     color: #696763;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     padding: 0;
     padding-right: 0;
@@ -1174,6 +1174,10 @@ h2.title {
     right: 0;
 }
 
+.carousel-inner {
+    height: 500px !important;
+}
+
 #similar-product .carousel-inner .item {
     padding-left: 0px;
 }
@@ -1510,6 +1514,7 @@ h2.title {
 
 .breadcrumbs {
     position: relative;
+    /*font-size: 16px;*/
 }
 
 .breadcrumbs .breadcrumb {
@@ -1542,7 +1547,7 @@ h2.title {
 
 #cart_items .cart_info {
     border: 1px solid #E6E4DF;
-    margin-bottom: 50px
+    margin-bottom: 10px
 }
 
 #cart_items .cart_info .cart_menu {
@@ -1748,6 +1753,27 @@ textarea {
     margin-top: 18px;
     border: none;
     padding: 5px 15px;
+}
+
+.back {
+    font-size: 17px;
+    background: #FE980F;
+    border-radius: 0;
+    color: #FFFFFF;
+    border: none;
+    float: right;
+    margin-right: 5px;
+}
+
+.purchase {
+    font-size: 17px;
+    background: #FE980F;
+    border-radius: 0;
+    color: #FFFFFF;
+    border: none;
+    float: right;
+    margin-right: 0px;
+    margin-bottom: 60px;
 }
 
 .update {
