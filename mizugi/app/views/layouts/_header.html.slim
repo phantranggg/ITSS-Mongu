@@ -9,11 +9,16 @@ header#header
 				div class="col-md-8 clearfix"
 					div class="shop-menu clearfix pull-right"
 						ul class="nav navbar-nav"
-						  li
-						    a href=""
-						      i class="fa fa-shopping-cart"
-						      = "Cart"
-						  li
-						    a href="/sign_in"
-						      i class="fa fa-lock"
-						      = "Login"
+						  - if !user_signed_in?
+						    li
+						      a href="/sign_in"
+						        i class="fa fa-lock"
+						        = "Login"
+						  - else 
+						    div class="dropdown"
+						      a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+						        = "Dropdown link"
+						      div class="dropdown-menu" aria-labelledby="dropdownMenuLink"
+						        a class="dropdown-item" href="#" Action
+						        a class="dropdown-item" href="#" Another action
+						        a class="dropdown-item" href="#" Something else here
