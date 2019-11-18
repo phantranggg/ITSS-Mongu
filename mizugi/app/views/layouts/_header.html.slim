@@ -1,24 +1,60 @@
-header#header
-	div.header-middle>
-		div.container
-			div.row
-				div class="col-md-4 clearfix"
-					div class="logo pull-left"
-						a href=""
-						  = image_tag("logo.png", alt: "slider_1", style: "width:100px")
-				div class="col-md-8 clearfix"
-					div class="shop-menu clearfix pull-right"
-						ul class="nav navbar-nav"
-						  - if !user_signed_in?
-						    li
-						      a href="/sign_in"
-						        i class="fa fa-lock"
-						        = "Login"
-						  - else 
-						    div class="dropdown"
-						      a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-						        = "Dropdown link"
-						      div class="dropdown-menu" aria-labelledby="dropdownMenuLink"
-						        a class="dropdown-item" href="#" Action
-						        a class="dropdown-item" href="#" Another action
-						        a class="dropdown-item" href="#" Something else here
+header.header_area.sticky-header
+  .main_menu
+    nav.navbar.navbar-expand-lg.navbar-light.main_box
+      .container
+        /! Brand and toggle get grouped for better mobile display
+        a.navbar-brand.logo_h href="index.html" 
+          img alt="" src="img/logo.png" /
+        button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        /! Collect the nav links, forms, and other content for toggling
+        #navbarSupportedContent.collapse.navbar-collapse.offset
+          ul.nav.navbar-nav.menu_nav.ml-auto
+            li.nav-item.active
+              a.nav-link href="index.html"  Home
+            li.nav-item.submenu.dropdown
+              a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"  Shop
+              ul.dropdown-menu
+                li.nav-item
+                  a.nav-link href="category.html"  Shop Category
+                li.nav-item
+                  a.nav-link href="single-product.html"  Product Details
+                li.nav-item
+                  a.nav-link href="checkout.html"  Product Checkout
+                li.nav-item
+                  a.nav-link href="cart.html"  Shopping Cart
+                li.nav-item
+                  a.nav-link href="confirmation.html"  Confirmation
+            li.nav-item.submenu.dropdown
+              a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"  Blog
+              ul.dropdown-menu
+                li.nav-item
+                  a.nav-link href="blog.html"  Blog
+                li.nav-item
+                  a.nav-link href="single-blog.html"  Blog Details
+            li.nav-item.submenu.dropdown
+              a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"  Pages
+              ul.dropdown-menu
+                li.nav-item
+                  a.nav-link href="login.html"  Login
+                li.nav-item
+                  a.nav-link href="tracking.html"  Tracking
+                li.nav-item
+                  a.nav-link href="elements.html"  Elements
+            li.nav-item
+              a.nav-link href="contact.html"  Contact
+          ul.nav.navbar-nav.navbar-right
+            li.nav-item
+              a.cart href="#" 
+                span.ti-bag
+            li.nav-item
+              button.search
+                span#search.lnr.lnr-magnifier
+  #search_input_box.search_input
+    .container
+      form.d-flex.justify-content-between
+        input#search_input.form-control placeholder=("Search Here") type="text" /
+        button.btn type="submit" 
+        span#close_search.lnr.lnr-cross title=("Close Search") 
