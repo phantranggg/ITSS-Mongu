@@ -19,7 +19,7 @@ section.banner-area
                   span.add-text.text-uppercase Add to Bag
             .col-lg-7
               .banner-img
-                = image_tag("/img/banner/banner-img.png", alt: "", class: "img-fluid")
+                = image_tag("banner/banner-img.png", alt: "", class: "img-fluid")
           /! single-slide
           .row.single-slide
             .col-lg-5
@@ -35,7 +35,7 @@ section.banner-area
                   span.add-text.text-uppercase Add to Bag
             .col-lg-7
               .banner-img
-                img.img-fluid alt="" src="img/banner/banner-img.png" /
+                = image_tag("banner/banner-img.png", alt: "", class: "img-fluid")
 /! End banner Area
 /! start features Area
 section.features-area.section_gap
@@ -45,28 +45,28 @@ section.features-area.section_gap
       .col-lg-3.col-md-6.col-sm-6
         .single-features
           .f-icon
-            img alt="" src="img/features/f-icon1.png" /
+            = image_tag("features/f-icon1.png", alt: "")
           h6 Free Delivery
           p Free Shipping on all order
       /! single features
       .col-lg-3.col-md-6.col-sm-6
         .single-features
           .f-icon
-            img alt="" src="img/features/f-icon2.png" /
+            = image_tag("features/f-icon2.png", alt: "")
           h6 Return Policy
           p Free Shipping on all order
       /! single features
       .col-lg-3.col-md-6.col-sm-6
         .single-features
           .f-icon
-            img alt="" src="img/features/f-icon3.png" /
+            = image_tag("features/f-icon3.png", alt: "")
           h6 24/7 Support
           p Free Shipping on all order
       /! single features
       .col-lg-3.col-md-6.col-sm-6
         .single-features
           .f-icon
-            img alt="" src="img/features/f-icon4.png" /
+            = image_tag("features/f-icon4.png", alt: "")
           h6 Secure Payment
           p Free Shipping on all order
 /! end features Area
@@ -79,35 +79,35 @@ section.category-area
           .col-lg-8.col-md-8
             .single-deal
               .overlay
-              img.img-fluid.w-100 alt="" src="img/category/c1.jpg" /
+              = image_tag("category/c1.jpg", alt: "", class: "img-fluid w-100")
               a.img-pop-up href="img/category/c1.jpg" target="_blank" 
               .deal-details
                 h6.deal-title Sneaker for Sports
           .col-lg-4.col-md-4
             .single-deal
               .overlay
-              img.img-fluid.w-100 alt="" src="img/category/c2.jpg" /
+              = image_tag("category/c2.jpg", alt: "", class: "img-fluid w-100")
               a.img-pop-up href="img/category/c2.jpg" target="_blank" 
               .deal-details
                 h6.deal-title Sneaker for Sports
           .col-lg-4.col-md-4
             .single-deal
               .overlay
-              img.img-fluid.w-100 alt="" src="img/category/c3.jpg" /
+              = image_tag("category/c3.jpg", alt: "", class: "img-fluid w-100")
               a.img-pop-up href="img/category/c3.jpg" target="_blank" 
               .deal-details
                 h6.deal-title Product for Couple
           .col-lg-8.col-md-8
             .single-deal
               .overlay
-              img.img-fluid.w-100 alt="" src="img/category/c4.jpg" /
+              = image_tag("category/c4.jpg", alt: "", class: "img-fluid w-100")
               a.img-pop-up href="img/category/c4.jpg" target="_blank" 
               .deal-details
                 h6.deal-title Sneaker for Sports
       .col-lg-4.col-md-6
         .single-deal
           .overlay
-          img.img-fluid.w-100 alt="" src="img/category/c5.jpg" /
+          = image_tag("category/c5.jpg", alt: "", class: "img-fluid w-100")
           a.img-pop-up href="img/category/c5.jpg" target="_blank" 
           .deal-details
             h6.deal-title Sneaker for Sports
@@ -129,7 +129,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p1.jpg" /
+            = image_tag("product/p1.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -153,7 +153,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p2.jpg" /
+            = image_tag("product/p2.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -177,7 +177,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p3.jpg" /
+            = image_tag("product/p3.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -201,7 +201,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p4.jpg" /
+            = image_tag("product/p4.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -225,7 +225,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p5.jpg" /
+            = image_tag("product/p5.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -249,7 +249,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p6.jpg" /
+            = image_tag("product/p6.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -273,7 +273,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p7.jpg" /
+            = image_tag("product/p7.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -297,7 +297,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p8.jpg" /
+            = image_tag("product/p8.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -333,7 +333,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p6.jpg" /
+            = image_tag("product/p6.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -357,7 +357,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p8.jpg" /
+            = image_tag("product/p8.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
