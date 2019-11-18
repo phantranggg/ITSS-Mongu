@@ -1,0 +1,82 @@
+section#slider
+	div.container
+		div.row
+			div.col-sm-12
+				div id="slider-carousel" class="carousel slide" data-ride="carousel"
+					ol.carousel-indicators
+						li data-target="#slider-carousel" data-slide-to="0" class="active"
+						li data-target="#slider-carousel" data-slide-to="1"
+						li data-target="#slider-carousel" data-slide-to="2"
+					
+					div.carousel-inner
+						div class="item active"
+							div.col-sm-6
+								h1 MIZUGI
+								h2 Web description goes here
+								p Couple Gym delivers innovative products, experiences and services to inspire athletes.
+							div.col-sm-6
+								= image_tag("home_slider_1.jpg", alt: "slider_1", class: "girl img-responsive")
+						div.item
+							div.col-sm-6
+								h1 MIZUGI
+								h2 Web description goes here
+								p Couple Gym provides the latest fashions at great prices for couples 
+							div.col-sm-6
+								= image_tag("home_slider_2.jpg", alt: "slider_2", class: "girl img-responsive")
+						div.item
+							div.col-sm-6
+								h1 MIZUGI
+								h2 Web description goes here
+								p Welcome to Couple Gym, your shopping destination for fashion online. We offer fashion and quality at the best price in a more sustainable way.
+							div.col-sm-6
+								= image_tag("home_slider_3.jpg", alt: "slider_3", class: "girl img-responsive")
+					
+					a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev"
+						i class="fa fa-angle-left"
+					a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next"
+						i class="fa fa-angle-right"
+
+section
+	div.container
+		div.row
+			div.col-sm-3
+				div.left-sidebar
+					h2 Category
+					div class="panel-group category-products" id="accordian"
+					  - @categories.each do |category|
+						  div class="panel panel-default"
+							  div class="panel-heading"
+								  h4 class="panel-title"
+								    a href="#"
+								      = category.name
+					div.price-range
+						h2 Price Range
+						div class="well text-center"
+							 input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2"
+							 br
+							 b.pull-left $ 0
+							 b.pull-right $ 600
+			div class="col-sm-9 padding-right"
+			  div class="features_items category-tab"
+					h2 class="title text-center" Features Items
+					div.col-sm-12
+						ul class="nav nav-tabs"
+						  - @categories.each do |category|
+							  li
+								  a href="#tshirt" data-toggle="tab"
+								    = category.name
+					br
+					- @products.each do |product|
+					  div.col-sm-4
+						  div.product-image-wrapper
+							  div.single-products
+								  div class="productinfo text-center"
+									  = image_tag("default_item.jpg", alt: "default_item")
+									  h2
+									    = product.price
+									  p
+									    = product.name
+									  a href="#" class="btn btn-default add-to-cart"
+									    i class="fa fa-shopping-cart"
+									    = "Add to cart"
+     

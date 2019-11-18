@@ -1,0 +1,24 @@
+header#header
+	div.header-middle>
+		div.container
+			div.row
+				div class="col-md-4 clearfix"
+					div class="logo pull-left"
+						a href=""
+						  = image_tag("logo.png", alt: "slider_1", style: "width:100px")
+				div class="col-md-8 clearfix"
+					div class="shop-menu clearfix pull-right"
+						ul class="nav navbar-nav"
+						  - if !user_signed_in?
+						    li
+						      a href="/sign_in"
+						        i class="fa fa-lock"
+						        = "Login"
+						  - else 
+						    div class="dropdown"
+						      a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+						        = "Dropdown link"
+						      div class="dropdown-menu" aria-labelledby="dropdownMenuLink"
+						        a class="dropdown-item" href="#" Action
+						        a class="dropdown-item" href="#" Another action
+						        a class="dropdown-item" href="#" Something else here

@@ -1,0 +1,9 @@
+= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  div.container
+    = f.label :email
+    = f.email_field :email
+  
+    = f.label :password
+    = f.password_field :password
+
+    = f.submit "Login"

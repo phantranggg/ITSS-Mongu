@@ -5,20 +5,30 @@ Admin.create(
     role: "admin",
 )
 
-num_categories = 5
+User.create(
+    email: "foo@example.com",
+    password: "foobaz"
+)
 
-for _ in 1..num_categories
-    Category.create(name: Faker::Name.name)
+categories = [
+   "Clothes",
+   "Shoes",
+   "Equipment"
+]
+
+categories.each do |name|
+    Category.create(name: name)
 end
 
-num_products = Category.all.length * 50
+products = [
+   ["Easy Polo Black Edition", 100000, "Easy Polo Black Edition Description", 1, 5],
+   ["Easy Polo Black Edition", 120000, "Easy Polo Black Edition Description", 2, 3],
+   ["Easy Polo Black Edition", 130000, "Easy Polo Black Edition Description", 3, 2],
+   ["Easy Polo Black Edition", 140000, "Easy Polo Black Edition Description", 1, 7],
+   ["Easy Polo Black Edition", 150000, "Easy Polo Black Edition Description", 2, 8],
+   ["Easy Polo Black Edition", 160000, "Easy Polo Black Edition Description", 3, 6]
+]
 
-for _ in 1..num_products
-    Product.create(
-        name: Faker::Name.name,
-        price: rand( 1000 ),
-        description: Faker::Lorem.sentence,
-        category_id: (1..Category.all.length).to_a.sample,
-        live: (rand < 0.5) ? true : false
-    )
+products.each do |name, price, description, category_id, quantity|
+    Product.create(name: name, price: price, description: description, category_id: category_id, quantity: quantity)
 end
