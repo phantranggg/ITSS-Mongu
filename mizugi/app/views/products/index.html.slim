@@ -1,82 +1,694 @@
-section#slider
-	div.container
-		div.row
-			div.col-sm-12
-				div id="slider-carousel" class="carousel slide" data-ride="carousel"
-					ol.carousel-indicators
-						li data-target="#slider-carousel" data-slide-to="0" class="active"
-						li data-target="#slider-carousel" data-slide-to="1"
-						li data-target="#slider-carousel" data-slide-to="2"
-					
-					div.carousel-inner
-						div class="item active"
-							div.col-sm-6
-								h1 MIZUGI
-								h2 Web description goes here
-								p Couple Gym delivers innovative products, experiences and services to inspire athletes.
-							div.col-sm-6
-								= image_tag("products/5.jpg", alt: "slider_1", class: "girl img-responsive")
-						div.item
-							div.col-sm-6
-								h1 MIZUGI
-								h2 Web description goes here
-								p Couple Gym provides the latest fashions at great prices for couples 
-							div.col-sm-6
-								= image_tag("products/4.jpg", alt: "slider_2", class: "girl img-responsive")
-						div.item
-							div.col-sm-6
-								h1 MIZUGI
-								h2 Web description goes here
-								p Welcome to Couple Gym, your shopping destination for fashion online. We offer fashion and quality at the best price in a more sustainable way.
-							div.col-sm-6
-								= image_tag("products/6.jpg", alt: "slider_3", class: "girl img-responsive")
-					
-					a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev"
-						i class="fa fa-angle-left"
-					a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next"
-						i class="fa fa-angle-right"
-
-section
-	div.container
-		div.row
-			div.col-sm-3
-				div.left-sidebar
-					h2 Category
-					div class="panel-group category-products" id="accordian"
-					  - @categories.each do |category|
-						  div class="panel panel-default"
-							  div class="panel-heading"
-								  h4 class="panel-title"
-								    a href="#"
-								      = category.name
-					div.price-range
-						h2 Price Range
-						div class="well text-center"
-							 input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2"
-							 br
-							 b.pull-left $ 0
-							 b.pull-right $ 600
-			div class="col-sm-9 padding-right"
-			  div class="features_items category-tab"
-					h2 class="title text-center" Features Items
-					div.col-sm-12
-						ul class="nav nav-tabs"
-						  - @categories.each do |category|
-							  li
-								  a href="#tshirt" data-toggle="tab"
-								    = category.name
-					br
-					- @products.each do |product|
-					  div.col-sm-4
-						  div.product-image-wrapper
-							  div.single-products
-								  div class="productinfo text-center"
-									  = image_tag("default_item.jpg", alt: "default_item")
-									  h2
-									    = product.price
-									  p
-									    = product.name
-									  a href="#" class="btn btn-default add-to-cart"
-									    i class="fa fa-shopping-cart"
-									    = "Add to cart"
-     
+/! start banner Area
+section.banner-area
+  .container
+    .row.fullscreen.align-items-center.justify-content-start
+      .col-lg-12
+        .active-banner-slider.owl-carousel
+          /! single-slide
+          .row.single-slide.align-items-center.d-flex
+            .col-lg-5.col-md-6
+              .banner-content
+                h1
+                  | Nike New
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                .add-bag.d-flex.align-items-center
+                  a.add-btn href="" 
+                    span.lnr.lnr-cross
+                  span.add-text.text-uppercase Add to Bag
+            .col-lg-7
+              .banner-img
+                = image_tag("img/banner/banner-img.png", alt: "", class: "img-fluid")
+          /! single-slide
+          .row.single-slide
+            .col-lg-5
+              .banner-content
+                h1
+                  | Nike New
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                .add-bag.d-flex.align-items-center
+                  a.add-btn href="" 
+                    span.lnr.lnr-cross
+                  span.add-text.text-uppercase Add to Bag
+            .col-lg-7
+              .banner-img
+                img.img-fluid alt="" src="img/banner/banner-img.png" /
+/! End banner Area
+/! start features Area
+section.features-area.section_gap
+  .container
+    .row.features-inner
+      /! single features
+      .col-lg-3.col-md-6.col-sm-6
+        .single-features
+          .f-icon
+            img alt="" src="img/features/f-icon1.png" /
+          h6 Free Delivery
+          p Free Shipping on all order
+      /! single features
+      .col-lg-3.col-md-6.col-sm-6
+        .single-features
+          .f-icon
+            img alt="" src="img/features/f-icon2.png" /
+          h6 Return Policy
+          p Free Shipping on all order
+      /! single features
+      .col-lg-3.col-md-6.col-sm-6
+        .single-features
+          .f-icon
+            img alt="" src="img/features/f-icon3.png" /
+          h6 24/7 Support
+          p Free Shipping on all order
+      /! single features
+      .col-lg-3.col-md-6.col-sm-6
+        .single-features
+          .f-icon
+            img alt="" src="img/features/f-icon4.png" /
+          h6 Secure Payment
+          p Free Shipping on all order
+/! end features Area
+/! Start category Area
+section.category-area
+  .container
+    .row.justify-content-center
+      .col-lg-8.col-md-12
+        .row
+          .col-lg-8.col-md-8
+            .single-deal
+              .overlay
+              img.img-fluid.w-100 alt="" src="img/category/c1.jpg" /
+              a.img-pop-up href="img/category/c1.jpg" target="_blank" 
+              .deal-details
+                h6.deal-title Sneaker for Sports
+          .col-lg-4.col-md-4
+            .single-deal
+              .overlay
+              img.img-fluid.w-100 alt="" src="img/category/c2.jpg" /
+              a.img-pop-up href="img/category/c2.jpg" target="_blank" 
+              .deal-details
+                h6.deal-title Sneaker for Sports
+          .col-lg-4.col-md-4
+            .single-deal
+              .overlay
+              img.img-fluid.w-100 alt="" src="img/category/c3.jpg" /
+              a.img-pop-up href="img/category/c3.jpg" target="_blank" 
+              .deal-details
+                h6.deal-title Product for Couple
+          .col-lg-8.col-md-8
+            .single-deal
+              .overlay
+              img.img-fluid.w-100 alt="" src="img/category/c4.jpg" /
+              a.img-pop-up href="img/category/c4.jpg" target="_blank" 
+              .deal-details
+                h6.deal-title Sneaker for Sports
+      .col-lg-4.col-md-6
+        .single-deal
+          .overlay
+          img.img-fluid.w-100 alt="" src="img/category/c5.jpg" /
+          a.img-pop-up href="img/category/c5.jpg" target="_blank" 
+          .deal-details
+            h6.deal-title Sneaker for Sports
+/! End category Area
+/! start product Area
+section.owl-carousel.active-product-area.section_gap
+  /! single product slide
+  .single-product-slider
+    .container
+      .row.justify-content-center
+        .col-lg-6.text-center
+          .section-title
+            h1 Latest Products
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              | dolore
+              | magna aliqua.
+      .row
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p1.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p2.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p3.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p4.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p5.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p6.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p7.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p8.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+  /! single product slide
+  .single-product-slider
+    .container
+      .row.justify-content-center
+        .col-lg-6.text-center
+          .section-title
+            h1 Coming Products
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              | dolore
+              | magna aliqua.
+      .row
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p6.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p8.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p3.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p5.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p1.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p4.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p1.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p8.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+/! end product Area
+/! Start exclusive deal Area
+section.exclusive-deal-area
+  .container-fluid
+    .row.justify-content-center.align-items-center
+      .col-lg-6.no-padding.exclusive-left
+        #clockdiv.row.clock_sec.clockdiv
+          .col-lg-12
+            h1 Exclusive Hot Deal Ends Soon!
+            p Who are in extremely love with eco friendly system.
+          .col-lg-12
+            .row.clock-wrap
+              .col.clockinner1.clockinner
+                h1.days 150
+                span.smalltext Days
+              .col.clockinner.clockinner1
+                h1.hours 23
+                span.smalltext Hours
+              .col.clockinner.clockinner1
+                h1.minutes 47
+                span.smalltext Mins
+              .col.clockinner.clockinner1
+                h1.seconds 59
+                span.smalltext Secs
+        a.primary-btn href=""  Shop Now
+      .col-lg-6.no-padding.exclusive-right
+        .active-exclusive-product-slider
+          /! single exclusive carousel
+          .single-exclusive-slider
+            img.img-fluid alt="" src="img/product/e-p1.png" /
+            .product-details
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              h4
+                | addidas New Hammer sole
+                | for Sports person
+              .add-bag.d-flex.align-items-center.justify-content-center
+                a.add-btn href="" 
+                  span.ti-bag
+                span.add-text.text-uppercase Add to Bag
+          /! single exclusive carousel
+          .single-exclusive-slider
+            img.img-fluid alt="" src="img/product/e-p1.png" /
+            .product-details
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              h4
+                | addidas New Hammer sole
+                | for Sports person
+              .add-bag.d-flex.align-items-center.justify-content-center
+                a.add-btn href="" 
+                  span.ti-bag
+                span.add-text.text-uppercase Add to Bag
+/! End exclusive deal Area
+/! Start brand Area
+section.brand-area.section_gap
+  .container
+    .row
+      a.col.single-img href="#" 
+        img.img-fluid.d-block.mx-auto alt="" src="img/brand/1.png" /
+      a.col.single-img href="#" 
+        img.img-fluid.d-block.mx-auto alt="" src="img/brand/2.png" /
+      a.col.single-img href="#" 
+        img.img-fluid.d-block.mx-auto alt="" src="img/brand/3.png" /
+      a.col.single-img href="#" 
+        img.img-fluid.d-block.mx-auto alt="" src="img/brand/4.png" /
+      a.col.single-img href="#" 
+        img.img-fluid.d-block.mx-auto alt="" src="img/brand/5.png" /
+/! End brand Area
+/! Start related-product Area
+section.related-product-area.section_gap_bottom
+  .container
+    .row.justify-content-center
+      .col-lg-6.text-center
+        .section-title
+          h1 Deals of the Week
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            | magna aliqua.
+    .row
+      .col-lg-9
+        .row
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r1.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r2.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r3.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r5.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r6.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r7.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r9.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r10.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r11.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+      .col-lg-3
+        .ctg-right
+          a href="#" target="_blank" 
+            img.img-fluid.d-block.mx-auto alt="" src="img/category/c5.jpg" /
+/! End related-product Area
