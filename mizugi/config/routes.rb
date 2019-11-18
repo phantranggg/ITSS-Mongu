@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   root to: 'products#index'
   get '/cart', to: 'carts#index'
   get '/category', to: 'categories#index'
+  get '/checkout', to: 'payments#checkout'
   
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
