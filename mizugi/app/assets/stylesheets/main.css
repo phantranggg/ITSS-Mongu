@@ -1424,6 +1424,11 @@ h2.title {
 
 .signup-form {}
 
+.signup-form .account-detail-text {
+    font-size: 18px;
+    text-align: center;
+}
+
 .login-form h2,
 .signup-form h2 {
     color: #696763;
