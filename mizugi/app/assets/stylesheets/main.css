@@ -1187,6 +1187,10 @@ h2.title {
     margin-left: 15px;
 }
 
+.item-image {
+    height: 50px !important;
+}
+
 .item-control {
     position: absolute;
     top: 35%;
