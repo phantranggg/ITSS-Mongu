@@ -1,148 +1,15 @@
-/! Start Banner Area
-section.banner-area.organic-breadcrumb
+/! start banner Area
+section.banner-area
   .container
-    .breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
-      .col-first
-        h1 Product Details Page
-        nav.d-flex.align-items-center
-          a href="index.html" 
-            | Home
-            span.lnr.lnr-arrow-right
-          a href="#" 
-            | Shop
-            span.lnr.lnr-arrow-right
-          a href="single-product.html"  product-details
-/! End Banner Area
-/! ================Single Product Area =================
-.product_image_area
-  .container
-    .row.s_product_inner
-      .col-lg-6
-        .s_Product_carousel
-          .single-prd-item
-            img.img-fluid alt="" src="img/category/s-p1.jpg" /
-          .single-prd-item
-            img.img-fluid alt="" src="img/category/s-p1.jpg" /
-          .single-prd-item
-            img.img-fluid alt="" src="img/category/s-p1.jpg" /
-      .col-lg-5.offset-lg-1
-        .s_product_text
-          h3 Faded SkyBlu Denim Jeans
-          h2 $149.99
-          ul.list
-            li
-              a.active href="#" 
-                span Category
-                | \: Household
-            li
-              a href="#" 
-                span Availibility
-                | \: In Stock
-          p
-            | Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for
-            | something that can make your interior look awesome, and at the same time give you the pleasant warm feeling
-            | during the winter.
-          .product_count
-            label for="qty"  Quantity:
-            input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
-            button.increase.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;") type="button" 
-              i.lnr.lnr-chevron-up
-            button.reduced.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;") type="button" 
-              i.lnr.lnr-chevron-down
-          .card_area.d-flex.align-items-center
-            a.primary-btn href="#"  Add to Cart
-            a.icon_btn href="#" 
-              i.lnr.lnr.lnr-diamond
-            a.icon_btn href="#" 
-              i.lnr.lnr.lnr-heart
-/! ================End Single Product Area =================
-/! ================Product Description Area =================
-section.product_description_area
-  .container
-    ul#myTab.nav.nav-tabs role="tablist" 
-      li.nav-item
-        a#home-tab.nav-link aria-controls="home" aria-selected="true" data-toggle="tab" href="#home" role="tab"  Description
-      li.nav-item
-        a#profile-tab.nav-link aria-controls="profile" aria-selected="false" data-toggle="tab" href="#profile" role="tab"  Specification
-      li.nav-item
-        a#contact-tab.nav-link aria-controls="contact" aria-selected="false" data-toggle="tab" href="#contact" role="tab"  Comments
-      li.nav-item
-        a#review-tab.nav-link.active aria-controls="review" aria-selected="false" data-toggle="tab" href="#review" role="tab"  Reviews
-    #myTabContent.tab-content
-      #home.tab-pane.fade aria-labelledby="home-tab" role="tabpanel" 
-        p
-          | Beryl Cook is one of Britain’s most talented and amusing artists .Beryl’s pictures feature women of all shapes
-          | and sizes enjoying themselves .Born between the two world wars, Beryl Cook eventually left Kendrick School in
-          | Reading at the age of 15, where she went to secretarial school and then into an insurance office. After moving to
-          | London and then Hampton, she eventually married her next door neighbour from Reading, John Cook. He was an
-          | officer in the Merchant Navy and after he left the sea in 1956, they bought a pub for a year before John took a
-          | job in Southern Rhodesia with a motor company. Beryl bought their young son a box of watercolours, and when
-          | showing him how to use it, she decided that she herself quite enjoyed painting. John subsequently bought her a
-          | child’s painting set for her birthday and it was with this that she produced her first significant work, a
-          | half-length portrait of a dark-skinned lady with a vacant expression and large drooping breasts. It was aptly
-          | named ‘Hangover’ by Beryl’s husband and
-        p
-          | It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing
-          | more and more recipe books and Internet websites that are dedicated to the act of cooking for one. Divorce and
-          | the death of spouses or grown children leaving for college are all reasons that someone accustomed to cooking for
-          | more than one would suddenly need to learn how to adjust all the cooking practices utilized before into a
-          | streamlined plan of cooking that is more efficient for one person creating less
-      #profile.tab-pane.fade aria-labelledby="profile-tab" role="tabpanel" 
-        .table-responsive
-          table.table
-            tbody
-              tr
-                td
-                  h5 Width
-                td
-                  h5 128mm
-              tr
-                td
-                  h5 Height
-                td
-                  h5 508mm
-              tr
-                td
-                  h5 Depth
-                td
-                  h5 85mm
-              tr
-                td
-                  h5 Weight
-                td
-                  h5 52gm
-              tr
-                td
-                  h5 Quality checking
-                td
-                  h5 yes
-              tr
-                td
-                  h5 Freshness Duration
-                td
-                  h5 03days
-              tr
-                td
-                  h5 When packeting
-                td
-                  h5 Without touch of hand
-              tr
-                td
-                  h5 Each Box contains
-                td
-                  h5 60pcs
-      #contact.tab-pane.fade aria-labelledby="contact-tab" role="tabpanel" 
-        .row
-          .col-lg-6
-            .comment_list
-              .review_item
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-1.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    h5 12th Feb, 2018 at 05:56 pm
-                    a.reply_btn href="#"  Reply
+    .row.fullscreen.align-items-center.justify-content-start
+      .col-lg-12
+        .active-banner-slider.owl-carousel
+          /! single-slide
+          .row.single-slide.align-items-center.d-flex
+            .col-lg-5.col-md-6
+              .banner-content
+                h1
+                  | Nike New
                 p
                   | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                   | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
@@ -514,7 +381,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p3.jpg" /
+            = image_tag("product/p3.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -538,7 +405,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p5.jpg" /
+            = image_tag("product/p5.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -562,7 +429,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p1.jpg" /
+            = image_tag("product/p1.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -586,7 +453,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p4.jpg" /
+            = image_tag("product/p4.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -610,7 +477,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p1.jpg" /
+            = image_tag("product/p1.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -634,7 +501,7 @@ section.owl-carousel.active-product-area.section_gap
         /! single product
         .col-lg-3.col-md-6
           .single-product
-            img.img-fluid alt="" src="img/product/p8.jpg" /
+            = image_tag("product/p8.jpg", alt: "", class: "img-fluid")
             .product-details
               h6
                 | addidas New Hammer sole
@@ -684,7 +551,7 @@ section.exclusive-deal-area
         .active-exclusive-product-slider
           /! single exclusive carousel
           .single-exclusive-slider
-            img.img-fluid alt="" src="img/product/e-p1.png" /
+            = image_tag("product/e-p1.png", alt: "", class: "img-fluid")
             .product-details
               .price
                 h6 $150.00
@@ -698,7 +565,7 @@ section.exclusive-deal-area
                 span.add-text.text-uppercase Add to Bag
           /! single exclusive carousel
           .single-exclusive-slider
-            img.img-fluid alt="" src="img/product/e-p1.png" /
+            = image_tag("product/e-p1.png", alt: "", class: "img-fluid")
             .product-details
               .price
                 h6 $150.00
@@ -716,17 +583,16 @@ section.brand-area.section_gap
   .container
     .row
       a.col.single-img href="#" 
-        img.img-fluid.d-block.mx-auto alt="" src="img/brand/1.png" /
+        = image_tag("brand/1.png", alt: "", class: "img-fluid d-block mx-auto")
       a.col.single-img href="#" 
-        img.img-fluid.d-block.mx-auto alt="" src="img/brand/2.png" /
+        = image_tag("brand/2.png", alt: "", class: "img-fluid d-block mx-auto")
       a.col.single-img href="#" 
-        img.img-fluid.d-block.mx-auto alt="" src="img/brand/3.png" /
+        = image_tag("brand/3.png", alt: "", class: "img-fluid d-block mx-auto")
       a.col.single-img href="#" 
-        img.img-fluid.d-block.mx-auto alt="" src="img/brand/4.png" /
+        = image_tag("brand/4.png", alt: "", class: "img-fluid d-block mx-auto")
       a.col.single-img href="#" 
-        img.img-fluid.d-block.mx-auto alt="" src="img/brand/5.png" /
+        = image_tag("brand/5.png", alt: "", class: "img-fluid d-block mx-auto")
 /! End brand Area
-
 /! Start related-product Area
 section.related-product-area.section_gap_bottom
   .container
@@ -824,5 +690,5 @@ section.related-product-area.section_gap_bottom
       .col-lg-3
         .ctg-right
           a href="#" target="_blank" 
-            img.img-fluid.d-block.mx-auto alt="" src="img/category/c5.jpg" /
+            = image_tag("category/c5.jpg", alt: "", class: "img-fluid d-block mx-auto")
 /! End related-product Area
