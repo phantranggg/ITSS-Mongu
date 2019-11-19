@@ -145,191 +145,588 @@ section.product_description_area
                     a.reply_btn href="#"  Reply
                 p
                   | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-              .review_item.reply
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-2.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    h5 12th Feb, 2018 at 05:56 pm
-                    a.reply_btn href="#"  Reply
+                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                .add-bag.d-flex.align-items-center
+                  a.add-btn href="" 
+                    span.lnr.lnr-cross
+                  span.add-text.text-uppercase Add to Bag
+            .col-lg-7
+              .banner-img
+                = image_tag("banner/banner-img.png", alt: "", class: "img-fluid")
+          /! single-slide
+          .row.single-slide
+            .col-lg-5
+              .banner-content
+                h1
+                  | Nike New
                 p
                   | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-              .review_item
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-3.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    h5 12th Feb, 2018 at 05:56 pm
-                    a.reply_btn href="#"  Reply
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-          .col-lg-6
-            .review_box
-              h4 Post a comment
-              form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate" 
-                .col-md-12
-                  .form-group
-                    input#name.form-control name="name" placeholder=("Your Full name") type="text" /
-                .col-md-12
-                  .form-group
-                    input#email.form-control name="email" placeholder=("Email Address") type="email" /
-                .col-md-12
-                  .form-group
-                    input#number.form-control name="number" placeholder=("Phone Number") type="text" /
-                .col-md-12
-                  .form-group
-                    textarea#message.form-control name="message" placeholder="Message" rows="1" 
-                .col-md-12.text-right
-                  button.btn.primary-btn type="submit" value="submit"  Submit Now
-      #review.tab-pane.fade.show.active aria-labelledby="review-tab" role="tabpanel" 
+                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                .add-bag.d-flex.align-items-center
+                  a.add-btn href="" 
+                    span.lnr.lnr-cross
+                  span.add-text.text-uppercase Add to Bag
+            .col-lg-7
+              .banner-img
+                = image_tag("banner/banner-img.png", alt: "", class: "img-fluid")
+/! End banner Area
+/! start features Area
+section.features-area.section_gap
+  .container
+    .row.features-inner
+      /! single features
+      .col-lg-3.col-md-6.col-sm-6
+        .single-features
+          .f-icon
+            = image_tag("features/f-icon1.png", alt: "")
+          h6 Free Delivery
+          p Free Shipping on all order
+      /! single features
+      .col-lg-3.col-md-6.col-sm-6
+        .single-features
+          .f-icon
+            = image_tag("features/f-icon2.png", alt: "")
+          h6 Return Policy
+          p Free Shipping on all order
+      /! single features
+      .col-lg-3.col-md-6.col-sm-6
+        .single-features
+          .f-icon
+            = image_tag("features/f-icon3.png", alt: "")
+          h6 24/7 Support
+          p Free Shipping on all order
+      /! single features
+      .col-lg-3.col-md-6.col-sm-6
+        .single-features
+          .f-icon
+            = image_tag("features/f-icon4.png", alt: "")
+          h6 Secure Payment
+          p Free Shipping on all order
+/! end features Area
+/! Start category Area
+section.category-area
+  .container
+    .row.justify-content-center
+      .col-lg-8.col-md-12
         .row
-          .col-lg-6
-            .row.total_rate
-              .col-6
-                .box_total
-                  h5 Overall
-                  h4 4.0
-                  h6 (03 Reviews)
-              .col-6
-                .rating_list
-                  h3 Based on 3 Reviews
-                  ul.list
-                    li
-                      a href="#" 
-                        | 5 Star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
-                    li
-                      a href="#" 
-                        | 4 Star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
-                    li
-                      a href="#" 
-                        | 3 Star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
-                    li
-                      a href="#" 
-                        | 2 Star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
-                    li
-                      a href="#" 
-                        | 1 Star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
-            .review_list
-              .review_item
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-1.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-              .review_item
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-2.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-              .review_item
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-3.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-          .col-lg-6
-            .review_box
-              h4 Add a Review
-              p Your Rating:
-              ul.list
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-              p Outstanding
-              form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate" 
-                .col-md-12
-                  .form-group
-                    input#name.form-control name="name" onblur=("this.placeholder = 'Your Full name'") onfocus=("this.placeholder = ''") placeholder=("Your Full name") type="text" /
-                .col-md-12
-                  .form-group
-                    input#email.form-control name="email" onblur=("this.placeholder = 'Email Address'") onfocus=("this.placeholder = ''") placeholder=("Email Address") type="email" /
-                .col-md-12
-                  .form-group
-                    input#number.form-control name="number" onblur=("this.placeholder = 'Phone Number'") onfocus=("this.placeholder = ''") placeholder=("Phone Number") type="text" /
-                .col-md-12
-                  .form-group
-                    textarea#message.form-control name="message" onblur=("this.placeholder = 'Review'") onfocus=("this.placeholder = ''") placeholder="Review" rows="1" 
-                .col-md-12.text-right
-                  button.primary-btn type="submit" value="submit"  Submit Now
-/! ================End Product Description Area =================
+          .col-lg-8.col-md-8
+            .single-deal
+              .overlay
+              = image_tag("category/c1.jpg", alt: "", class: "img-fluid w-100")
+              a.img-pop-up href="img/category/c1.jpg" target="_blank" 
+              .deal-details
+                h6.deal-title Sneaker for Sports
+          .col-lg-4.col-md-4
+            .single-deal
+              .overlay
+              = image_tag("category/c2.jpg", alt: "", class: "img-fluid w-100")
+              a.img-pop-up href="img/category/c2.jpg" target="_blank" 
+              .deal-details
+                h6.deal-title Sneaker for Sports
+          .col-lg-4.col-md-4
+            .single-deal
+              .overlay
+              = image_tag("category/c3.jpg", alt: "", class: "img-fluid w-100")
+              a.img-pop-up href="img/category/c3.jpg" target="_blank" 
+              .deal-details
+                h6.deal-title Product for Couple
+          .col-lg-8.col-md-8
+            .single-deal
+              .overlay
+              = image_tag("category/c4.jpg", alt: "", class: "img-fluid w-100")
+              a.img-pop-up href="img/category/c4.jpg" target="_blank" 
+              .deal-details
+                h6.deal-title Sneaker for Sports
+      .col-lg-4.col-md-6
+        .single-deal
+          .overlay
+          = image_tag("category/c5.jpg", alt: "", class: "img-fluid w-100")
+          a.img-pop-up href="img/category/c5.jpg" target="_blank" 
+          .deal-details
+            h6.deal-title Sneaker for Sports
+/! End category Area
+/! start product Area
+section.owl-carousel.active-product-area.section_gap
+  /! single product slide
+  .single-product-slider
+    .container
+      .row.justify-content-center
+        .col-lg-6.text-center
+          .section-title
+            h1 Latest Products
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              | dolore
+              | magna aliqua.
+      .row
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            = image_tag("product/p1.jpg", alt: "", class: "img-fluid")
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            = image_tag("product/p2.jpg", alt: "", class: "img-fluid")
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            = image_tag("product/p3.jpg", alt: "", class: "img-fluid")
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            = image_tag("product/p4.jpg", alt: "", class: "img-fluid")
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            = image_tag("product/p5.jpg", alt: "", class: "img-fluid")
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            = image_tag("product/p6.jpg", alt: "", class: "img-fluid")
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            = image_tag("product/p7.jpg", alt: "", class: "img-fluid")
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            = image_tag("product/p8.jpg", alt: "", class: "img-fluid")
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+  /! single product slide
+  .single-product-slider
+    .container
+      .row.justify-content-center
+        .col-lg-6.text-center
+          .section-title
+            h1 Coming Products
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              | dolore
+              | magna aliqua.
+      .row
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            = image_tag("product/p6.jpg", alt: "", class: "img-fluid")
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            = image_tag("product/p8.jpg", alt: "", class: "img-fluid")
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p3.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p5.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p1.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p4.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p1.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+        /! single product
+        .col-lg-3.col-md-6
+          .single-product
+            img.img-fluid alt="" src="img/product/p8.jpg" /
+            .product-details
+              h6
+                | addidas New Hammer sole
+                | for Sports person
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              .prd-bottom
+                a.social-info href="" 
+                  span.ti-bag
+                p.hover-text add to bag
+                a.social-info href="" 
+                  span.lnr.lnr-heart
+                p.hover-text Wishlist
+                a.social-info href="" 
+                  span.lnr.lnr-sync
+                p.hover-text compare
+                a.social-info href="" 
+                  span.lnr.lnr-move
+                p.hover-text view more
+/! end product Area
+/! Start exclusive deal Area
+section.exclusive-deal-area
+  .container-fluid
+    .row.justify-content-center.align-items-center
+      .col-lg-6.no-padding.exclusive-left
+        #clockdiv.row.clock_sec.clockdiv
+          .col-lg-12
+            h1 Exclusive Hot Deal Ends Soon!
+            p Who are in extremely love with eco friendly system.
+          .col-lg-12
+            .row.clock-wrap
+              .col.clockinner1.clockinner
+                h1.days 150
+                span.smalltext Days
+              .col.clockinner.clockinner1
+                h1.hours 23
+                span.smalltext Hours
+              .col.clockinner.clockinner1
+                h1.minutes 47
+                span.smalltext Mins
+              .col.clockinner.clockinner1
+                h1.seconds 59
+                span.smalltext Secs
+        a.primary-btn href=""  Shop Now
+      .col-lg-6.no-padding.exclusive-right
+        .active-exclusive-product-slider
+          /! single exclusive carousel
+          .single-exclusive-slider
+            img.img-fluid alt="" src="img/product/e-p1.png" /
+            .product-details
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              h4
+                | addidas New Hammer sole
+                | for Sports person
+              .add-bag.d-flex.align-items-center.justify-content-center
+                a.add-btn href="" 
+                  span.ti-bag
+                span.add-text.text-uppercase Add to Bag
+          /! single exclusive carousel
+          .single-exclusive-slider
+            img.img-fluid alt="" src="img/product/e-p1.png" /
+            .product-details
+              .price
+                h6 $150.00
+                h6.l-through $210.00
+              h4
+                | addidas New Hammer sole
+                | for Sports person
+              .add-bag.d-flex.align-items-center.justify-content-center
+                a.add-btn href="" 
+                  span.ti-bag
+                span.add-text.text-uppercase Add to Bag
+/! End exclusive deal Area
+/! Start brand Area
+section.brand-area.section_gap
+  .container
+    .row
+      a.col.single-img href="#" 
+        img.img-fluid.d-block.mx-auto alt="" src="img/brand/1.png" /
+      a.col.single-img href="#" 
+        img.img-fluid.d-block.mx-auto alt="" src="img/brand/2.png" /
+      a.col.single-img href="#" 
+        img.img-fluid.d-block.mx-auto alt="" src="img/brand/3.png" /
+      a.col.single-img href="#" 
+        img.img-fluid.d-block.mx-auto alt="" src="img/brand/4.png" /
+      a.col.single-img href="#" 
+        img.img-fluid.d-block.mx-auto alt="" src="img/brand/5.png" /
+/! End brand Area
+
 /! Start related-product Area
 section.related-product-area.section_gap_bottom
   .container
