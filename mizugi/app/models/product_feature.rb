@@ -1,0 +1,2 @@
+class ProductFeature < ApplicationRecord
+end
