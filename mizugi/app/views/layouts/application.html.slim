@@ -3,7 +3,6 @@ html
   head
     title Mizugi
     meta name="keywords" content="template language"
-    link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
@@ -12,10 +11,6 @@ html
     == render 'layouts/header'
   
   body
-    .alert
-    alert(alert)
-    .notice
-    notice(notice)
     
     == yield
 
