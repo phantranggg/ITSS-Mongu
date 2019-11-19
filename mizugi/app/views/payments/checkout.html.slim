@@ -1,0 +1,152 @@
+/! Start Banner Area
+section.banner-area.organic-breadcrumb
+  .container
+    .breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
+      .col-first
+        h1 Checkout
+        nav.d-flex.align-items-center
+          a href="index.html" 
+            | Home
+            span.lnr.lnr-arrow-right
+          a href="single-product.html"  Checkout
+/! End Banner Area
+/! ================Checkout Area =================
+section.checkout_area.section_gap
+  .container
+    .returning_customer
+      .check_title
+        h2
+          | Returning Customer?
+          a href="#"  Click here to login
+      p
+        | If you have shopped with us before, please enter your details in the boxes below. If you are a new
+        | customer, please proceed to the Billing & Shipping section.
+      form.row.contact_form action="#" method="post" novalidate="novalidate" 
+        .col-md-6.form-group.p_star
+          input#name.form-control name="name" type="text" /
+          span.placeholder data-placeholder=("Username or Email") 
+        .col-md-6.form-group.p_star
+          input#password.form-control name="password" type="password" /
+          span.placeholder data-placeholder="Password" 
+        .col-md-12.form-group
+          button.primary-btn type="submit" value="submit"  login
+          .creat_account
+            input#f-option name="selector" type="checkbox" /
+            label for="f-option"  Remember me
+          a.lost_pass href="#"  Lost your password?
+    .cupon_area
+      .check_title
+        h2
+          | Have a coupon?
+          a href="#"  Click here to enter your code
+      input placeholder=("Enter coupon code") type="text" /
+      a.tp_btn href="#"  Apply Coupon
+    .billing_details
+      .row
+        .col-lg-8
+          h3 Billing Details
+          form.row.contact_form action="#" method="post" novalidate="novalidate" 
+            .col-md-6.form-group.p_star
+              input#first.form-control name="name" type="text" /
+              span.placeholder data-placeholder=("First name") 
+            .col-md-6.form-group.p_star
+              input#last.form-control name="name" type="text" /
+              span.placeholder data-placeholder=("Last name") 
+            .col-md-12.form-group
+              input#company.form-control name="company" placeholder=("Company name") type="text" /
+            .col-md-6.form-group.p_star
+              input#number.form-control name="number" type="text" /
+              span.placeholder data-placeholder=("Phone number") 
+            .col-md-6.form-group.p_star
+              input#email.form-control name="compemailany" type="text" /
+              span.placeholder data-placeholder=("Email Address") 
+            .col-md-12.form-group.p_star
+              select.country_select
+                option value="1"  Country
+                option value="2"  Country
+                option value="4"  Country
+            .col-md-12.form-group.p_star
+              input#add1.form-control name="add1" type="text" /
+              span.placeholder data-placeholder=("Address line 01") 
+            .col-md-12.form-group.p_star
+              input#add2.form-control name="add2" type="text" /
+              span.placeholder data-placeholder=("Address line 02") 
+            .col-md-12.form-group.p_star
+              input#city.form-control name="city" type="text" /
+              span.placeholder data-placeholder="Town/City" 
+            .col-md-12.form-group.p_star
+              select.country_select
+                option value="1"  District
+                option value="2"  District
+                option value="4"  District
+            .col-md-12.form-group
+              input#zip.form-control name="zip" placeholder="Postcode/ZIP" type="text" /
+            .col-md-12.form-group
+              .creat_account
+                input#f-option2 name="selector" type="checkbox" /
+                label for="f-option2"  Create an account?
+            .col-md-12.form-group
+              .creat_account
+                h3 Shipping Details
+                input#f-option3 name="selector" type="checkbox" /
+                label for="f-option3"  Ship to a different address?
+              textarea#message.form-control name="message" placeholder=("Order Notes") rows="1" 
+        .col-lg-4
+          .order_box
+            h2 Your Order
+            ul.list
+              li
+                a href="#" 
+                  | Product
+                  span Total
+              li
+                a href="#" 
+                  | Fresh Blackberry
+                  span.middle x 02
+                  span.last $720.00
+              li
+                a href="#" 
+                  | Fresh Tomatoes
+                  span.middle x 02
+                  span.last $720.00
+              li
+                a href="#" 
+                  | Fresh Brocoli
+                  span.middle x 02
+                  span.last $720.00
+            ul.list.list_2
+              li
+                a href="#" 
+                  | Subtotal
+                  span $2160.00
+              li
+                a href="#" 
+                  | Shipping
+                  span Flat rate: $50.00
+              li
+                a href="#" 
+                  | Total
+                  span $2210.00
+            .payment_item
+              .radion_btn
+                input#f-option5 name="selector" type="radio" /
+                label for="f-option5"  Check payments
+                .check
+              p
+                | Please send a check to Store Name, Store Street, Store Town, Store State / County,
+                | Store Postcode.
+            .payment_item.active
+              .radion_btn
+                input#f-option6 name="selector" type="radio" /
+                label for="f-option6"  Paypal
+                img alt="" src="img/product/card.jpg" /
+                .check
+              p
+                | Pay via PayPal; you can pay with your credit card if you don’t have a PayPal
+                | account.
+            .creat_account
+              input#f-option4 name="selector" type="checkbox" /
+              label for="f-option4"  I’ve read and accept the
+              a href="#"  terms & conditions*
+            a.primary-btn href="#"  Proceed to Paypal
+/! ================End Checkout Area =================

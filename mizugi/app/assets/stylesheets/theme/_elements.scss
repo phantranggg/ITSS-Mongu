@@ -6,6 +6,14 @@ $warning: #f4e700;
 $danger: #f44a40;
 $link: #f9f9ff;
 $disable: (#222222, .3);
+
+
+input[type="radio"] {
+  margin-top: -1px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
 .sample-text-area {
 	background: $white;
 	padding: 100px 0 70px 0;
