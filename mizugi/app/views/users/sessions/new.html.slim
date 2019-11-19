@@ -1,16 +1,39 @@
-section#form
-	div.container
-		div.row
-			div class="col-sm-4 col-sm-offset-1"
-				div.login-form
-					h2 Login to your account
-					= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-						= f.label :email
-						= f.email_field :email
-  
-						= f.label :password
-						= f.password_field :password
-						span
-							input type="checkbox" class="checkbox" Keep me signed in
-						= button_tag "Login", type: "submit", class: "btn btn-default"
-
+/! Start Banner Area
+section.banner-area.organic-breadcrumb
+  .container
+    .breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
+      .col-first
+        h1 Login/Register
+        nav.d-flex.align-items-center
+          a href="index.html" 
+            | Home
+            span.lnr.lnr-arrow-right
+          a href="category.html"  Login/Register
+/! End Banner Area
+/! ================Login Box Area =================
+section.login_box_area.section_gap
+  .container
+    .row
+      .col-lg-6
+        .login_box_img
+          img.img-fluid alt="" src="img/login.jpg" /
+          .hover
+            h4 New to our website?
+            p There are advances being made in science and technology everyday, and a good example of this is the
+            a.primary-btn href="registration.html"  Create an Account
+      .col-lg-6
+        .login_form_inner
+          h3 Log in to enter
+          form#contactForm.row.login_form action="contact_process.php" method="post" novalidate="novalidate" 
+            .col-md-12.form-group
+              input#name.form-control name="name" onblur=("this.placeholder = 'Username'") onfocus=("this.placeholder = ''") placeholder="Username" type="text" /
+            .col-md-12.form-group
+              input#name.form-control name="name" onblur=("this.placeholder = 'Password'") onfocus=("this.placeholder = ''") placeholder="Password" type="text" /
+            .col-md-12.form-group
+              .creat_account
+                input#f-option2 name="selector" type="checkbox" /
+                label for="f-option2"  Keep me logged in
+            .col-md-12.form-group
+              button.primary-btn type="submit" value="submit"  Log In
+              a href="#"  Forgot Password?
+/! ================End Login Box Area =================

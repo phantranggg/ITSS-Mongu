@@ -1,103 +1,134 @@
-section id="cart_items"
-	div class="container"
-		div class="breadcrumbs"
-			ol class="breadcrumb"
-			    li
-			        a href="#" Home
-			    li class="active"
-			    = "Shopping Cart"
-		div class="table-responsive cart_info"
-			table class="table table-condensed"
-				thead
-					tr class="cart_menu"
-						td class="image" Item
-						td class="description"
-						td class="price" Price
-						td class="quantity" Quantity
-						td class="total" Total
-						td
-				tbody
-					tr
-						td class="cart_product"
-							a href=""
-							    img style="width:100px" src="https://www.famousfootwear.com/c/-/media/project/famousfootwear/brand-landing-pages/nike/2019/fall/mobile/mobile-hero-hub.jpg?h=452&w=750&la=en&hash=522AECDBAD3FA6B25B1EE888F76BA90B54D79BC7" alt=""
-						
-						td class="cart_description"
-							h4
-							    a href=""
-							    = "Shoe"
-							p
-							= "Web ID: 1089772"
-						
-						td class="cart_price"
-							p $59
-						
-						td class="cart_quantity"
-							div class="cart_quantity_button"
-								a class="cart_quantity_up" href="" +
-								input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2"
-								a class="cart_quantity_down" href="" -
-						
-						td class="cart_total"
-							p class="cart_total_price" $59
-						
-						td class="cart_delete"
-							a class="cart_quantity_delete" href=""
-							    i class="fa fa-times"
-							    
-					tr
-						td class="cart_product"
-							a href=""
-							    img style="width:100px" src="https://www.famousfootwear.com/c/-/media/project/famousfootwear/brand-landing-pages/nike/2019/fall/mobile/mobile-hero-hub.jpg?h=452&w=750&la=en&hash=522AECDBAD3FA6B25B1EE888F76BA90B54D79BC7" alt=""
-						
-						td class="cart_description"
-							h4
-							    a href=""
-							    = "Shoe"
-							p
-							= "Web ID: 1089772"
-						
-						td class="cart_price"
-							p $59
-						
-						td class="cart_quantity"
-							div class="cart_quantity_button"
-								a class="cart_quantity_up" href="" +
-								input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2"
-								a class="cart_quantity_down" href="" -
-						
-						td class="cart_total"
-							p class="cart_total_price" $59
-						
-						td class="cart_delete"
-							a class="cart_quantity_delete" href=""
-							    i class="fa fa-times"		 
-							    
-					tr
-						td class="cart_product"
-							a href=""
-							    img style="width:100px" src="https://www.famousfootwear.com/c/-/media/project/famousfootwear/brand-landing-pages/nike/2019/fall/mobile/mobile-hero-hub.jpg?h=452&w=750&la=en&hash=522AECDBAD3FA6B25B1EE888F76BA90B54D79BC7" alt=""
-						
-						td class="cart_description"
-							h4
-							    a href=""
-							    = "Shoe"
-							p
-							= "Web ID: 1089772"
-						
-						td class="cart_price"
-							p $59
-						
-						td class="cart_quantity"
-							div class="cart_quantity_button"
-								a class="cart_quantity_up" href="" +
-								input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2"
-								a class="cart_quantity_down" href="" -
-						
-						td class="cart_total"
-							p class="cart_total_price" $59
-						
-						td class="cart_delete"
-							a class="cart_quantity_delete" href=""
-							    i class="fa fa-times"
-							    
+/! Start Banner Area
+section.banner-area.organic-breadcrumb
+  .container
+    .breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
+      .col-first
+        h1 Shopping Cart
+        nav.d-flex.align-items-center
+          a href="index.html" 
+            | Home
+            span.lnr.lnr-arrow-right
+          a href="category.html"  Cart
+/! End Banner Area
+/! ================Cart Area =================
+section.cart_area
+  .container
+    .cart_inner
+      .table-responsive
+        table.table
+          thead
+            tr
+              th scope="col"  Product
+              th scope="col"  Price
+              th scope="col"  Quantity
+              th scope="col"  Total
+          tbody
+            tr
+              td
+                .media
+                  .d-flex
+                    img alt="" src="img/cart.jpg" /
+                  .media-body
+                    p Minimalistic shop for multipurpose use
+              td
+                h5 $360.00
+              td
+                .product_count
+                  input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
+                  button.increase.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;") type="button" 
+                    i.lnr.lnr-chevron-up
+                  button.reduced.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;") type="button" 
+                    i.lnr.lnr-chevron-down
+              td
+                h5 $720.00
+            tr
+              td
+                .media
+                  .d-flex
+                    img alt="" src="img/cart.jpg" /
+                  .media-body
+                    p Minimalistic shop for multipurpose use
+              td
+                h5 $360.00
+              td
+                .product_count
+                  input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
+                  button.increase.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;") type="button" 
+                    i.lnr.lnr-chevron-up
+                  button.reduced.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;") type="button" 
+                    i.lnr.lnr-chevron-down
+              td
+                h5 $720.00
+            tr
+              td
+                .media
+                  .d-flex
+                    img alt="" src="img/cart.jpg" /
+                  .media-body
+                    p Minimalistic shop for multipurpose use
+              td
+                h5 $360.00
+              td
+                .product_count
+                  input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
+                  button.increase.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;") type="button" 
+                    i.lnr.lnr-chevron-up
+                  button.reduced.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;") type="button" 
+                    i.lnr.lnr-chevron-down
+              td
+                h5 $720.00
+            tr.bottom_button
+              td
+                a.gray_btn href="#"  Update Cart
+              td
+              td
+              td
+                .cupon_text.d-flex.align-items-center
+                  input placeholder=("Coupon Code") type="text" /
+                  a.primary-btn href="#"  Apply
+                  a.gray_btn href="#"  Close Coupon
+            tr
+              td
+              td
+              td
+                h5 Subtotal
+              td
+                h5 $2160.00
+            tr.shipping_area
+              td
+              td
+              td
+                h5 Shipping
+              td
+                .shipping_box
+                  ul.list
+                    li
+                      a href="#"  Flat Rate: $5.00
+                    li
+                      a href="#"  Free Shipping
+                    li
+                      a href="#"  Flat Rate: $10.00
+                    li.active
+                      a href="#"  Local Delivery: $2.00
+                  h6
+                    | Calculate Shipping
+                    i.fa.fa-caret-down aria-hidden="true" 
+                  select.shipping_select
+                    option value="1"  Bangladesh
+                    option value="2"  India
+                    option value="4"  Pakistan
+                  select.shipping_select
+                    option value="1"  Select a State
+                    option value="2"  Select a State
+                    option value="4"  Select a State
+                  input placeholder="Postcode/Zipcode" type="text" /
+                  a.gray_btn href="#"  Update Details
+            tr.out_button_area
+              td
+              td
+              td
+              td
+                .checkout_btn_inner.d-flex.align-items-center
+                  a.gray_btn href="#"  Continue Shopping
+                  a.primary-btn href="#"  Proceed to checkout
+/! ================End Cart Area =================

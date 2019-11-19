@@ -1,0 +1,43 @@
+/! Start Banner Area
+section.banner-area.organic-breadcrumb
+  .container
+    .breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
+      .col-first
+        h1 Login/Register
+        nav.d-flex.align-items-center
+          a href="index.html" 
+            | Home
+            span.lnr.lnr-arrow-right
+          a href="category.html"  Login/Register
+/! End Banner Area
+/! ================Login Box Area =================
+section.login_box_area.section_gap
+  .container
+    .row
+      .col-lg-6
+        .login_box_img
+          img.img-fluid alt="" src="img/login.jpg" /
+          .hover
+            h4 New to our website?
+            p There are advances being made in science and technology everyday, and a good example of this is the
+            a.primary-btn href="signin.html"  Log in to your account
+      .col-lg-6
+        .login_form_inner
+          h3 Create new account
+          form#contactForm.row.login_form action="contact_process.php" method="post" novalidate="novalidate" 
+            .col-md-12.form-group
+              input#name.form-control name="email" onblur=("this.placeholder = 'Email'") onfocus=("this.placeholder = ''") placeholder="Email" type="email" /
+            .col-md-12.form-group
+              input#name.form-control name="password" onblur=("this.placeholder = 'Password'") onfocus=("this.placeholder = ''") placeholder="Password" type="password" /
+            .col-md-12.form-group
+              input#name.form-control name="name" onblur=("this.placeholder = 'Username'") onfocus=("this.placeholder = ''") placeholder="Username" type="text" /
+            .col-md-12.form-group
+              input#name.form-control name="date" onblur=("this.placeholder = 'Date'") onfocus=("this.placeholder = ''") placeholder="Date of Birth" type="date" /
+            .col-md-12.form-group
+			  label.radio-inline
+			    input checked="" name="male" type="radio" Male
+			  label.radio-inline
+			    input name="femail" type="radio" style="margin-left: 100px;" Female
+            .col-md-12.form-group
+              button.primary-btn type="submit" value="submit"  Sign Up
+/! ================End Signup Box Area =================
