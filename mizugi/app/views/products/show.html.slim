@@ -1,18 +1,3 @@
-/! Start Banner Area
-section.banner-area.organic-breadcrumb
-  .container
-    .breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
-      .col-first
-        h1 Product Details Page
-        nav.d-flex.align-items-center
-          a href="index.html" 
-            | Home
-            span.lnr.lnr-arrow-right
-          a href="#" 
-            | Shop
-            span.lnr.lnr-arrow-right
-          a href="single-product.html"  product-details
-/! End Banner Area
 /! ================Single Product Area =================
 .product_image_area
   .container
@@ -245,7 +230,7 @@ section.product_description_area
               .review_item
                 .media
                   .d-flex
-                    img alt="" src="img/product/review-1.png" /
+                    = image_tag("product/review-1.png", alt: "")
                   .media-body
                     h4 Blake Ruiz
                     i.fa.fa-star
@@ -260,7 +245,7 @@ section.product_description_area
               .review_item
                 .media
                   .d-flex
-                    img alt="" src="img/product/review-2.png" /
+                    = image_tag("product/review-2.png", alt: "")
                   .media-body
                     h4 Blake Ruiz
                     i.fa.fa-star
@@ -275,7 +260,7 @@ section.product_description_area
               .review_item
                 .media
                   .d-flex
-                    img alt="" src="img/product/review-3.png" /
+                    = image_tag("product/review-3.png", alt: "")
                   .media-body
                     h4 Blake Ruiz
                     i.fa.fa-star
@@ -324,102 +309,4 @@ section.product_description_area
                 .col-md-12.text-right
                   button.primary-btn type="submit" value="submit"  Submit Now
 /! ================End Product Description Area =================
-/! Start related-product Area
-section.related-product-area.section_gap_bottom
-  .container
-    .row.justify-content-center
-      .col-lg-6.text-center
-        .section-title
-          h1 Deals of the Week
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            | magna aliqua.
-    .row
-      .col-lg-9
-        .row
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r1.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r2.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r3.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r5.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r6.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r7.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r9.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r10.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r11.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-      .col-lg-3
-        .ctg-right
-          a href="#" target="_blank" 
-            = image_tag("category/c5.jpg", alt: "", class: "img-fluid d-block mx-auto")
-/! End related-product Area
+
