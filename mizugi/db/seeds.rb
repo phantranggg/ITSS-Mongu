@@ -27,7 +27,7 @@ user.save!
 categories = [
    "Clothes",
    "Shoes",
-   "Equipment"
+   "Equipments"
 ]
 
 categories.each do |name|

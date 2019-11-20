@@ -1,43 +1,34 @@
-/! Start Banner Area
-section.banner-area.organic-breadcrumb
-  .container
-    .breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
-      .col-first
-        h1 Login/Register
-        nav.d-flex.align-items-center
-          a href="index.html" 
-            | Home
-            span.lnr.lnr-arrow-right
-          a href="category.html"  Login/Register
-/! End Banner Area
 /! ================Login Box Area =================
 section.login_box_area.section_gap
   .container
     .row
       .col-lg-6
         .login_box_img
-          img.img-fluid alt="" src="img/login.jpg" /
+          = image_tag("login.jpg", alt: "", class:"img-fluid")
           .hover
             h4 New to our website?
             p There are advances being made in science and technology everyday, and a good example of this is the
-            a.primary-btn href="signin.html"  Log in to your account
+            a.primary-btn href="/sign_in"  Log in to your account
       .col-lg-6
         .login_form_inner
           h3 Create new account
-          form#contactForm.row.login_form action="contact_process.php" method="post" novalidate="novalidate" 
-            .col-md-12.form-group
-              input#name.form-control name="email" onblur=("this.placeholder = 'Email'") onfocus=("this.placeholder = ''") placeholder="Email" type="email" /
-            .col-md-12.form-group
-              input#name.form-control name="password" onblur=("this.placeholder = 'Password'") onfocus=("this.placeholder = ''") placeholder="Password" type="password" /
-            .col-md-12.form-group
-              input#name.form-control name="name" onblur=("this.placeholder = 'Username'") onfocus=("this.placeholder = ''") placeholder="Username" type="text" /
-            .col-md-12.form-group
-              input#name.form-control name="date" onblur=("this.placeholder = 'Date'") onfocus=("this.placeholder = ''") placeholder="Date of Birth" type="date" /
-            .col-md-12.form-group
-			  label.radio-inline
-			    input checked="" name="male" type="radio" Male
-			  label.radio-inline
-			    input name="femail" type="radio" style="margin-left: 100px;" Female
-            .col-md-12.form-group
-              button.primary-btn type="submit" value="submit"  Sign Up
+          = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+            div#contactForm.row.login_form 
+              .col-md-12.form-group
+                = f.email_field :email, class: "form-control", placeholder: "Email"
+              .col-md-12.form-group
+                = f.password_field :password, class: "form-control", placeholder: "Password"
+              .col-md-12.form-group
+                = f.text_field :name, class: "form-control", placeholder: "Name"
+              .col-md-12.form-group
+                = f.date_field :birthday, class: "form-control", placeholder: "Birthday"
+              .col-md-12.form-group
+                label.radio-inline
+                  = f.radio_button :gender, '0'
+                  label for='gender_0' Male
+                label.radio-inline
+                  = f.radio_button :gender, '1', style: "margin-left: 100px;"
+                  label for='gender_1' Female
+              .col-md-12.form-group
+                = button_tag "Sign up", type: "submit", class: "primary-btn"
 /! ================End Signup Box Area =================
