@@ -1,8 +1,3 @@
-/! Start Banner Area
-section.banner-area.organic-breadcrumb
-  .container
-/! End Banner Area
-
 /! ================Single Product Area =================
 .product_image_area
   .container
@@ -17,34 +12,24 @@ section.banner-area.organic-breadcrumb
             = image_tag("category/s-p1.jpg", alt: "", class: "img-fluid")
       .col-lg-5.offset-lg-1
         .s_product_text
-          h3 Faded SkyBlu Denim Jeans
+          h3 = @product.name
           h2 $149.99
           ul.list
             li
               a.active href="#" 
                 span Category
-                | : Household
+                = @product.category.name
             li
               a href="#" 
                 span Availibility
-                | : In Stock
+                | In Stock
           p
-            | Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for
-            | something that can make your interior look awesome, and at the same time give you the pleasant warm feeling
-            | during the winter.
+            = @product.description
           .product_count
             label for="qty"  Quantity:
             input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
-            button.increase.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;") type="button" 
-              i.lnr.lnr-chevron-up
-            button.reduced.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;") type="button" 
-              i.lnr.lnr-chevron-down
           .card_area.d-flex.align-items-center
             a.primary-btn href="#"  Add to Cart
-            a.icon_btn href="#" 
-              i.lnr.lnr.lnr-diamond
-            a.icon_btn href="#" 
-              i.lnr.lnr.lnr-heart
 /! ================End Single Product Area =================
 /! ================Product Description Area =================
 section.product_description_area
@@ -53,9 +38,7 @@ section.product_description_area
       li.nav-item
         a#home-tab.nav-link aria-controls="home" aria-selected="true" data-toggle="tab" href="#home" role="tab"  Description
       li.nav-item
-        a#profile-tab.nav-link aria-controls="profile" aria-selected="false" data-toggle="tab" href="#profile" role="tab"  Specification
-      li.nav-item
-        a#review-tab.nav-link.active aria-controls="review" aria-selected="false" data-toggle="tab" href="#review" role="tab"  Comments
+        a#contact-tab.nav-link aria-controls="review" aria-selected="false" data-toggle="tab" href="#review" role="tab"  Comments
     #myTabContent.tab-content
       #home.tab-pane.fade aria-labelledby="home-tab" role="tabpanel" 
         p
@@ -75,50 +58,6 @@ section.product_description_area
           | the death of spouses or grown children leaving for college are all reasons that someone accustomed to cooking for
           | more than one would suddenly need to learn how to adjust all the cooking practices utilized before into a
           | streamlined plan of cooking that is more efficient for one person creating less
-      #profile.tab-pane.fade aria-labelledby="profile-tab" role="tabpanel" 
-        .table-responsive
-          table.table
-            tbody
-              tr
-                td
-                  h5 Width
-                td
-                  h5 128mm
-              tr
-                td
-                  h5 Height
-                td
-                  h5 508mm
-              tr
-                td
-                  h5 Depth
-                td
-                  h5 85mm
-              tr
-                td
-                  h5 Weight
-                td
-                  h5 52gm
-              tr
-                td
-                  h5 Quality checking
-                td
-                  h5 yes
-              tr
-                td
-                  h5 Freshness Duration
-                td
-                  h5 03days
-              tr
-                td
-                  h5 When packeting
-                td
-                  h5 Without touch of hand
-              tr
-                td
-                  h5 Each Box contains
-                td
-                  h5 60pcs
       #review.tab-pane.fade.show.active aria-labelledby="review-tab" role="tabpanel" 
         .row
           .col-lg-6
