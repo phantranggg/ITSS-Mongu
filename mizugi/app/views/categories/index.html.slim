@@ -3,429 +3,295 @@ section.banner-area.organic-breadcrumb
   .container
     .breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
       .col-first
-        h1 Product Details Page
-        nav.d-flex.align-items-center
-          a href="index.html" 
-            | Home
-            span.lnr.lnr-arrow-right
-          a href="#" 
-            | Shop
-            span.lnr.lnr-arrow-right
-          a href="single-product.html"  product-details
 /! End Banner Area
-/! ================Single Product Area =================
-.product_image_area
-  .container
-    .row.s_product_inner
-      .col-lg-6
-        .s_Product_carousel
-          .single-prd-item
-            img.img-fluid alt="" src="img/category/s-p1.jpg" /
-          .single-prd-item
-            img.img-fluid alt="" src="img/category/s-p1.jpg" /
-          .single-prd-item
-            img.img-fluid alt="" src="img/category/s-p1.jpg" /
-      .col-lg-5.offset-lg-1
-        .s_product_text
-          h3 Faded SkyBlu Denim Jeans
-          h2 $149.99
-          ul.list
-            li
-              a.active href="#" 
-                span Category
-                | \: Household
-            li
-              a href="#" 
-                span Availibility
-                | \: In Stock
-          p
-            | Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for
-            | something that can make your interior look awesome, and at the same time give you the pleasant warm feeling
-            | during the winter.
-          .product_count
-            label for="qty"  Quantity:
-            input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
-            button.increase.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;") type="button" 
-              i.lnr.lnr-chevron-up
-            button.reduced.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;") type="button" 
-              i.lnr.lnr-chevron-down
-          .card_area.d-flex.align-items-center
-            a.primary-btn href="#"  Add to Cart
-            a.icon_btn href="#" 
-              i.lnr.lnr.lnr-diamond
-            a.icon_btn href="#" 
-              i.lnr.lnr.lnr-heart
-/! ================End Single Product Area =================
-/! ================Product Description Area =================
-section.product_description_area
-  .container
-    ul#myTab.nav.nav-tabs role="tablist" 
-      li.nav-item
-        a#home-tab.nav-link aria-controls="home" aria-selected="true" data-toggle="tab" href="#home" role="tab"  Description
-      li.nav-item
-        a#profile-tab.nav-link aria-controls="profile" aria-selected="false" data-toggle="tab" href="#profile" role="tab"  Specification
-      li.nav-item
-        a#contact-tab.nav-link aria-controls="contact" aria-selected="false" data-toggle="tab" href="#contact" role="tab"  Comments
-      li.nav-item
-        a#review-tab.nav-link.active aria-controls="review" aria-selected="false" data-toggle="tab" href="#review" role="tab"  Reviews
-    #myTabContent.tab-content
-      #home.tab-pane.fade aria-labelledby="home-tab" role="tabpanel" 
-        p
-          | Beryl Cook is one of Britain’s most talented and amusing artists .Beryl’s pictures feature women of all shapes
-          | and sizes enjoying themselves .Born between the two world wars, Beryl Cook eventually left Kendrick School in
-          | Reading at the age of 15, where she went to secretarial school and then into an insurance office. After moving to
-          | London and then Hampton, she eventually married her next door neighbour from Reading, John Cook. He was an
-          | officer in the Merchant Navy and after he left the sea in 1956, they bought a pub for a year before John took a
-          | job in Southern Rhodesia with a motor company. Beryl bought their young son a box of watercolours, and when
-          | showing him how to use it, she decided that she herself quite enjoyed painting. John subsequently bought her a
-          | child’s painting set for her birthday and it was with this that she produced her first significant work, a
-          | half-length portrait of a dark-skinned lady with a vacant expression and large drooping breasts. It was aptly
-          | named ‘Hangover’ by Beryl’s husband and
-        p
-          | It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing
-          | more and more recipe books and Internet websites that are dedicated to the act of cooking for one. Divorce and
-          | the death of spouses or grown children leaving for college are all reasons that someone accustomed to cooking for
-          | more than one would suddenly need to learn how to adjust all the cooking practices utilized before into a
-          | streamlined plan of cooking that is more efficient for one person creating less
-      #profile.tab-pane.fade aria-labelledby="profile-tab" role="tabpanel" 
-        .table-responsive
-          table.table
-            tbody
-              tr
-                td
-                  h5 Width
-                td
-                  h5 128mm
-              tr
-                td
-                  h5 Height
-                td
-                  h5 508mm
-              tr
-                td
-                  h5 Depth
-                td
-                  h5 85mm
-              tr
-                td
-                  h5 Weight
-                td
-                  h5 52gm
-              tr
-                td
-                  h5 Quality checking
-                td
-                  h5 yes
-              tr
-                td
-                  h5 Freshness Duration
-                td
-                  h5 03days
-              tr
-                td
-                  h5 When packeting
-                td
-                  h5 Without touch of hand
-              tr
-                td
-                  h5 Each Box contains
-                td
-                  h5 60pcs
-      #contact.tab-pane.fade aria-labelledby="contact-tab" role="tabpanel" 
+
+.container
+  .row
+    .col-xl-3.col-lg-4.col-md-5
+      .sidebar-categories
+        .head Browse Categories
+        ul.main-categories
+          li.main-nav-list
+            a aria-controls="fruitsVegetable" aria-expanded="false" data-toggle="collapse" href="#fruitsVegetable" 
+              span.lnr.lnr-arrow-right
+              | Outfit
+              span.number (53)
+          li.main-nav-list
+            a aria-controls="meatFish" aria-expanded="false" data-toggle="collapse" href="#meatFish" 
+              span.lnr.lnr-arrow-right
+              | Shoe
+              span.number (53)
+          li.main-nav-list
+            a aria-controls="cooking" aria-expanded="false" data-toggle="collapse" href="#cooking" 
+              span.lnr.lnr-arrow-right
+              | Equipment
+              span.number (53)
+      .sidebar-filter.mt-50
+        .top-filter-head Product Filters
+        .common-filter
+          .head Brands
+          form action="#" 
+            ul
+              li.filter-list
+                input#apple.pixel-radio name="brand" type="radio" /
+                label for="apple" 
+                  | Nike
+                  span (29)
+              li.filter-list
+                input#asus.pixel-radio name="brand" type="radio" /
+                label for="asus" 
+                  | Vans
+                  span (29)
+              li.filter-list
+                input#gionee.pixel-radio name="brand" type="radio" /
+                label for="gionee" 
+                  | H&M
+                  span (19)
+              li.filter-list
+                input#micromax.pixel-radio name="brand" type="radio" /
+                label for="micromax" 
+                  | Canifa
+                  span (19)
+              li.filter-list
+                input#samsung.pixel-radio name="brand" type="radio" /
+                label for="samsung" 
+                  | The Blue
+                  span (19)
+        .common-filter
+          .head Color
+          form action="#" 
+            ul
+              li.filter-list
+                input#black.pixel-radio name="color" type="radio" /
+                label for="black" 
+                  | Black
+                  span (29)
+              li.filter-list
+                input#balckleather.pixel-radio name="color" type="radio" /
+                label for="balckleather" 
+                  | Black
+                  | Leather
+                  span (29)
+              li.filter-list
+                input#blackred.pixel-radio name="color" type="radio" /
+                label for="blackred" 
+                  | Black
+                  | with red
+                  span (19)
+              li.filter-list
+                input#gold.pixel-radio name="color" type="radio" /
+                label for="gold" 
+                  | Gold
+                  span (19)
+              li.filter-list
+                input#spacegrey.pixel-radio name="color" type="radio" /
+                label for="spacegrey" 
+                  | Spacegrey
+                  span (19)
+        .common-filter
+          .head Price
+          .price-range-area
+            #price-range
+            .value-wrapper.d-flex
+              .price Price:
+              span $
+              #lower-value
+              .to to
+              span $
+              #upper-value
+    .col-xl-9.col-lg-8.col-md-7
+      /! Start Filter Bar
+      .filter-bar.d-flex.flex-wrap.align-items-center
+        .sorting
+          select
+            option value="1"  Default sorting
+            option value="1"  Default sorting
+            option value="1"  Default sorting
+        .sorting.mr-auto
+          select
+            option value="1"  Show 12
+            option value="1"  Show 12
+            option value="1"  Show 12
+        .pagination
+          a.prev-arrow href="#" 
+            i.fa.fa-long-arrow-left aria-hidden="true" 
+          a.active href="#"  1
+          a href="#"  2
+          a href="#"  3
+          a.dot-dot href="#" 
+            i.fa.fa-ellipsis-h aria-hidden="true" 
+          a href="#"  6
+          a.next-arrow href="#" 
+            i.fa.fa-long-arrow-right aria-hidden="true" 
+      /! End Filter Bar
+      /! Start Best Seller
+      section.lattest-product-area.pb-40.category-list
         .row
-          .col-lg-6
-            .comment_list
-              .review_item
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-1.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    h5 12th Feb, 2018 at 05:56 pm
-                    a.reply_btn href="#"  Reply
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-              .review_item.reply
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-2.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    h5 12th Feb, 2018 at 05:56 pm
-                    a.reply_btn href="#"  Reply
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-              .review_item
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-3.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    h5 12th Feb, 2018 at 05:56 pm
-                    a.reply_btn href="#"  Reply
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-          .col-lg-6
-            .review_box
-              h4 Post a comment
-              form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate" 
-                .col-md-12
-                  .form-group
-                    input#name.form-control name="name" placeholder=("Your Full name") type="text" /
-                .col-md-12
-                  .form-group
-                    input#email.form-control name="email" placeholder=("Email Address") type="email" /
-                .col-md-12
-                  .form-group
-                    input#number.form-control name="number" placeholder=("Phone Number") type="text" /
-                .col-md-12
-                  .form-group
-                    textarea#message.form-control name="message" placeholder="Message" rows="1" 
-                .col-md-12.text-right
-                  button.btn.primary-btn type="submit" value="submit"  Submit Now
-      #review.tab-pane.fade.show.active aria-labelledby="review-tab" role="tabpanel" 
-        .row
-          .col-lg-6
-            .row.total_rate
-              .col-6
-                .box_total
-                  h5 Overall
-                  h4 4.0
-                  h6 (03 Reviews)
-              .col-6
-                .rating_list
-                  h3 Based on 3 Reviews
-                  ul.list
-                    li
-                      a href="#" 
-                        | 5 Star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
-                    li
-                      a href="#" 
-                        | 4 Star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
-                    li
-                      a href="#" 
-                        | 3 Star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
-                    li
-                      a href="#" 
-                        | 2 Star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
-                    li
-                      a href="#" 
-                        | 1 Star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
-            .review_list
-              .review_item
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-1.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-              .review_item
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-2.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-              .review_item
-                .media
-                  .d-flex
-                    img alt="" src="img/product/review-3.png" /
-                  .media-body
-                    h4 Blake Ruiz
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
-          .col-lg-6
-            .review_box
-              h4 Add a Review
-              p Your Rating:
-              ul.list
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-              p Outstanding
-              form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate" 
-                .col-md-12
-                  .form-group
-                    input#name.form-control name="name" onblur=("this.placeholder = 'Your Full name'") onfocus=("this.placeholder = ''") placeholder=("Your Full name") type="text" /
-                .col-md-12
-                  .form-group
-                    input#email.form-control name="email" onblur=("this.placeholder = 'Email Address'") onfocus=("this.placeholder = ''") placeholder=("Email Address") type="email" /
-                .col-md-12
-                  .form-group
-                    input#number.form-control name="number" onblur=("this.placeholder = 'Phone Number'") onfocus=("this.placeholder = ''") placeholder=("Phone Number") type="text" /
-                .col-md-12
-                  .form-group
-                    textarea#message.form-control name="message" onblur=("this.placeholder = 'Review'") onfocus=("this.placeholder = ''") placeholder="Review" rows="1" 
-                .col-md-12.text-right
-                  button.primary-btn type="submit" value="submit"  Submit Now
-/! ================End Product Description Area =================
+          /! single product
+          .col-lg-4.col-md-6
+            .single-product
+              = image_tag("product/p1.jpg", alt: "", class: "img-fluid")
+              .product-details
+                h6
+                  | addidas New Hammer sole
+                  | for Sports person
+                .price
+                  h6 $150.00
+                  h6.l-through $210.00
+                .prd-bottom
+                  a.social-info href="" 
+                    span.ti-bag
+                  p.hover-text add to bag
+                  a.social-info href="" 
+                    span.lnr.lnr-heart
+                  p.hover-text Wishlist
+                  a.social-info href="" 
+                    span.lnr.lnr-sync
+                  p.hover-text compare
+                  a.social-info href="" 
+                    span.lnr.lnr-move
+                  p.hover-text view more
+          /! single product
+          .col-lg-4.col-md-6
+            .single-product
+              = image_tag("product/p2.jpg", alt: "", class: "img-fluid")
+              .product-details
+                h6
+                  | addidas New Hammer sole
+                  | for Sports person
+                .price
+                  h6 $150.00
+                  h6.l-through $210.00
+                .prd-bottom
+                  a.social-info href="" 
+                    span.ti-bag
+                  p.hover-text add to bag
+                  a.social-info href="" 
+                    span.lnr.lnr-heart
+                  p.hover-text Wishlist
+                  a.social-info href="" 
+                    span.lnr.lnr-sync
+                  p.hover-text compare
+                  a.social-info href="" 
+                    span.lnr.lnr-move
+                  p.hover-text view more
+          /! single product
+          .col-lg-4.col-md-6
+            .single-product
+              = image_tag("product/p3.jpg", alt: "", class: "img-fluid")
+              .product-details
+                h6
+                  | addidas New Hammer sole
+                  | for Sports person
+                .price
+                  h6 $150.00
+                  h6.l-through $210.00
+                .prd-bottom
+                  a.social-info href="" 
+                    span.ti-bag
+                  p.hover-text add to bag
+                  a.social-info href="" 
+                    span.lnr.lnr-heart
+                  p.hover-text Wishlist
+                  a.social-info href="" 
+                    span.lnr.lnr-sync
+                  p.hover-text compare
+                  a.social-info href="" 
+                    span.lnr.lnr-move
+                  p.hover-text view more
+          /! single product
+          .col-lg-4.col-md-6
+            .single-product
+              = image_tag("product/p4.jpg", alt: "", class: "img-fluid")
+              .product-details
+                h6
+                  | addidas New Hammer sole
+                  | for Sports person
+                .price
+                  h6 $150.00
+                  h6.l-through $210.00
+                .prd-bottom
+                  a.social-info href="" 
+                    span.ti-bag
+                  p.hover-text add to bag
+                  a.social-info href="" 
+                    span.lnr.lnr-heart
+                  p.hover-text Wishlist
+                  a.social-info href="" 
+                    span.lnr.lnr-sync
+                  p.hover-text compare
+                  a.social-info href="" 
+                    span.lnr.lnr-move
+                  p.hover-text view more
+          /! single product
+          .col-lg-4.col-md-6
+            .single-product
+              = image_tag("product/p5.jpg", alt: "", class: "img-fluid")
+              .product-details
+                h6
+                  | addidas New Hammer sole
+                  | for Sports person
+                .price
+                  h6 $150.00
+                  h6.l-through $210.00
+                .prd-bottom
+                  a.social-info href="" 
+                    span.ti-bag
+                  p.hover-text add to bag
+                  a.social-info href="" 
+                    span.lnr.lnr-heart
+                  p.hover-text Wishlist
+                  a.social-info href="" 
+                    span.lnr.lnr-sync
+                  p.hover-text compare
+                  a.social-info href="" 
+                    span.lnr.lnr-move
+                  p.hover-text view more
+          /! single product
+          .col-lg-4.col-md-6
+            .single-product
+              = image_tag("product/p6.jpg", alt: "", class: "img-fluid")
+              .product-details
+                h6
+                  | addidas New Hammer sole
+                  | for Sports person
+                .price
+                  h6 $150.00
+                  h6.l-through $210.00
+                .prd-bottom
+                  a.social-info href="" 
+                    span.ti-bag
+                  p.hover-text add to bag
+                  a.social-info href="" 
+                    span.lnr.lnr-heart
+                  p.hover-text Wishlist
+                  a.social-info href="" 
+                    span.lnr.lnr-sync
+                  p.hover-text compare
+                  a.social-info href="" 
+                    span.lnr.lnr-move
+                  p.hover-text view more
+      /! End Best Seller
+      /! Start Filter Bar
+      .filter-bar.d-flex.flex-wrap.align-items-center
+        .sorting.mr-auto
+          select
+            option value="1"  Show 12
+            option value="1"  Show 12
+            option value="1"  Show 12
+        .pagination
+          a.prev-arrow href="#" 
+            i.fa.fa-long-arrow-left aria-hidden="true" 
+          a.active href="#"  1
+          a href="#"  2
+          a href="#"  3
+          a.dot-dot href="#" 
+            i.fa.fa-ellipsis-h aria-hidden="true" 
+          a href="#"  6
+          a.next-arrow href="#" 
+            i.fa.fa-long-arrow-right aria-hidden="true" 
+      /! End Filter Bar
 /! Start related-product Area
-section.related-product-area.section_gap_bottom
+section.related-product-area.section_gap
   .container
     .row.justify-content-center
-      .col-lg-6.text-center
-        .section-title
-          h1 Deals of the Week
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            | magna aliqua.
-    .row
-      .col-lg-9
-        .row
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r1.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r2.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r3.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r5.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r6.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r7.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r9.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r10.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r11.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-      .col-lg-3
-        .ctg-right
-          a href="#" target="_blank" 
-            img.img-fluid.d-block.mx-auto alt="" src="img/category/c5.jpg" /
-/! End related-product Area
