@@ -8,7 +8,10 @@ $(document).ready(function(){
 	header_height_static = $(".site-header.static").outerHeight(),
 	fitscreen 			 = window_height - header_height;
 
-
+  $.fn.andSelf = function() {
+    return this.addBack.apply(this, arguments);
+  } 
+  
 	$(".fullscreen").css("height", window_height)
     $(".fitscreen").css("height", fitscreen);
 
@@ -54,7 +57,7 @@ $(document).ready(function(){
         autoplayTimeout: 5000,
         loop:true,
         nav:true,
-        navText:["<img src='img/banner/prev.png'>","<img src='img/banner/next.png'>"],
+        navText:["<img src='/assets/banner/prev.png'>","<img src='/assets/banner/next.png'>"],
         dots:false
     });
 
@@ -67,7 +70,7 @@ $(document).ready(function(){
         autoplayTimeout: 5000,
         loop:true,
         nav:true,
-        navText:["<img src='img/product/prev.png'>","<img src='img/product/next.png'>"],
+        navText:["<img src='/assets/product/prev.png'>","<img src='/assets/product/next.png'>"],
         dots:false
     });
 
@@ -92,7 +95,7 @@ $(document).ready(function(){
         autoplayTimeout: 5000,
         loop:true,
         nav:true,
-        navText:["<img src='img/product/prev.png'>","<img src='img/product/next.png'>"],
+        navText:["<img src='/assets/product/prev.png'>","<img src='/assets/product/next.png'>"],
         dots:false
     });
 
