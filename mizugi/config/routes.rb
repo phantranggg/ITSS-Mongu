@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   root to: 'products#index'
   
   get '/cart', to: 'carts#index'
+  resources :categories
   get '/category', to: 'categories#index'
   get '/checkout', to: 'payments#checkout'
   

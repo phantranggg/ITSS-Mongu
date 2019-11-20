@@ -1,8 +1,3 @@
-/! Start Banner Area
-section.banner-area.organic-breadcrumb
-  .container
-/! End Banner Area
-
 /! ================Single Product Area =================
 .product_image_area
   .container
@@ -31,10 +26,6 @@ section.banner-area.organic-breadcrumb
           p
             = @product.description
           .product_count
-            label for="qty"  Color:
-            - @product_colors.each do |color|
-              div style="background-color: #{color}; height: 20px; width: 20px; border: 1px solid black; display: inline-block"
-            br
             label for="qty"  Quantity:
             input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
           .card_area.d-flex.align-items-center
@@ -47,7 +38,7 @@ section.product_description_area
       li.nav-item
         a#home-tab.nav-link aria-controls="home" aria-selected="true" data-toggle="tab" href="#home" role="tab"  Description
       li.nav-item
-        a#contact-tab.nav-link aria-controls="contact" aria-selected="false" data-toggle="tab" href="#contact" role="tab"  Comments
+        a#contact-tab.nav-link aria-controls="review" aria-selected="false" data-toggle="tab" href="#review" role="tab"  Comments
     #myTabContent.tab-content
       #home.tab-pane.fade aria-labelledby="home-tab" role="tabpanel" 
         p
