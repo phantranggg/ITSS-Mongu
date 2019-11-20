@@ -16,5 +16,6 @@ class ProductsController < ApplicationController
   
   def set_products_data
     @products = Product.all
+    @latest_products = Product.includes(:product_feature).order(created_at: :desc)
   end
 end
