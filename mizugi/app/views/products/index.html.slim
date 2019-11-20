@@ -12,10 +12,6 @@ section.banner-area
                   | NEW COLLECTION
                 h4
                   | Welcome to Mizugi, your shopping destination for fashion online. We offer fashion and quality at the best price in a more sustainable way.
-                .add-bag.d-flex.align-items-center
-                  a.add-btn href="" 
-                    span.lnr.lnr-cross
-                  span.add-text.text-uppercase Add to Bag
             .col-lg-7
               .banner-img
                 = image_tag("banner/banner-img.png", alt: "", class: "img-fluid")
@@ -28,10 +24,6 @@ section.banner-area
                 h4
                   | Mizugi provides the latest fashions at great prices for couples.
                   | We delivers innovative products, experiences and services to inspire athletes.
-                .add-bag.d-flex.align-items-center
-                  a.add-btn href="" 
-                    span.lnr.lnr-cross
-                  span.add-text.text-uppercase Add to Bag
             .col-lg-7
               .banner-img
                 = image_tag("banner/banner-img.png", alt: "", class: "img-fluid")
@@ -515,61 +507,6 @@ section.owl-carousel.active-product-area.section_gap
                   span.lnr.lnr-move
                   p.hover-text view more
 /! end product Area
-/! Start exclusive deal Area
-section.exclusive-deal-area
-  .container-fluid
-    .row.justify-content-center.align-items-center
-      .col-lg-6.no-padding.exclusive-left
-        #clockdiv.row.clock_sec.clockdiv
-          .col-lg-12
-            h1 Exclusive Hot Deal Ends Soon!
-            p Who are in extremely love with eco friendly system.
-          .col-lg-12
-            .row.clock-wrap
-              .col.clockinner1.clockinner
-                h1.days 150
-                span.smalltext Days
-              .col.clockinner.clockinner1
-                h1.hours 23
-                span.smalltext Hours
-              .col.clockinner.clockinner1
-                h1.minutes 47
-                span.smalltext Mins
-              .col.clockinner.clockinner1
-                h1.seconds 59
-                span.smalltext Secs
-        a.primary-btn href=""  Shop Now
-      .col-lg-6.no-padding.exclusive-right
-        .active-exclusive-product-slider
-          /! single exclusive carousel
-          .single-exclusive-slider
-            = image_tag("product/e-p1.png", alt: "", class: "img-fluid")
-            .product-details
-              .price
-                h6 $150.00
-                h6.l-through $210.00
-              h4
-                | addidas New Hammer sole
-                | for Sports person
-              .add-bag.d-flex.align-items-center.justify-content-center
-                a.add-btn href="" 
-                  span.ti-bag
-                span.add-text.text-uppercase Add to Bag
-          /! single exclusive carousel
-          .single-exclusive-slider
-            = image_tag("product/e-p1.png", alt: "", class: "img-fluid")
-            .product-details
-              .price
-                h6 $150.00
-                h6.l-through $210.00
-              h4
-                | addidas New Hammer sole
-                | for Sports person
-              .add-bag.d-flex.align-items-center.justify-content-center
-                a.add-btn href="" 
-                  span.ti-bag
-                span.add-text.text-uppercase Add to Bag
-/! End exclusive deal Area
 /! Start brand Area
 section.brand-area.section_gap
   .container
@@ -585,100 +522,3 @@ section.brand-area.section_gap
       a.col.single-img href="#" 
         = image_tag("brand/5.png", alt: "", class: "img-fluid d-block mx-auto")
 /! End brand Area
-/! Start related-product Area
-section.related-product-area.section_gap_bottom
-  .container
-    .row.justify-content-center
-      .col-lg-6.text-center
-        .section-title
-          h1 Deals of the Week
-          p
-    .row
-      .col-lg-9
-        .row
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r1.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r2.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r3.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r5.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r6.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6.mb-20
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r7.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r9.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r10.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-          .col-lg-4.col-md-4.col-sm-6
-            .single-related-product.d-flex
-              a href="#" 
-                img alt="" src="img/r11.jpg" /
-              .desc
-                a.title href="#"  Black lace Heels
-                .price
-                  h6 $189.00
-                  h6.l-through $210.00
-      .col-lg-3
-        .ctg-right
-          a href="#" target="_blank" 
-            = image_tag("category/c5.jpg", alt: "", class: "img-fluid d-block mx-auto")
-/! End related-product Area
