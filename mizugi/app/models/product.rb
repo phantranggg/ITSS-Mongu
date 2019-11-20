@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :category
+  has_many :product_feature
   mount_uploaders :images, ImageUploader
   serialize :images, JSON
   
