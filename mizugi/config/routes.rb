@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'products/index'
   resources :products
   root to: 'products#index'
+  
   get '/cart', to: 'carts#index'
   get '/category', to: 'categories#index'
   get '/checkout', to: 'payments#checkout'

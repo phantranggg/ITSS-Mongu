@@ -1,219 +1,425 @@
-section
-	link href="/css/product_detail/star.css" rel='stylesheet' type='text/css'
-	link href="/css/product_detail/product_recommend_slider.css" rel='stylesheet' type='text/css'
-	div.container
-		div.row
-			div.col-sm-3
-				div.left-sidebar
-					h2 Category
-					div class="panel-group category-products" id="accordian"
-						div class="panel panel-default"
-							div.panel-heading
-								h4.panel-title
-									a data-toggle="collapse" data-parent="#accordian" href="#sportswear"
-										span class="badge pull-right"
-										  i class="fa fa-plus"
-										= "Sportswear"
-						
-						div class="panel panel-default"
-							div.panel-heading
-								h4.panel-title
-									a data-toggle="collapse" data-parent="#accordian" href="#sportswear"
-										span class="badge pull-right"
-										  i class="fa fa-plus"
-										= "Gym device"
-
-						div class="panel panel-default"
-							div class="panel-heading"
-								h4 class="panel-title"
-								  a href="#" Shoes
-
-						
-						
-						div class="panel panel-default"
-							div class="panel-heading"
-								h4 class="panel-title"
-								  a href="#" Fashion
-					div.price-range
-						h2 Price Range
-						div class="well text-center"
-							 input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" idg="sl2"
-							 br
-							 b.pull-left $ 0
-							 b.pull-right $ 600
-			div class="col-sm-9 padding-right"
-				div.row
-					div.product-details
-						div.col-sm-5
-							div.view-product
-								= image_tag("default_item.jpg", alt: "default_item")
-
-
-
-						div.col-sm-7
-							div.product-information
-								h3  align="left" style='margin-left: 1px;border:1px' COUPLE CLOTHER FOR GYM 
-								span
-								 span 100.000
-								span
-								ul.ratings
-								  
-								  span 
-								  li.star
-								  li.star
-								  li.star
-								  li.star
-								  li#star1.star
-
-								h3 align="left"  style="font-size:20px;padding-bottom:15px" 1.02 Start / 78 Review
-								p
-								label 
-									h5 style='margin-left: 1px;border:1px' Maker 
-								span 
-								= image_tag("maker_logo/shein.png", alt: "default_item",height:"20px", :style => 'margin-left: 1px;')
-								p
-								 label
-								p
-								label 
-								 h5 Max amount  20
-								p
-								label 
-								 h5 Max amount  
-								 button class="btn btn-default bootstrap-touchspin-up" type="button" style = "margin-bottom:8px;height:32px;border:1px solid #DEDEDC" S
-								 button class="btn btn-default bootstrap-touchspin-up" type="button" style = "margin-bottom:8px;height:32px;border:1px solid #DEDEDC" M
-								 button class="btn btn-default bootstrap-touchspin-up" type="button" style = "margin-bottom:8px;height:32px;border:1px solid #DEDEDC" L
-								 button class="btn btn-default bootstrap-touchspin-up" type="button" style = "margin-bottom:8px;height:32px;border:1px solid #DEDEDC" XL
-								 
-								p
-								label 
-								 h5 Color  
-								 = image_tag("color/gray.png", alt: "default_item",height:"20px", :style => 'margin-left: 1px;')
-								p
-								span
-								 label 
-								 	h5 Quantity
-								 button class="btn btn-default bootstrap-touchspin-up" type="button" style = "margin-bottom:8px;height:32px;border:1px solid #DEDEDC" -
-								 input style = "margin-bottom:8px;height:32px;border:1px solid #DEDEDC" type="text" value="3" 
-								 button class="btn btn-default bootstrap-touchspin-up" type="button" style = "margin-bottom:8px;height:32px;border:1px solid #DEDEDC" +
-								 button type="button" class="btn btn-fefault cart"
-									 i class="fa fa-shopping-cart"
-									 = "Add to cart"
-								p
-								span 
-									h5 Description
-								p
-								 Cut with the adorable camo design for a modern look, these jogger pants are edgy with the chain hooked at the waist and the flap pockets at both sides for a utilitarian function, which is finished with the high-rise cut making it perfectly going with your favorite crop tops to complete the look.
-									
-
-					div.col-sm-4
-							
-			div.row
-				div.col-sm-1
-				div.col-sm-10
-					link#bootstrap-css href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" /
-					script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" 
-					script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" 
-					/! ---- Include the above in your HEAD tag --------
-					script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js" 
-					.container
-					  h2 Some recommend product for you
-					  section.customer-logos.slider
-					    .slide
-					      = image_tag("products/1.jpg", alt: "default_item")
-					      h2
-						    = 99.000
-						  p
-						    = "couple clother for gym"
-						.slide
-					      = image_tag("products/2.jpg", alt: "default_item")
-					      h2
-						    = 199.000
-						  p
-						    = "love couple gym clother"
-						.slide
-					      = image_tag("products/3.jpg", alt: "default_item")
-					      h2
-						    = 299.000
-						  p
-						    = "couple gym clother"
-						
-						.slide
-					      = image_tag("products/5.jpg", alt: "default_item")
-					      h2
-						    = 399.000
-						  p
-						    = "couple gym clother"
-						.slide
-					      = image_tag("products/1.jpg", alt: "default_item")
-					      h2
-						    = 499.000
-						  p
-						    = "couple clother for gym"
-						.slide
-					      = image_tag("products/2.jpg", alt: "default_item")
-					      h2
-						    = 59.000
-						  p
-						    = "couple gym clother"
-						.slide
-					      = image_tag("products/3.jpg", alt: "default_item")
-					      h2
-						    = 59.000
-						  p
-						    = "couple clother for gym"
-						
-						
-						
-					    
-					  
-				div.col-sm-1
-		p
-		p
-		p
-		br/
-		br/
-		br/
-		div.row
-			.col-sm-1
-			.col-sm-10
-			  .panel.panel-default 
-			    .panel-heading style = "padding:2px;"
-			      
-			      
-			    .panel-body
-			    	div.row
-			    	 .col-sm-2
-			    	  = image_tag("avatar/avatar1.png", alt: "default_item",height:"50px")
-			    	  strong style = "margin: 10px" Marinla Da
-
-			    	 .col-sm-1	
-			    	 .col-sm-9
-			    	  span  It is a bit big but it looks so cute! the chain is cheap material so I dont suggest wearing it because the chains sometimes stick out. the material of the pants is a bit stiff but it looks good
-			    	  h6.text-muted  commented 5 days ago
-			  .panel.panel-default
-			    .panel-heading style = "padding:2px;"	
-			      
-			      
-			    .panel-body
-			    	div.row
-			    	 .col-sm-2
-			    	  = image_tag("avatar/avatar2.png", alt: "default_item",height:"50px")
-			    	  strong style = "margin: 10px" David Khao
-			    	 .col-sm-1	
-			    	 .col-sm-9
-			    	  span  It is a bit big but it looks so cute! the chain is cheap material so I dont suggest wearing it because the chains sometimes stick out. the material of the pants is a bit stiff but it looks good
-			    	  h6.text-muted  commented 5 days ago
-
-			  .panel.panel-default
-			    .panel-heading style = "padding:2px;"	
-			      
-			      
-			    .panel-body
-			    	div.row
-			    	 .col-sm-2
-			    	  = image_tag("avatar/avatar3.png", alt: "default_item",height:"50px")
-			    	  strong style = "margin: 10px" David Khao
-			    	 .col-sm-1	
-			    	 .col-sm-9
-			    	  textarea style = "witdh:800px;height:50px;background-color:white;border:1px solid #F5F5F5"	
-
+/! Start Banner Area
+section.banner-area.organic-breadcrumb
+  .container
+    .breadcrumb-banner.d-flex.flex-wrap.align-items-center.justify-content-end
+      .col-first
+        h1 Product Details Page
+        nav.d-flex.align-items-center
+          a href="index.html" 
+            | Home
+            span.lnr.lnr-arrow-right
+          a href="#" 
+            | Shop
+            span.lnr.lnr-arrow-right
+          a href="single-product.html"  product-details
+/! End Banner Area
+/! ================Single Product Area =================
+.product_image_area
+  .container
+    .row.s_product_inner
+      .col-lg-6
+        .s_Product_carousel
+          .single-prd-item
+            = image_tag("category/s-p1.jpg", alt: "", class: "img-fluid")
+          .single-prd-item
+            = image_tag("category/s-p1.jpg", alt: "", class: "img-fluid")
+          .single-prd-item
+            = image_tag("category/s-p1.jpg", alt: "", class: "img-fluid")
+      .col-lg-5.offset-lg-1
+        .s_product_text
+          h3 Faded SkyBlu Denim Jeans
+          h2 $149.99
+          ul.list
+            li
+              a.active href="#" 
+                span Category
+                | : Household
+            li
+              a href="#" 
+                span Availibility
+                | : In Stock
+          p
+            | Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for
+            | something that can make your interior look awesome, and at the same time give you the pleasant warm feeling
+            | during the winter.
+          .product_count
+            label for="qty"  Quantity:
+            input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
+            button.increase.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;") type="button" 
+              i.lnr.lnr-chevron-up
+            button.reduced.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;") type="button" 
+              i.lnr.lnr-chevron-down
+          .card_area.d-flex.align-items-center
+            a.primary-btn href="#"  Add to Cart
+            a.icon_btn href="#" 
+              i.lnr.lnr.lnr-diamond
+            a.icon_btn href="#" 
+              i.lnr.lnr.lnr-heart
+/! ================End Single Product Area =================
+/! ================Product Description Area =================
+section.product_description_area
+  .container
+    ul#myTab.nav.nav-tabs role="tablist" 
+      li.nav-item
+        a#home-tab.nav-link aria-controls="home" aria-selected="true" data-toggle="tab" href="#home" role="tab"  Description
+      li.nav-item
+        a#profile-tab.nav-link aria-controls="profile" aria-selected="false" data-toggle="tab" href="#profile" role="tab"  Specification
+      li.nav-item
+        a#contact-tab.nav-link aria-controls="contact" aria-selected="false" data-toggle="tab" href="#contact" role="tab"  Comments
+      li.nav-item
+        a#review-tab.nav-link.active aria-controls="review" aria-selected="false" data-toggle="tab" href="#review" role="tab"  Reviews
+    #myTabContent.tab-content
+      #home.tab-pane.fade aria-labelledby="home-tab" role="tabpanel" 
+        p
+          | Beryl Cook is one of Britain’s most talented and amusing artists .Beryl’s pictures feature women of all shapes
+          | and sizes enjoying themselves .Born between the two world wars, Beryl Cook eventually left Kendrick School in
+          | Reading at the age of 15, where she went to secretarial school and then into an insurance office. After moving to
+          | London and then Hampton, she eventually married her next door neighbour from Reading, John Cook. He was an
+          | officer in the Merchant Navy and after he left the sea in 1956, they bought a pub for a year before John took a
+          | job in Southern Rhodesia with a motor company. Beryl bought their young son a box of watercolours, and when
+          | showing him how to use it, she decided that she herself quite enjoyed painting. John subsequently bought her a
+          | child’s painting set for her birthday and it was with this that she produced her first significant work, a
+          | half-length portrait of a dark-skinned lady with a vacant expression and large drooping breasts. It was aptly
+          | named ‘Hangover’ by Beryl’s husband and
+        p
+          | It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing
+          | more and more recipe books and Internet websites that are dedicated to the act of cooking for one. Divorce and
+          | the death of spouses or grown children leaving for college are all reasons that someone accustomed to cooking for
+          | more than one would suddenly need to learn how to adjust all the cooking practices utilized before into a
+          | streamlined plan of cooking that is more efficient for one person creating less
+      #profile.tab-pane.fade aria-labelledby="profile-tab" role="tabpanel" 
+        .table-responsive
+          table.table
+            tbody
+              tr
+                td
+                  h5 Width
+                td
+                  h5 128mm
+              tr
+                td
+                  h5 Height
+                td
+                  h5 508mm
+              tr
+                td
+                  h5 Depth
+                td
+                  h5 85mm
+              tr
+                td
+                  h5 Weight
+                td
+                  h5 52gm
+              tr
+                td
+                  h5 Quality checking
+                td
+                  h5 yes
+              tr
+                td
+                  h5 Freshness Duration
+                td
+                  h5 03days
+              tr
+                td
+                  h5 When packeting
+                td
+                  h5 Without touch of hand
+              tr
+                td
+                  h5 Each Box contains
+                td
+                  h5 60pcs
+      #contact.tab-pane.fade aria-labelledby="contact-tab" role="tabpanel" 
+        .row
+          .col-lg-6
+            .comment_list
+              .review_item
+                .media
+                  .d-flex
+            		= image_tag("product/review-1.png", alt: "", class: "img-fluid")
+                  .media-body
+                    h4 Blake Ruiz
+                    h5 12th Feb, 2018 at 05:56 pm
+                    a.reply_btn href="#"  Reply
+                p
+                  | Love it <3<3<3
+              .review_item.reply
+                .media
+                  .d-flex
+            		= image_tag("product/review-2.png", alt: "", class: "img-fluid")
+                  .media-body
+                    h4 Blake Ruiz
+                    h5 12th Feb, 2018 at 05:56 pm
+                    a.reply_btn href="#"  Reply
+                p
+                  | Love it <3<3<3
+              .review_item
+                .media
+                  .d-flex
+            		= image_tag("product/review-3.png", alt: "", class: "img-fluid")
+                  .media-body
+                    h4 Blake Ruiz
+                    h5 12th Feb, 2018 at 05:56 pm
+                    a.reply_btn href="#"  Reply
+                p
+                  | Love it <3<3<3
+          .col-lg-6
+            .review_box
+              h4 Post a comment
+              form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate" 
+                .col-md-12
+                  .form-group
+                    input#name.form-control name="name" placeholder=("Your Full name") type="text" /
+                .col-md-12
+                  .form-group
+                    input#email.form-control name="email" placeholder=("Email Address") type="email" /
+                .col-md-12
+                  .form-group
+                    input#number.form-control name="number" placeholder=("Phone Number") type="text" /
+                .col-md-12
+                  .form-group
+                    textarea#message.form-control name="message" placeholder="Message" rows="1" 
+                .col-md-12.text-right
+                  button.btn.primary-btn type="submit" value="submit"  Submit Now
+      #review.tab-pane.fade.show.active aria-labelledby="review-tab" role="tabpanel" 
+        .row
+          .col-lg-6
+            .row.total_rate
+              .col-6
+                .box_total
+                  h5 Overall
+                  h4 4.0
+                  h6 (03 Reviews)
+              .col-6
+                .rating_list
+                  h3 Based on 3 Reviews
+                  ul.list
+                    li
+                      a href="#" 
+                        | 5 Star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        | 01
+                    li
+                      a href="#" 
+                        | 4 Star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        | 01
+                    li
+                      a href="#" 
+                        | 3 Star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        | 01
+                    li
+                      a href="#" 
+                        | 2 Star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        | 01
+                    li
+                      a href="#" 
+                        | 1 Star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        | 01
+            .review_list
+              .review_item
+                .media
+                  .d-flex
+                    img alt="" src="img/product/review-1.png" /
+                  .media-body
+                    h4 Blake Ruiz
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  | commodo
+              .review_item
+                .media
+                  .d-flex
+                    img alt="" src="img/product/review-2.png" /
+                  .media-body
+                    h4 Blake Ruiz
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  | commodo
+              .review_item
+                .media
+                  .d-flex
+                    img alt="" src="img/product/review-3.png" /
+                  .media-body
+                    h4 Blake Ruiz
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  | commodo
+          .col-lg-6
+            .review_box
+              h4 Add a Review
+              p Your Rating:
+              ul.list
+                li
+                  a href="#" 
+                    i.fa.fa-star
+                li
+                  a href="#" 
+                    i.fa.fa-star
+                li
+                  a href="#" 
+                    i.fa.fa-star
+                li
+                  a href="#" 
+                    i.fa.fa-star
+                li
+                  a href="#" 
+                    i.fa.fa-star
+              p Outstanding
+              form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate" 
+                .col-md-12
+                  .form-group
+                    input#name.form-control name="name" onblur=("this.placeholder = 'Your Full name'") onfocus=("this.placeholder = ''") placeholder=("Your Full name") type="text" /
+                .col-md-12
+                  .form-group
+                    input#email.form-control name="email" onblur=("this.placeholder = 'Email Address'") onfocus=("this.placeholder = ''") placeholder=("Email Address") type="email" /
+                .col-md-12
+                  .form-group
+                    input#number.form-control name="number" onblur=("this.placeholder = 'Phone Number'") onfocus=("this.placeholder = ''") placeholder=("Phone Number") type="text" /
+                .col-md-12
+                  .form-group
+                    textarea#message.form-control name="message" onblur=("this.placeholder = 'Review'") onfocus=("this.placeholder = ''") placeholder="Review" rows="1" 
+                .col-md-12.text-right
+                  button.primary-btn type="submit" value="submit"  Submit Now
+/! ================End Product Description Area =================
+/! Start related-product Area
+section.related-product-area.section_gap_bottom
+  .container
+    .row.justify-content-center
+      .col-lg-6.text-center
+        .section-title
+          h1 Deals of the Week
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            | magna aliqua.
+    .row
+      .col-lg-9
+        .row
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r1.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r2.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r3.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r5.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r6.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6.mb-20
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r7.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r9.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r10.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+          .col-lg-4.col-md-4.col-sm-6
+            .single-related-product.d-flex
+              a href="#" 
+                img alt="" src="img/r11.jpg" /
+              .desc
+                a.title href="#"  Black lace Heels
+                .price
+                  h6 $189.00
+                  h6.l-through $210.00
+      .col-lg-3
+        .ctg-right
+          a href="#" target="_blank" 
+            = image_tag("category/c5.jpg", alt: "", class: "img-fluid d-block mx-auto")
+/! End related-product Area
