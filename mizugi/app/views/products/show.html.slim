@@ -1,3 +1,8 @@
+/! Start Banner Area
+section.banner-area.organic-breadcrumb
+  .container
+/! End Banner Area
+
 /! ================Single Product Area =================
 .product_image_area
   .container
@@ -50,9 +55,7 @@ section.product_description_area
       li.nav-item
         a#profile-tab.nav-link aria-controls="profile" aria-selected="false" data-toggle="tab" href="#profile" role="tab"  Specification
       li.nav-item
-        a#contact-tab.nav-link aria-controls="contact" aria-selected="false" data-toggle="tab" href="#contact" role="tab"  Comments
-      li.nav-item
-        a#review-tab.nav-link.active aria-controls="review" aria-selected="false" data-toggle="tab" href="#review" role="tab"  Reviews
+        a#review-tab.nav-link.active aria-controls="review" aria-selected="false" data-toggle="tab" href="#review" role="tab"  Comments
     #myTabContent.tab-content
       #home.tab-pane.fade aria-labelledby="home-tab" role="tabpanel" 
         p
@@ -116,58 +119,6 @@ section.product_description_area
                   h5 Each Box contains
                 td
                   h5 60pcs
-      #contact.tab-pane.fade aria-labelledby="contact-tab" role="tabpanel" 
-        .row
-          .col-lg-6
-            .comment_list
-              .review_item
-                .media
-                  .d-flex
-            		= image_tag("product/review-1.png", alt: "", class: "img-fluid")
-                  .media-body
-                    h4 Blake Ruiz
-                    h5 12th Feb, 2018 at 05:56 pm
-                    a.reply_btn href="#"  Reply
-                p
-                  | Love it <3<3<3
-              .review_item.reply
-                .media
-                  .d-flex
-            		= image_tag("product/review-2.png", alt: "", class: "img-fluid")
-                  .media-body
-                    h4 Blake Ruiz
-                    h5 12th Feb, 2018 at 05:56 pm
-                    a.reply_btn href="#"  Reply
-                p
-                  | Love it <3<3<3
-              .review_item
-                .media
-                  .d-flex
-            		= image_tag("product/review-3.png", alt: "", class: "img-fluid")
-                  .media-body
-                    h4 Blake Ruiz
-                    h5 12th Feb, 2018 at 05:56 pm
-                    a.reply_btn href="#"  Reply
-                p
-                  | Love it <3<3<3
-          .col-lg-6
-            .review_box
-              h4 Post a comment
-              form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate" 
-                .col-md-12
-                  .form-group
-                    input#name.form-control name="name" placeholder=("Your Full name") type="text" /
-                .col-md-12
-                  .form-group
-                    input#email.form-control name="email" placeholder=("Email Address") type="email" /
-                .col-md-12
-                  .form-group
-                    input#number.form-control name="number" placeholder=("Phone Number") type="text" /
-                .col-md-12
-                  .form-group
-                    textarea#message.form-control name="message" placeholder="Message" rows="1" 
-                .col-md-12.text-right
-                  button.btn.primary-btn type="submit" value="submit"  Submit Now
       #review.tab-pane.fade.show.active aria-labelledby="review-tab" role="tabpanel" 
         .row
           .col-lg-6
@@ -236,12 +187,8 @@ section.product_description_area
                     i.fa.fa-star
                     i.fa.fa-star
                     i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
                 p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
+                  | Love it <3
               .review_item
                 .media
                   .d-flex
@@ -252,11 +199,8 @@ section.product_description_area
                     i.fa.fa-star
                     i.fa.fa-star
                     i.fa.fa-star
-                    i.fa.fa-star
                 p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
+                  | Love it <3
               .review_item
                 .media
                   .d-flex
@@ -269,12 +213,10 @@ section.product_description_area
                     i.fa.fa-star
                     i.fa.fa-star
                 p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                  | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  | commodo
+                  | Love it <3
           .col-lg-6
             .review_box
-              h4 Add a Review
+              h4 Add a Comment
               p Your Rating:
               ul.list
                 li
@@ -293,16 +235,7 @@ section.product_description_area
                   a href="#" 
                     i.fa.fa-star
               p Outstanding
-              form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate" 
-                .col-md-12
-                  .form-group
-                    input#name.form-control name="name" onblur=("this.placeholder = 'Your Full name'") onfocus=("this.placeholder = ''") placeholder=("Your Full name") type="text" /
-                .col-md-12
-                  .form-group
-                    input#email.form-control name="email" onblur=("this.placeholder = 'Email Address'") onfocus=("this.placeholder = ''") placeholder=("Email Address") type="email" /
-                .col-md-12
-                  .form-group
-                    input#number.form-control name="number" onblur=("this.placeholder = 'Phone Number'") onfocus=("this.placeholder = ''") placeholder=("Phone Number") type="text" /
+              form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate"
                 .col-md-12
                   .form-group
                     textarea#message.form-control name="message" onblur=("this.placeholder = 'Review'") onfocus=("this.placeholder = ''") placeholder="Review" rows="1" 
