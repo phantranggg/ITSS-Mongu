@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   end
   
   def show
-
+    @product = Product.includes(:product_feature, :category).find(params[:id])
+    @product_colors = @product.product_feature.uniq{|x| x.color}.pluck(:color)
   end
   
   private
