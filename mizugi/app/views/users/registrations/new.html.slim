@@ -15,20 +15,56 @@ section.login_box_area.section_gap
           = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
             div#contactForm.row.login_form 
               .col-md-12.form-group
-                = f.email_field :email, class: "form-control", placeholder: "Email"
+                .row
+                  .col-md-3
+                    h6 style="position: absolute;top: 50%;left: 50%;height: 30%;width: 50%;margin: -10% 0 0 -25%;"
+                      span Email
+                  .col-md-9
+                    = f.email_field :email, class: "form-control", placeholder: "abc@example.com"
               .col-md-12.form-group
-                = f.password_field :password, class: "form-control", placeholder: "Password"
+                .row
+                    .col-md-3
+                      h6 style="position: absolute;top: 50%;left: 50%;height: 30%;width: 50%;margin: -10% 0 0 -25%;"
+                        span Password
+                    .col-md-9
+                      
+                      = f.password_field :password, class: "form-control", placeholder: "Password"
+
               .col-md-12.form-group
-                = f.text_field :name, class: "form-control", placeholder: "Name"
+                .row
+                    .col-md-3
+                      h6 style="position: absolute;top: 50%;left: 50%;height: 30%;width: 50%;margin: -10% 0 0 -25%;"
+                        span Confirm Password
+                    .col-md-9
+                      
+                      = f.password_field :password, class: "form-control", placeholder: "Password"
               .col-md-12.form-group
-                = f.date_field :birthday, class: "form-control", placeholder: "Birthday"
+                .row
+                    .col-md-3
+                      h6 style="position: absolute;top: 50%;left: 50%;height: 30%;width: 50%;margin: -15% 0 0 -25%;"
+                        span User Name
+                    .col-md-9
+                      
+                      = f.text_field :name, class: "form-control", placeholder: "Name"
               .col-md-12.form-group
-                label.radio-inline
-                  = f.radio_button :gender, '0'
-                  label for='gender_0' Male
-                label.radio-inline
-                  = f.radio_button :gender, '1', style: "margin-left: 100px;"
-                  label for='gender_1' Female
+                .row
+                    .col-md-3
+                      h6 style="position: absolute;top: 50%;left: 50%;height: 30%;width: 50%;margin: -10% 0 0 -25%;"
+                        span Birthday
+                    .col-md-9
+                      = f.date_field :birthday, class: "form-control", placeholder: "Birthday"
+              .col-md-12.form-group
+                .row
+                    .col-md-3
+                      h6 style="position: absolute;top: 50%;left: 50%;height: 30%;width: 50%;margin: -10% 0 0 -25%;"
+                        span Sex
+                    .col-md-9
+                      label.radio-inline
+                        = f.radio_button :gender, '0'
+                        label for='gender_0' Male
+                      label.radio-inline
+                        = f.radio_button :gender, '1', style: "margin-left: 100px;"
+                        label for='gender_1' Female
               .col-md-12.form-group
                 = button_tag "Sign up", type: "submit", class: "primary-btn"
 /! ================End Signup Box Area =================
