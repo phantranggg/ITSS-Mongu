@@ -25,8 +25,17 @@ header.header_area.sticky-header
                   a.nav-link href=""  Equipments
             li.nav-item
               a.nav-link href=""  Cart
-            li.nav-item.submenu.dropdown
-              a.nav-link href="/sign_in" role="button"  Login
+            - if user_signed_in?
+              li.nav-item.submenu.dropdown
+                a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"  Account
+                ul.dropdown-menu
+                  li.nav-item
+                    a.nav-link href=""  My profile
+                  li.nav-item
+                    = link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link")
+            - else
+              li.nav-item.submenu.dropdown
+                a.nav-link href="/sign_in" role="button"  Login
           ul.nav.navbar-nav.navbar-right
             li.nav-item
               a.cart href="#" 
