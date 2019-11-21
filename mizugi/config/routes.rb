@@ -5,7 +5,8 @@ Rails.application.routes.draw do
     get "/sign_up" => "devise/registrations#new", as: "new_user_registration" # custom path to sign_up/registration
   end
   devise_for :users, path: 'users', controllers: {
-    sessions: 'users/sessions'
+    sessions: 'users/sessions',
+    confirmations: 'users/confirmations'
   }
   get 'products/index'
   resources :products
