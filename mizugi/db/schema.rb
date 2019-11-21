@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 2019_11_21_061348) do
     t.string "size"
     t.string "color"
     t.integer "gender"
-    t.float "price"
+    t.integer "price"
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

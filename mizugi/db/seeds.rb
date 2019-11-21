@@ -35,54 +35,26 @@ categories.each do |name|
 end
   
 products = [
-   ["Easy Polo Christmas Edition", "Easy Polo Christmas Edition Description", 1],
+   ["Easy Polo Christmas Edition", "Easy Polo Christmas Edition Description", 2],
    ["addidas New Hammer", "addidas New Hammer solefor Sports person", 2],
-   ["Easy Polo Black Edition", "Easy Polo Black Edition Description", 3],
-   ["Easy Polo Christmas Edition", "Easy Polo Christmas Edition Description", 1],
+   ["Easy Polo Black Edition", "Easy Polo Black Edition Description", 2],
+   ["Easy Polo Christmas Edition", "Easy Polo Christmas Edition Description", 2],
 ]
 
-products.each do |name, description, category_id, quantity|
+products.each do |name, description, category_id|
     Product.create(name: name, description: description, category_id: category_id)
 end
 
-product_features = [
-    [1,'M','#FFFFFF',0,100000,5],
-    [1,'L','#FFFFFF',0,100000,5],
-    [1,'M','#000000',0,100000,5],
-    [1,'L','#000000',0,100000,5],
-    [1,'M','#FFFFFF',1,100000,5],
-    [1,'L','#FFFFFF',1,100000,5],
-    [1,'M','#000000',1,100000,5],
-    [1,'L','#000000',1,100000,5],
-    
-    [2,'M','#FFFFFF',0,100000,5],
-    [2,'L','#FFFFFF',0,100000,5],
-    [2,'M','#000000',0,100000,5],
-    [2,'L','#000000',0,100000,5],
-    [2,'M','#FFFFFF',1,100000,5],
-    [2,'L','#FFFFFF',1,100000,5],
-    [2,'M','#000000',1,100000,5],
-    [2,'L','#000000',1,100000,5],
-    
-    [3,'M','#FFFFFF',0,100000,5],
-    [3,'L','#FFFFFF',0,100000,5],
-    [3,'M','#000000',0,100000,5],
-    [3,'L','#000000',0,100000,5],
-    [3,'M','#FFFFFF',1,100000,5],
-    [3,'L','#FFFFFF',1,100000,5],
-    [3,'M','#000000',1,100000,5],
-    [3,'L','#000000',1,100000,5],
-    
-    [4,'M','#FFFFFF',0,100000,5],
-    [4,'L','#FFFFFF',0,100000,5],
-    [4,'M','#000000',0,100000,5],
-    [4,'L','#000000',0,100000,5],
-    [4,'M','#FFFFFF',1,100000,5],
-    [4,'L','#FFFFFF',1,100000,5],
-    [4,'M','#000000',1,100000,5],
-    [4,'L','#000000',1,100000,5]
-]
+size = ['S','M','L','XL','XXL']
+color = ['#FFFFFF', '#000000']
+price = [20000, 50000, 100000, 200000, 500000]
 
-product_features.each do |product_id, size, color, gender, price, quantity|
-    ProductFeature.create(product_id: product_id, size: size, color: color, gender: gender, price: price, quantity: quantity)
+for product_id in Product.ids do
+    i = 0
+    while i < 10
+        ProductFeature.create(product_id: product_id, size: size.sample, color: color.sample,
+                              gender: rand(2), price: price.sample + 50000 * rand(10),
+                              quantity: rand(2..5))
+        i += 1
+    end
 end
