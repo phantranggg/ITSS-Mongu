@@ -19,6 +19,8 @@ section.login_box_area.section_gap
               .col-md-12.form-group
                 = f.password_field :password, class: "form-control", placeholder: "Password"
               .col-md-12.form-group
+                = f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation"
+              .col-md-12.form-group
                 = f.text_field :name, class: "form-control", placeholder: "Name"
               .col-md-12.form-group
                 = f.date_field :birthday, class: "form-control", placeholder: "Birthday"

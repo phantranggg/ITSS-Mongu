@@ -36,7 +36,7 @@ end
   
 products = [
    ["Easy Polo Christmas Edition", "Easy Polo Christmas Edition Description", 1],
-   ["addidas New Hammer solefor Sports person", "addidas New Hammer solefor Sports person", 2],
+   ["addidas New Hammer", "addidas New Hammer solefor Sports person", 2],
    ["Easy Polo Black Edition", "Easy Polo Black Edition Description", 3],
    ["Easy Polo Christmas Edition", "Easy Polo Christmas Edition Description", 1],
 ]
