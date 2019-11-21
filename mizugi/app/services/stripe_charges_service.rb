@@ -46,7 +46,7 @@ class StripeChargesService
   def order_amount
     dollar_to_cents(
       @user.show_cart.sum do |item|
-        Product.find_by(id: item.product_id).price * item.quantity
+        ProductFeature.find_by(id: item.product__feature_id).price * item.quantity
       end
     )
   end

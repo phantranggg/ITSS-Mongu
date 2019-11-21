@@ -9,4 +9,6 @@ class User < ApplicationRecord
     customer = Stripe::Customer.create email: email
     self.customer_id = customer.id
   end
+  
+  selecting :product_feature
 end
