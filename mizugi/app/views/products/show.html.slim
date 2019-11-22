@@ -26,6 +26,14 @@
           p
             = @product.description
           .product_count
+            div
+              label for="qty"  Color Male:
+              - @product_colors.each do |color|
+                div.color-picker style="background: #{color}" 
+              label for="qty" style="margin-left: 40px" Color female:
+              - @product_colors.each do |color|
+                div.color-picker style="background: #{color}" 
+            br
             label for="qty"  Quantity:
             input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
           .card_area.d-flex.align-items-center

@@ -6,7 +6,8 @@ class ProductsController < ApplicationController
   
   def show
     @product = Product.includes(:product_feature, :category).find(params[:id])
-    @product_colors = @product.product_feature.uniq{|x| x.color}.pluck(:color)
+    @male_product_colors = @product.product_feature.where(gender: 0).uniq{|x| x.color}.pluck(:color)
+    @male_product_colors = @product.product_feature.where(gender: 0).uniq{|x| x.color}.pluck(:color)
   end
   
   private
