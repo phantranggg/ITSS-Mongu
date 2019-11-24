@@ -28,6 +28,7 @@
 				display: inline-block;
 				margin: 10px;
 				opacity: .5;
+				height: 20px;
 				@include transition();
 				&:hover {
 					opacity: 1;
