@@ -120,7 +120,7 @@ section.owl-carousel.active-product-area.section_gap
               a href="/products/#{latest_product.id}"
                 = image_tag("product/p1.jpg", alt: "", class: "img-fluid")
               .product-details
-                h6
+                h6 style="height:40px"
                   = latest_product.name
                 .price
                   h6 = "$ #{latest_product.product_feature[0].price}"
@@ -153,7 +153,7 @@ section.owl-carousel.active-product-area.section_gap
               a href="/products/#{product.id}"
                 = image_tag("product/p6.jpg", alt: "", class: "img-fluid")
               .product-details
-                h6
+                h6 style="height:40px"
                   = product.name
                 .price
                   h6 = "#{product.product_feature[0].price} vnd"

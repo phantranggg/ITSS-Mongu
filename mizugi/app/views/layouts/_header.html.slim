@@ -28,7 +28,11 @@ header.header_area.sticky-header
                 a.nav-link href="/cart"  Cart
             - if user_signed_in?
               li.nav-item.submenu.dropdown
-                a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"  Account
+                a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"   
+                  a
+                    =image_tag("avatar_icon.png", alt: "", class: "img-fluid",style:"margin-top:10px;height:20px")
+                    
+
                 ul.dropdown-menu
                   li.nav-item
                     a.nav-link href=""  My profile
