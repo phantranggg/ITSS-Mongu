@@ -9,10 +9,15 @@ Rails.application.routes.draw do
     confirmations: 'users/confirmations'
   }
   get 'products/index'
+  get 'products/update_price'
   resources :products
   root to: 'products#index'
   
-  get '/cart', to: 'carts#index'
+  # resources :carts
+  get '/carts', to: 'carts#index'
+  post "carts", to: "carts#update"
+  delete "carts", to: "carts#destroy"
+  
   resources :categories
   get '/category', to: 'categories#index'
   get '/checkout', to: 'payments#checkout'
