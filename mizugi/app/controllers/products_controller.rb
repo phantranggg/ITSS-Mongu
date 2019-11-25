@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
   end
   
   def set_products_data
-    @products = Product.all
+    @products = Product.limit(8)
     @latest_products = Product.latest
   end
 end

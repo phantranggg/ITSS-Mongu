@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   mount_uploaders :images, ImageUploader
   serialize :images, JSON
 
+  NUM_OF_PRODUCTS_HOMEPAGE = 8
   attr_accessor :delete_images
   after_validation do
     uploaders = images.delete_if do |uploader|
@@ -15,7 +16,7 @@ class Product < ApplicationRecord
     write_attribute(:images, uploaders.map { |uploader| uploader.file.identifier })
   end
   
-  scope :latest, -> { order(created_at: :desc) }
+  scope :latest, -> { order(created_at: :desc).limit(NUM_OF_PRODUCTS_HOMEPAGE) }
 
   def images=(files)
     appended = files.map do |file|

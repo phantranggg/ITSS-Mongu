@@ -118,7 +118,7 @@ section.owl-carousel.active-product-area.section_gap
           .col-lg-3.col-md-6
             .single-product
               a href="/products/#{latest_product.id}"
-                = image_tag("product/p1.jpg", alt: "", class: "img-fluid")
+                = image_tag("#{latest_product.images[0]}", alt: "", class: "img-fluid")
               .product-details
                 h6
                   = latest_product.name
@@ -151,7 +151,7 @@ section.owl-carousel.active-product-area.section_gap
           .col-lg-3.col-md-6
             .single-product
               a href="/products/#{product.id}"
-                = image_tag("product/p6.jpg", alt: "", class: "img-fluid")
+                = image_tag("#{product.images[0]}", alt: "", class: "img-fluid")
               .product-details
                 h6
                   = product.name

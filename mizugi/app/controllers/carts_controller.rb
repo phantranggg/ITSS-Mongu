@@ -3,7 +3,11 @@ class CartsController < ApplicationController
 
   def index
     redirect_to root_path unless current_user
+    @cart_products = Cart.includes(:product_feature).where(user_id: current_user.id)
     @total = 0
+    @cart_products.each do |cart|
+      @total += cart.product_feature.price * cart.quantity
+    end
   end
 
   def update
@@ -41,7 +45,7 @@ class CartsController < ApplicationController
   def load_product_feature
     @male_product = ProductFeature.find_by id: params[:male_product_id]
     @female_product = ProductFeature.find_by id: params[:female_product_id]
-
+    redirect_to "/sign_in" if !user_signed_in?
     redirect_to main_app.root_path unless @male_product && @female_product
   end
 end

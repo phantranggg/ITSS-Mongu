@@ -3,13 +3,14 @@
   .container
     .row.s_product_inner
       .col-lg-6
-        .s_Product_carousel
+        - if @product.images.length > 1
+          .s_Product_carousel
+            - @product.images.each do |image|
+              .single-prd-item
+                = image_tag("#{image}", alt: "", class: "img-fluid")
+        - else
           .single-prd-item
-            = image_tag("category/s-p1.jpg", alt: "", class: "img-fluid")
-          .single-prd-item
-            = image_tag("category/s-p1.jpg", alt: "", class: "img-fluid")
-          .single-prd-item
-            = image_tag("category/s-p1.jpg", alt: "", class: "img-fluid")
+            = image_tag("#{@product.images[0]}", alt: "", class: "img-fluid")
       .col-lg-5.offset-lg-1
         .s_product_text
           h3 = @product.name
