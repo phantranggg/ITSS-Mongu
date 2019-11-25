@@ -13,7 +13,7 @@
       .col-lg-5.offset-lg-1
         .s_product_text
           h3 = @product.name
-          h2 $149.99
+          h2#product-price = "$#{@selected_male_product.price + @selected_female_product.price}"
           ul.list
             li
               a.active href="#" 
@@ -26,18 +26,43 @@
           p
             = @product.description
           .product_count
-            div
-              label for="qty"  Color Male:
-              - @product_colors.each do |color|
-                div.color-picker style="background: #{color}" 
-              label for="qty" style="margin-left: 40px" Color female:
-              - @product_colors.each do |color|
-                div.color-picker style="background: #{color}" 
-            br
-            label for="qty"  Quantity:
-            input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
-          .card_area.d-flex.align-items-center
-            a.primary-btn href="#"  Add to Cart
+            table.product-description-table
+              tr
+                th
+                th Male
+                th Female
+              tr
+                td Color
+                td
+                  select.color-select-male
+                    - @male_product_colors.each do |color|
+                      option
+                        = color
+                td
+                  select.color-select-female
+                    - @female_product_colors.each do |color|
+                      option
+                        = color
+              tr
+                td Size
+                td
+                  select.size-select-male
+                    - @male_product_sizes.each do |size|
+                      option name="male-size"
+                        = size
+                td
+                  select.size-select-female
+                    - @female_product_sizes.each do |size|
+                      option name="female-size"
+                        = size
+            = form_for :cart, :url => carts_path do |f|
+              = f.label :quantity
+              = f.number_field :quantity, name: "product_feature_qty"
+              = f.hidden_field :male_product_id, value: @selected_male_product.id, name: "male_product_id"
+              = f.hidden_field :female_product_id, value: @selected_female_product.id, name: "female_product_id"
+              = f.hidden_field :btn_type, name: "btn_type", value: "add"
+              .card_area.d-flex.align-items-center
+                = f.submit 'Add to Cart', class: "primary-btn"
 /! ================End Single Product Area =================
 /! ================Product Description Area =================
 section.product_description_area

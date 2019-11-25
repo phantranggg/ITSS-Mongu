@@ -597,6 +597,7 @@
 	display: inline-block;
 	position: relative;
 	margin-bottom: 24px;
+	width: 100%;
 	label{
 		font-size: 14px;
 		color: $text-color;
@@ -605,7 +606,6 @@
 		padding-right: 10px;
 	}
 	input{
-		width: 76px;
 		border: 1px solid #eeeeee;
 		border-radius: 3px;
 		padding-left: 10px;
@@ -634,6 +634,21 @@
 	
 }
 
+
+.color-picker {
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+	border: 1px solid #dfdfdf;
+	border-radius: 4px;
+	padding: 6px;
+	margin-bottom: 25px;
+	cursor: pointer;
+}
+
+.product-description-table {
+	width: 100%;
+}
 
 
 .product_description_area{
