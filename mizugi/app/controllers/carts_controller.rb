@@ -3,7 +3,7 @@ class CartsController < ApplicationController
 
   def index
     redirect_to root_path unless current_user
-    @cart_products = Cart.includes(:product_feature).where(user_id: current_user.id)
+    @cart_products = Cart.includes(product_feature: [:product]).where(user_id: current_user.id)
     @total = 0
     @cart_products.each do |cart|
       @total += cart.product_feature.price * cart.quantity

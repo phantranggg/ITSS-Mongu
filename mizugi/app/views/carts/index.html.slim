@@ -7,18 +7,26 @@ section.cart_area
           thead
             tr
               th scope="col"  Product
+              th scope="col"  Color
+              th scope="col"  Size
               th scope="col"  Price
               th scope="col"  Quantity
               th scope="col"  Total
           tbody
-            - @cart_products.each do |cart|
+            - @cart_products.each_with_index do |cart, index|
+              - product_name = "#{cart.product_feature.product.name} (#{cart.product_feature.gender === 0 ? 'Male' : 'Female'})"
               tr
+                - if index.even?
+                  td
+                    .media
+                      .d-flex
+                        = image_tag("#{cart.product_feature.product.images[0]}", alt: "", class: "", style: "height: 150px")
+                      .media-body
+                        p = product_name
                 td
-                  .media
-                    .d-flex
-                      = image_tag("product/p1.jpg", alt: "", class: "", style: "height: 150px")
-                    .media-body
-                      p cart.product_feature.name
+                  h5 = cart.product_feature.color
+                td
+                  h5 = cart.product_feature.size
                 td
                   h5 = cart.product_feature.price
                 td
@@ -35,10 +43,14 @@ section.cart_area
               td
               td
               td
+              td
+              td
                 h5 Subtotal
               td
                 h5 = @total
             tr.out_button_area
+              td
+              td
               td
               td
               td
