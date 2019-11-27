@@ -20,9 +20,9 @@ section.login_box_area.section_gap
           = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
             div#contactForm.row.login_form
               .col-md-12.form-group
-                = f.email_field :email, class: "form-control", placeholder: "Email", required: ""
+                = f.email_field :email, class: "form-control", placeholder: "Email (*)", required: ""
               .col-md-12.form-group
-                = f.password_field :password, class: "form-control", placeholder: "Password", required: ""
+                = f.password_field :password, class: "form-control", placeholder: "Password (*)", required: ""
               .col-md-12.form-group
                 .creat_account
                   input#f-option2 name="selector" type="checkbox" /

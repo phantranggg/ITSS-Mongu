@@ -605,7 +605,6 @@
 		padding-right: 10px;
 	}
 	input{
-		width: 76px;
 		border: 1px solid #eeeeee;
 		border-radius: 3px;
 		padding-left: 10px;
@@ -634,6 +633,21 @@
 	
 }
 
+
+.color-picker {
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+	border: 1px solid #dfdfdf;
+	border-radius: 4px;
+	padding: 6px;
+	margin-bottom: 25px;
+	cursor: pointer;
+}
+
+.product-description-table {
+	width: 100%;
+}
 
 
 .product_description_area{
@@ -1809,4 +1823,18 @@
 
 .radion_btn input[type=radio]:checked ~ label{
     color: #000;
+}
+
+.single-prd-item .img-fluid {
+	width: 100%;
+}
+
+.stripe-button-el {
+	width: 100%;
+	display: block;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-align: center;
+	border-radius: 2px;
+	background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
 }

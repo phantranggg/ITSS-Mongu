@@ -1,8 +1,3 @@
-/! Start Banner Area
-section.banner-area.organic-breadcrumb
-  .container
-/! End Banner Area
-
 /! ================Cart Area =================
 section.cart_area
   .container
@@ -11,112 +6,83 @@ section.cart_area
         table.table
           thead
             tr
+              th
               th scope="col"  Product
+              th scope="col"  Color
+              th scope="col"  Size
               th scope="col"  Price
               th scope="col"  Quantity
               th scope="col"  Total
           tbody
+            - @cart_products.each_with_index do |cart, index|
+              - product_name = "#{cart.product_feature.product.name} (#{cart.product_feature.gender === 0 ? 'Male' : 'Female'})"
+              tr
+                - if index.even?
+                  td rowspan="2"
+                    .media
+                      .d-flex
+                        = image_tag("#{cart.product_feature.product.images[0]}", alt: "", class: "", style: "height: 150px")
+                      .media-body
+                td
+                  h5 = product_name
+                td
+                  h5 = cart.product_feature.color
+                td
+                  h5 = cart.product_feature.size
+                - if index.even?
+                  - couple_product = @cart_products.to_a[index+1]
+                  - price = cart.product_feature.price + couple_product.product_feature.price
+                  td rowspan="2"
+                    h5 = price
+                  td rowspan="2"
+                    .product_count
+                      input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="#{cart.quantity}" readonly="true" /
+                      button.increase.items-count type="button" btn_type="add" male_product_id="#{cart.product_feature_id}" female_product_id="#{couple_product.product_feature_id}" onclick="changeCart(this)"
+                        i.lnr.lnr-chevron-up
+                      button.reduced.items-count type="button" btn_type="remove" male_product_id="#{cart.product_feature_id}" female_product_id="#{couple_product.product_feature_id}" onclick="changeCart(this)"
+                        i.lnr.lnr-chevron-down
+                  td rowspan="2"
+                    h5 = price * cart.quantity
+            
             tr
               td
-                .media
-                  .d-flex
-                    = image_tag("product/p1.jpg", alt: "", class: "", style: "height: 150px")
-                  .media-body
-                    p Nike AX124
-              td
-                h5 $360.00
-              td
-                .product_count
-                  input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
-                  button.increase.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;") type="button" 
-                    i.lnr.lnr-chevron-up
-                  button.reduced.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;") type="button" 
-                    i.lnr.lnr-chevron-down
-              td
-                h5 $720.00
-            tr
-              td
-                .media
-                  .d-flex
-                    = image_tag("product/p2.jpg", alt: "", class: "", style: "height: 150px")
-                  .media-body
-                    p Nike ST352
-              td
-                h5 $360.00
-              td
-                .product_count
-                  input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
-                  button.increase.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;") type="button" 
-                    i.lnr.lnr-chevron-up
-                  button.reduced.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;") type="button" 
-                    i.lnr.lnr-chevron-down
-              td
-                h5 $720.00
-            tr
-              td
-                .media
-                  .d-flex
-                    = image_tag("product/p3.jpg", alt: "", class: "", style: "height: 150px")
-                  .media-body
-                    p Vans Auth
-              td
-                h5 $360.00
-              td
-                .product_count
-                  input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
-                  button.increase.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;") type="button" 
-                    i.lnr.lnr-chevron-up
-                  button.reduced.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;") type="button" 
-                    i.lnr.lnr-chevron-down
-              td
-                h5 $720.00
-            tr.bottom_button
-              td
-                a.gray_btn href="#"  Update Cart
               td
               td
-              td
-                .cupon_text.d-flex.align-items-center
-                  input placeholder=("Coupon Code") type="text" /
-                  a.primary-btn href="#"  Apply
-                  a.gray_btn href="#"  Close Coupon
-            tr
               td
               td
               td
                 h5 Subtotal
               td
-                h5 $2160.00
-            tr.shipping_area
-              td
-              td
-              td
-                h5 Shipping
-              td
-                .shipping_box
-                  ul.list
-                    li
-                      a href="#"  Flat Rate: $5.00
-                    li
-                      a href="#"  Free Shipping
-                    li
-                      a href="#"  Flat Rate: $10.00
-                    li.active
-                      a href="#"  Local Delivery: $2.00
-                  h6
-                    | Calculate Shipping
-                    i.fa.fa-caret-down aria-hidden="true" 
-                  select.shipping_select
-                    option value="1"  Ha Noi
-                    option value="2"  Ho Chi Minh
-                    option value="4"  Da Nang
-                  a.gray_btn href="#"  Update Details
+                h5 = @total
             tr.out_button_area
+              td
+              td
+              td
               td
               td
               td
               td
                 .checkout_btn_inner.d-flex.align-items-center
                   a.gray_btn href="#"  Continue Shopping
-                  a.primary-btn href="#"  Proceed to checkout
+                  a.primary-btn href="/orders"  Proceed to checkout
 /! ================End Cart Area =================
+javascript:
+  function changeCart(elm) {
+    var male_product_id = $(elm).attr("male_product_id")
+    var female_product_id = $(elm).attr("female_product_id")
+    var btn_type = $(elm).attr("btn_type")
+    var product_feature_qty = 1
+
+    $.ajax({
+      type: 'POST',
+      url: "/carts",
+      data: {
+        btn_type: btn_type,
+        male_product_id: male_product_id,
+        female_product_id: female_product_id,
+        product_feature_qty: product_feature_qty
+      }
+    }).done((response) => {
+      console.log(response)
+    })
+  }

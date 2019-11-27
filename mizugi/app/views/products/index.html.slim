@@ -118,7 +118,7 @@ section.owl-carousel.active-product-area.section_gap
           .col-lg-3.col-md-6
             .single-product
               a href="/products/#{latest_product.id}"
-                = image_tag("product/p1.jpg", alt: "", class: "img-fluid")
+                = image_tag("#{latest_product.images[0]}", alt: "", class: "img-fluid")
               .product-details
                 h6
                   = latest_product.name
@@ -151,7 +151,7 @@ section.owl-carousel.active-product-area.section_gap
           .col-lg-3.col-md-6
             .single-product
               a href="/products/#{product.id}"
-                = image_tag("product/p6.jpg", alt: "", class: "img-fluid")
+                = image_tag("#{product.images[0]}", alt: "", class: "img-fluid")
               .product-details
                 h6
                   = product.name
@@ -178,19 +178,22 @@ section.features-area.section_gap style='padding-top: 0px !important'
       /! single features
       .col-lg-4.col-md-4.col-sm-4
         .single-features
-          .f-icon
-            = image_tag("elements/clothes.png", alt: "", class: "brand-icon")
-          h6 Clothes
+          a.social-info href="/categories/1"
+            .f-icon
+              = image_tag("elements/clothes.png", alt: "", class: "brand-icon")
+            h6 Clothes
       /! single features
       .col-lg-4.col-md-4.col-sm-4
         .single-features
-          .f-icon
-            = image_tag("elements/shoes.png", alt: "", class: "brand-icon")
-          h6 Shoes
+          a.social-info href="/categories/1"
+            .f-icon
+              = image_tag("elements/shoes.png", alt: "", class: "brand-icon")
+            h6 Shoes
       /! single features
       .col-lg-4.col-md-4.col-sm-4
         .single-features
-          .f-icon
-            = image_tag("elements/equipments.png", alt: "", class: "brand-icon")
-          h6 Equipments
+          a.social-info href="/categories/1"
+            .f-icon
+              = image_tag("elements/equipments.png", alt: "", class: "brand-icon")
+            h6 Equipments
 /! End brand Area

@@ -149,4 +149,18 @@ section.checkout_area.section_gap
               label for="f-option4"  I’ve read and accept the
               a href="#"  terms & conditions*
             a.primary-btn href="#"  Proceed to Paypal
+            
+            /! convert this code below to slim 
+            /!<%= form_tag charges_path do %>
+            /!  <% if flash[:error].present? %>
+            /!    <div id="error_explanation">
+            /!      <p><%= flash[:error] %></p>
+            /!    </div>
+            /!  <% end %>
+            /!  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            /!    data-email="<%= current_user.email %>"
+            /!    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            /!    data-locale="auto">
+            /!  </script>
+            /!<% end %>
 /! ================End Checkout Area =================
