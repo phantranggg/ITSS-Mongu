@@ -28,7 +28,17 @@ header.header_area.sticky-header
                 a.nav-link href="/carts"  Cart
             - if user_signed_in?
               li.nav-item.submenu.dropdown
-                a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"  Account
+                a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" Account
+                  = current_user.name
+                ul.dropdown-menu
+                  li.nav-item
+                    a.nav-link href=""  My profile
+                  li.nav-item
+                    = link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link")
+            - if user_signed_in?
+              li.nav-item.submenu.dropdown
+                a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+                  = current_user.name
                 ul.dropdown-menu
                   li.nav-item
                     a.nav-link href=""  My profile
