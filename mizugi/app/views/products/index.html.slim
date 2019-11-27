@@ -123,7 +123,7 @@ section.owl-carousel.active-product-area.section_gap
                 h6
                   = latest_product.name
                 .price
-                  h6 = "#{latest_product.product_feature[0].price} vnd"
+                  h6 = "$ #{latest_product.product_feature[0].price}"
                 .prd-bottom
                   a.social-info href="" 
                     span.ti-bag
@@ -172,17 +172,28 @@ section.owl-carousel.active-product-area.section_gap
                     p.hover-text view more
 /! end product Area
 /! Start brand Area
-section.brand-area.section_gap
+section.features-area.section_gap style='padding-top: 0px !important'
   .container
-    .row
-      a.col.single-img href="#" 
-        = image_tag("brand/1.png", alt: "", class: "img-fluid d-block mx-auto")
-      a.col.single-img href="#" 
-        = image_tag("brand/2.png", alt: "", class: "img-fluid d-block mx-auto")
-      a.col.single-img href="#" 
-        = image_tag("brand/3.png", alt: "", class: "img-fluid d-block mx-auto")
-      a.col.single-img href="#" 
-        = image_tag("brand/4.png", alt: "", class: "img-fluid d-block mx-auto")
-      a.col.single-img href="#" 
-        = image_tag("brand/5.png", alt: "", class: "img-fluid d-block mx-auto")
+    .row.features-inner
+      /! single features
+      .col-lg-4.col-md-4.col-sm-4
+        .single-features
+          a.social-info href="/categories/1"
+            .f-icon
+              = image_tag("elements/clothes.png", alt: "", class: "brand-icon")
+            h6 Clothes
+      /! single features
+      .col-lg-4.col-md-4.col-sm-4
+        .single-features
+          a.social-info href="/categories/1"
+            .f-icon
+              = image_tag("elements/shoes.png", alt: "", class: "brand-icon")
+            h6 Shoes
+      /! single features
+      .col-lg-4.col-md-4.col-sm-4
+        .single-features
+          a.social-info href="/categories/1"
+            .f-icon
+              = image_tag("elements/equipments.png", alt: "", class: "brand-icon")
+            h6 Equipments
 /! End brand Area
