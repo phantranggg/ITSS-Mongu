@@ -58,7 +58,7 @@
                         = size
             = form_for :cart, :url => carts_path do |f|
               = f.label :quantity
-              = f.number_field :quantity, name: "product_feature_qty", style: "padding-right: 30px;"
+              = f.number_field :quantity, value: 1, name: "product_feature_qty", style: "padding-right: 30px;"
               = f.hidden_field :male_product_id, value: @selected_male_product.id, name: "male_product_id"
               = f.hidden_field :female_product_id, value: @selected_female_product.id, name: "female_product_id"
               = f.hidden_field :btn_type, name: "btn_type", value: "add"
