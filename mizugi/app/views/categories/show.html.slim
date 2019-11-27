@@ -40,21 +40,22 @@
             /! single product
             .col-lg-4.col-md-6
               .single-product
-                = image_tag("#{product.images[0]}", alt: "", class: "img-fluid")
+                a href="/products/#{product.id}"
+                  = image_tag("#{product.images[0]}", alt: "", class: "img-fluid")
                 .product-details
                   h6 = product.name
                   .price
-                    h6 = Product.default_price(product)
+                    h6 = "$#{Product.default_price(product)}"
                   .prd-bottom
                     a.social-info href="" 
                       span.ti-bag
-                      p.hover-text add to bag
+                      p.hover-text Add to bag
                     a.social-info href="" 
                       span.lnr.lnr-heart
                       p.hover-text Wishlist
                     a.social-info href="" 
                       span.lnr.lnr-sync
-                      p.hover-text compare
+                      p.hover-text Compare
                     a.social-info href="" 
                       span.lnr.lnr-move
-                      p.hover-text view more
+                      p.hover-text View more
