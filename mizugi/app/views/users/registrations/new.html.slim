@@ -24,9 +24,11 @@ section.login_box_area.section_gap
               .col-md-12.form-group
                 = f.password_field :password, class: "form-control", placeholder: "Password (*)", required: ""
               .col-md-12.form-group
-                = f.text_field :name, class: "form-control", placeholder: "Name", required: ""
+                = f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation (*)", required: ""
               .col-md-12.form-group
-                = f.date_field :birthday, id: "date", class: "form-control", placeholder: "Birthday", type: "text", onfocus: "(this.type='date')", required: ""
+                = f.text_field :name, class: "form-control", placeholder: "Name"
+              .col-md-12.form-group
+                = f.date_field :birthday, id: "date", class: "form-control", placeholder: "Birthday", type: "text", onfocus: "(this.type='date')"
               .col-md-12.form-group
                 label.radio-inline
                   = f.radio_button :gender, '0'

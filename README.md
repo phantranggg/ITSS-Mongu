@@ -1,14 +1,5 @@
-         ___        ______     ____ _                 _  ___  
-        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
-       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
-      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
-     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
- ----------------------------------------------------------------- 
-
-
-Hi there! Welcome to AWS Cloud9!
-
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
-
-Happy coding!
+#### Config gmail
+Nếu chạy trên môi trường Cloud9, chạy lệnh <br>
+`export SERVER_HOST=[YOUR_SERVER_HOST]`
+**VD**
+`export SERVER_HOST=https://5ff0046829be4826827425e448097dc8.vfs.cloud9.us-east-1.amazonaws.com/`
