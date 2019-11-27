@@ -36,7 +36,7 @@ section.cart_area
                     h5 = price
                   td rowspan="2"
                     .product_count
-                      input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="#{cart.quantity}" /
+                      input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="#{cart.quantity}" readonly="true" /
                       button.increase.items-count type="button" btn_type="add" male_product_id="#{cart.product_feature_id}" female_product_id="#{couple_product.product_feature_id}" onclick="changeCart(this)"
                         i.lnr.lnr-chevron-up
                       button.reduced.items-count type="button" btn_type="remove" male_product_id="#{cart.product_feature_id}" female_product_id="#{couple_product.product_feature_id}" onclick="changeCart(this)"
@@ -64,7 +64,7 @@ section.cart_area
               td
                 .checkout_btn_inner.d-flex.align-items-center
                   a.gray_btn href="#"  Continue Shopping
-                  a.primary-btn href="#"  Proceed to checkout
+                  a.primary-btn href="/orders"  Proceed to checkout
 /! ================End Cart Area =================
 javascript:
   function changeCart(elm) {
