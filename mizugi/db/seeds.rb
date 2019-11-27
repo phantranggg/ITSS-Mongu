@@ -77,9 +77,10 @@ price = [10, 25, 50, 100, 200]
 
 for product_id in Product.ids do
     i = 0
+    print product_id
     while i < 10
         ProductFeature.create(product_id: product_id, size: size.sample, color: color.sample,
-                              gender: rand(2), price: price.sample + 50000 * rand(10),
+                              gender: rand(2), price: price.sample + 10 * rand(10),
                               quantity: rand(2..5))
         i += 1
     end
