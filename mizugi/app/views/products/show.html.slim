@@ -33,36 +33,36 @@
                 th Male
                 th Female
               tr
-                td Color
+                td style='padding-right: 30px;' Color
                 td
                   select.color-select-male
                     - @male_product_colors.each do |color|
                       option
                         = color
-                td
+                td style='padding-right: 30px;'
                   select.color-select-female
                     - @female_product_colors.each do |color|
                       option
                         = color
               tr
-                td Size
-                td
+                td style='padding-right: 30px;' Size
+                td style='padding-right: 30px;'
                   select.size-select-male
                     - @male_product_sizes.each do |size|
                       option name="male-size"
                         = size
-                td
+                td style='padding-right: 30px;'
                   select.size-select-female
                     - @female_product_sizes.each do |size|
                       option name="female-size"
                         = size
             = form_for :cart, :url => carts_path do |f|
               = f.label :quantity
-              = f.number_field :quantity, name: "product_feature_qty"
+              = f.number_field :quantity, name: "product_feature_qty", style: "padding-right: 30px;"
               = f.hidden_field :male_product_id, value: @selected_male_product.id, name: "male_product_id"
               = f.hidden_field :female_product_id, value: @selected_female_product.id, name: "female_product_id"
               = f.hidden_field :btn_type, name: "btn_type", value: "add"
-              .card_area.d-flex.align-items-center
+              .card_area.d-flex.align-items-center style='margin-top: 30px;'
                 = f.submit 'Add to Cart', class: "primary-btn"
 /! ================End Single Product Area =================
 /! ================Product Description Area =================
