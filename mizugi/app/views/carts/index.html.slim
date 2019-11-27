@@ -29,11 +29,11 @@ section.cart_area
                   h5 = cart.product_feature.color
                 td
                   h5 = cart.product_feature.size
+                td
+                  h5 = "$#{cart.product_feature.price}"
                 - if index.even?
                   - couple_product = @cart_products.to_a[index+1]
                   - price = cart.product_feature.price + couple_product.product_feature.price
-                  td rowspan="2"
-                    h5 = price
                   td rowspan="2"
                     .product_count
                       input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="#{cart.quantity}" readonly="true" /
@@ -42,7 +42,7 @@ section.cart_area
                       button.reduced.items-count type="button" btn_type="remove" male_product_id="#{cart.product_feature_id}" female_product_id="#{couple_product.product_feature_id}" onclick="changeCart(this)"
                         i.lnr.lnr-chevron-down
                   td rowspan="2"
-                    h5 = price * cart.quantity
+                    h5 = "$#{price * cart.quantity}"
             
             tr
               td
@@ -51,9 +51,9 @@ section.cart_area
               td
               td
               td
-                h5 Subtotal
+                h5 Total
               td
-                h5 = @total
+                h5 = "$#{@total}"
             tr.out_button_area
               td
               td

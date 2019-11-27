@@ -39,7 +39,7 @@ class StripeChargesService
       customer: customer.id,
       amount: order_amount,
       description: customer.email,
-      currency: "vnd"
+      currency: "usd"
     )
   end
 
@@ -47,5 +47,9 @@ class StripeChargesService
     @user.show_cart.sum do |item|
       ProductFeature.find_by(id: item.product_feature_id).price * item.quantity
     end
+  end
+
+  def dollar_to_cents amount
+    (amount * 100).to_i
   end
 end
