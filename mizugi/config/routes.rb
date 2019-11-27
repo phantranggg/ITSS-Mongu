@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   get '/category', to: 'categories#index'
   get '/checkout', to: 'payments#checkout'
   
+  resources :orders
+  
+  
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
   }

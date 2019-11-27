@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
   before_action :load_product_feature, only: %i(update destroy)
+  skip_before_action :verify_authenticity_token
 
   def index
     redirect_to root_path unless current_user

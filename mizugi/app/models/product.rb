@@ -43,5 +43,9 @@ class Product < ApplicationRecord
     def female_product_sizes(product)
       product.product_feature.for_female.uniq{|x| x.size}.pluck(:size)
     end
+    
+    def default_price(product)
+      product.product_feature.for_male.first.price + product.product_feature.for_female.first.price 
+    end
   end
 end
