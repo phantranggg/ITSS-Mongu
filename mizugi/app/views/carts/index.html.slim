@@ -6,6 +6,7 @@ section.cart_area
         table.table
           thead
             tr
+              th
               th scope="col"  Product
               th scope="col"  Color
               th scope="col"  Size
@@ -17,29 +18,34 @@ section.cart_area
               - product_name = "#{cart.product_feature.product.name} (#{cart.product_feature.gender === 0 ? 'Male' : 'Female'})"
               tr
                 - if index.even?
-                  td
+                  td rowspan="2"
                     .media
                       .d-flex
                         = image_tag("#{cart.product_feature.product.images[0]}", alt: "", class: "", style: "height: 150px")
                       .media-body
-                        p = product_name
+                td
+                  h5 = product_name
                 td
                   h5 = cart.product_feature.color
                 td
                   h5 = cart.product_feature.size
-                td
-                  h5 = cart.product_feature.price
-                td
-                  .product_count
-                    input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="#{cart.quantity}" /
-                    button.increase.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;") type="button" 
-                      i.lnr.lnr-chevron-up
-                    button.reduced.items-count onclick=("var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;") type="button" 
-                      i.lnr.lnr-chevron-down
-                td
-                  h5 = cart.product_feature.price * cart.quantity
+                - if index.even?
+                  - couple_product = @cart_products.to_a[index+1]
+                  - price = cart.product_feature.price + couple_product.product_feature.price
+                  td rowspan="2"
+                    h5 = price
+                  td rowspan="2"
+                    .product_count
+                      input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="#{cart.quantity}" /
+                      button.increase.items-count type="button" btn_type="add" male_product_id="#{cart.product_feature_id}" female_product_id="#{couple_product.product_feature_id}" onclick="changeCart(this)"
+                        i.lnr.lnr-chevron-up
+                      button.reduced.items-count type="button" btn_type="remove" male_product_id="#{cart.product_feature_id}" female_product_id="#{couple_product.product_feature_id}" onclick="changeCart(this)"
+                        i.lnr.lnr-chevron-down
+                  td rowspan="2"
+                    h5 = price * cart.quantity
             
             tr
+              td
               td
               td
               td
@@ -55,7 +61,28 @@ section.cart_area
               td
               td
               td
+              td
                 .checkout_btn_inner.d-flex.align-items-center
                   a.gray_btn href="#"  Continue Shopping
                   a.primary-btn href="#"  Proceed to checkout
 /! ================End Cart Area =================
+javascript:
+  function changeCart(elm) {
+    var male_product_id = $(elm).attr("male_product_id")
+    var female_product_id = $(elm).attr("female_product_id")
+    var btn_type = $(elm).attr("btn_type")
+    var product_feature_qty = 1
+
+    $.ajax({
+      type: 'POST',
+      url: "/carts",
+      data: {
+        btn_type: btn_type,
+        male_product_id: male_product_id,
+        female_product_id: female_product_id,
+        product_feature_qty: product_feature_qty
+      }
+    }).done((response) => {
+      console.log(response)
+    })
+  }
