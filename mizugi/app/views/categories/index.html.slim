@@ -5,6 +5,11 @@
         .head style='font-size: 18px !important;' Browse Categories
         ul.main-categories
           li.main-nav-list
+            a href="/category" 
+              span.lnr.lnr-arrow-right
+              | All Products
+              span.number (53)
+          li.main-nav-list
             a href="/categories/1" 
               span.lnr.lnr-arrow-right
               | Clothes
@@ -24,194 +29,32 @@
       .filter-bar.d-flex.flex-wrap.align-items-center
         .sorting
           select
-            option value="1"  Default sorting
-            option value="1"  Default sorting
-            option value="1"  Default sorting
-        .sorting.mr-auto
-          select
-            option value="1"  Show 12
-            option value="1"  Show 12
-            option value="1"  Show 12
-        .pagination
-          a.prev-arrow href="#" 
-            i.fa.fa-long-arrow-left aria-hidden="true" 
-          a.active href="#"  1
-          a href="#"  2
-          a href="#"  3
-          a.dot-dot href="#" 
-            i.fa.fa-ellipsis-h aria-hidden="true" 
-          a href="#"  6
-          a.next-arrow href="#" 
-            i.fa.fa-long-arrow-right aria-hidden="true" 
+            option value="1"  Latest
+            option value="1"  By Name
+            option value="1"  By Price
       /! End Filter Bar
       /! Start Best Seller
       section.lattest-product-area.pb-40.category-list
         .row
-          /! single product
-          .col-lg-4.col-md-6
-            .single-product
-              = image_tag("product/p1.jpg", alt: "", class: "img-fluid")
-              .product-details
-                h6
-                  | addidas New Hammer sole
-                  | for Sports person
-                .price
-                  h6 $150.00
-                  h6.l-through $210.00
-                .prd-bottom
-                  a.social-info href="" 
-                    span.ti-bag
-                    p.hover-text add to bag
-                  a.social-info href="" 
-                    span.lnr.lnr-heart
-                    p.hover-text Wishlist
-                  a.social-info href="" 
-                    span.lnr.lnr-sync
-                    p.hover-text compare
-                  a.social-info href="" 
-                    span.lnr.lnr-move
-                    p.hover-text view more
-          /! single product
-          .col-lg-4.col-md-6
-            .single-product
-              = image_tag("product/p2.jpg", alt: "", class: "img-fluid")
-              .product-details
-                h6
-                  | addidas New Hammer sole
-                  | for Sports person
-                .price
-                  h6 $150.00
-                  h6.l-through $210.00
-                .prd-bottom
-                  a.social-info href="" 
-                    span.ti-bag
-                    p.hover-text add to bag
-                  a.social-info href="" 
-                    span.lnr.lnr-heart
-                    p.hover-text Wishlist
-                  a.social-info href="" 
-                    span.lnr.lnr-sync
-                    p.hover-text compare
-                  a.social-info href="" 
-                    span.lnr.lnr-move
-                    p.hover-text view more
-          /! single product
-          .col-lg-4.col-md-6
-            .single-product
-              = image_tag("product/p3.jpg", alt: "", class: "img-fluid")
-              .product-details
-                h6
-                  | addidas New Hammer sole
-                  | for Sports person
-                .price
-                  h6 $150.00
-                  h6.l-through $210.00
-                .prd-bottom
-                  a.social-info href="" 
-                    span.ti-bag
-                    p.hover-text add to bag
-                  a.social-info href="" 
-                    span.lnr.lnr-heart
-                    p.hover-text Wishlist
-                  a.social-info href="" 
-                    span.lnr.lnr-sync
-                    p.hover-text compare
-                  a.social-info href="" 
-                    span.lnr.lnr-move
-                    p.hover-text view more
-          /! single product
-          .col-lg-4.col-md-6
-            .single-product
-              = image_tag("product/p4.jpg", alt: "", class: "img-fluid")
-              .product-details
-                h6
-                  | addidas New Hammer sole
-                  | for Sports person
-                .price
-                  h6 $150.00
-                  h6.l-through $210.00
-                .prd-bottom
-                  a.social-info href="" 
-                    span.ti-bag
-                    p.hover-text add to bag
-                  a.social-info href="" 
-                    span.lnr.lnr-heart
-                    p.hover-text Wishlist
-                  a.social-info href="" 
-                    span.lnr.lnr-sync
-                    p.hover-text compare
-                  a.social-info href="" 
-                    span.lnr.lnr-move
-                    p.hover-text view more
-          /! single product
-          .col-lg-4.col-md-6
-            .single-product
-              = image_tag("product/p5.jpg", alt: "", class: "img-fluid")
-              .product-details
-                h6
-                  | addidas New Hammer sole
-                  | for Sports person
-                .price
-                  h6 $150.00
-                  h6.l-through $210.00
-                .prd-bottom
-                  a.social-info href="" 
-                    span.ti-bag
-                    p.hover-text add to bag
-                  a.social-info href="" 
-                    span.lnr.lnr-heart
-                    p.hover-text Wishlist
-                  a.social-info href="" 
-                    span.lnr.lnr-sync
-                    p.hover-text compare
-                  a.social-info href="" 
-                    span.lnr.lnr-move
-                    p.hover-text view more
-          /! single product
-          .col-lg-4.col-md-6
-            .single-product
-              = image_tag("product/p6.jpg", alt: "", class: "img-fluid")
-              .product-details
-                h6
-                  | addidas New Hammer sole
-                  | for Sports person
-                .price
-                  h6 $150.00
-                  h6.l-through $210.00
-                .prd-bottom
-                  a.social-info href="" 
-                    span.ti-bag
-                    p.hover-text add to bag
-                  a.social-info href="" 
-                    span.lnr.lnr-heart
-                    p.hover-text Wishlist
-                  a.social-info href="" 
-                    span.lnr.lnr-sync
-                    p.hover-text compare
-                  a.social-info href="" 
-                    span.lnr.lnr-move
-                    p.hover-text view more
-      /! End Best Seller
-      /! Start Filter Bar
-      .filter-bar.d-flex.flex-wrap.align-items-center
-        .sorting.mr-auto
-          select
-            option value="1"  Show 12
-            option value="1"  Show 12
-            option value="1"  Show 12
-        .pagination
-          a.prev-arrow href="#" 
-            i.fa.fa-long-arrow-left aria-hidden="true" 
-          a.active href="#"  1
-          a href="#"  2
-          a href="#"  3
-          a.dot-dot href="#" 
-            i.fa.fa-ellipsis-h aria-hidden="true" 
-          a href="#"  6
-          a.next-arrow href="#" 
-            i.fa.fa-long-arrow-right aria-hidden="true" 
-      /! End Filter Bar
-/! Start related-product Area
-section.related-product-area.section_gap
-  .container
-    .row.justify-content-center
+          - @products.each do |product|
+            /! single product
+            .col-lg-4.col-md-6
+              .single-product
+                = image_tag("#{product.images[0]}", alt: "", class: "img-fluid")
+                .product-details
+                  h6 = product.name
+                  .price
+                    h6 = Product.default_price(product)
+                  .prd-bottom
+                    a.social-info href="" 
+                      span.ti-bag
+                      p.hover-text add to bag
+                    a.social-info href="" 
+                      span.lnr.lnr-heart
+                      p.hover-text Wishlist
+                    a.social-info href="" 
+                      span.lnr.lnr-sync
+                      p.hover-text compare
+                    a.social-info href="" 
+                      span.lnr.lnr-move
+                      p.hover-text view more
