@@ -1828,3 +1828,13 @@
 .single-prd-item .img-fluid {
 	width: 100%;
 }
+
+.stripe-button-el {
+	width: 100%;
+	display: block;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-align: center;
+	border-radius: 2px;
+	background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+}
