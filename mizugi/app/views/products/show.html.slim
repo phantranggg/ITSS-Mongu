@@ -151,17 +151,15 @@ section.product_description_area
                         | &nbsp;
                         = "(#{@product.ratings.where(rate: 1).count})"
             .review_list
-              .review_item
-                .media
-                  .d-flex
-                    = image_tag("product/review-1.png", alt: "")
-                  .media-body
-                    h4 Blake Ruiz
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                p
-                  | Love it <3
+              - @all_comments.each do |comment|
+                .review_item
+                  .media
+                    .d-flex
+                      = image_tag("product/review-1.png", alt: "")
+                    .media-body
+                      h4 = comment.user.email
+                      p = comment.content
+
           .col-lg-6
             .row
               .col-sm-12
@@ -181,11 +179,14 @@ section.product_description_area
                     label for="star1" title="text"  1 star
             .review_box
               h4 Add a Comment
-              form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate"
-                .col-md-12
-                  .form-group
-                    textarea#message.form-control name="message" onblur=("this.placeholder = 'Review'") onfocus=("this.placeholder = ''") placeholder="Review" rows="1" 
-                .col-md-12.text-right
-                  button.primary-btn type="submit" value="submit"  Submit Now
+              = form_for :comments, :url => comments_path do |f|
+                div#contactForm.row.contact_form
+                  .col-md-12
+                    .form-group
+                      = f.hidden_field :user_id, value: current_user.id
+                      = f.hidden_field :product_id, value: @product.id
+                      = f.text_area :content, id: "message", class: "form-control", placeholder: "Review", rows: "1"
+                  .col-md-12.text-right
+                    button.primary-btn type="submit" value="submit"  Submit Now
 /! ================End Product Description Area =================
 
