@@ -1,4 +1,5 @@
 /! ================Single Product Area =================
+#product-id data-product_id=@product.id
 .product_image_area
   .container
     .row.s_product_inner
@@ -99,57 +100,56 @@ section.product_description_area
               .col-6
                 .box_total
                   h5 Overall
-                  h4 4.0
+                  h4 = @product.get_average_rating ? @product.get_average_rating : "0.0"
                   h6 (03 Reviews)
               .col-6
                 .rating_list
-                  h3 Based on 3 Reviews
                   ul.list
                     li
                       a href="#" 
-                        | 5 Star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
-                        | 01
+                        | &nbsp;
+                        = "(#{@product.ratings.where(rate: 5).count})"
                     li
                       a href="#" 
-                        | 4 Star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
+                        i.fa.fa-star.text-secondary
+                        | &nbsp;
+                        = "(#{@product.ratings.where(rate: 4).count})"
                     li
                       a href="#" 
-                        | 3 Star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        | &nbsp;
+                        = "(#{@product.ratings.where(rate: 3).count})"
                     li
                       a href="#" 
-                        | 2 Star
                         i.fa.fa-star
                         i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        | &nbsp;
+                        = "(#{@product.ratings.where(rate: 2).count})"
                     li
                       a href="#" 
-                        | 1 Star
                         i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        | &nbsp;
+                        = "(#{@product.ratings.where(rate: 1).count})"
             .review_list
               .review_item
                 .media
@@ -162,52 +162,25 @@ section.product_description_area
                     i.fa.fa-star
                 p
                   | Love it <3
-              .review_item
-                .media
-                  .d-flex
-                    = image_tag("product/review-2.png", alt: "")
-                  .media-body
-                    h4 Blake Ruiz
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                p
-                  | Love it <3
-              .review_item
-                .media
-                  .d-flex
-                    = image_tag("product/review-3.png", alt: "")
-                  .media-body
-                    h4 Blake Ruiz
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                p
-                  | Love it <3
           .col-lg-6
+            .row
+              .col-sm-12
+                h4 Rate this product
+                - if user_signed_in?
+                  #rate-score data-rate=current_user.ratings.where(product_id: @product.id).first&.rate 
+                  .rate
+                    input#star5.star-rating name="rate" type="radio" value="5" /
+                    label for="star5" title="text"  5 stars
+                    input#star4.star-rating name="rate" type="radio" value="4" /
+                    label for="star4" title="text"  4 stars
+                    input#star3.star-rating name="rate" type="radio" value="3" /
+                    label for="star3" title="text"  3 stars
+                    input#star2.star-rating name="rate" type="radio" value="2" /
+                    label for="star2" title="text"  2 stars
+                    input#star1.star-rating name="rate" type="radio" value="1" /
+                    label for="star1" title="text"  1 star
             .review_box
               h4 Add a Comment
-              p Your Rating:
-              ul.list
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-                li
-                  a href="#" 
-                    i.fa.fa-star
-              p Outstanding
               form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate"
                 .col-md-12
                   .form-group
