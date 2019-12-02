@@ -3,8 +3,9 @@ class Product < ApplicationRecord
   has_many :product_feature
   mount_uploaders :images, ImageUploader
   serialize :images, JSON
-
+  has_many :ratings
   NUM_OF_PRODUCTS_HOMEPAGE = 8
+
   attr_accessor :delete_images
   after_validation do
     uploaders = images.delete_if do |uploader|
@@ -27,6 +28,9 @@ class Product < ApplicationRecord
     super(images + appended)
   end
   
+  def get_average_rating
+    return self.ratings.average(:rate)
+
   class << self
     def male_product_colors(product)
       product.product_feature.for_male.uniq{|x| x.color}.pluck(:color)
