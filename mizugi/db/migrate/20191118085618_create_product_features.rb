@@ -5,7 +5,7 @@ class CreateProductFeatures < ActiveRecord::Migration[5.2]
       t.string :size
       t.string :color
       t.integer :gender
-      t.float :price
+      t.integer :price
       t.integer :quantity
       
       t.timestamps

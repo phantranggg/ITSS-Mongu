@@ -35,54 +35,53 @@ categories.each do |name|
 end
   
 products = [
-   ["Easy Polo Christmas Edition", "Easy Polo Christmas Edition Description", 1],
-   ["addidas New Hammer solefor Sports person", "addidas New Hammer solefor Sports person", 2],
-   ["Easy Polo Black Edition", "Easy Polo Black Edition Description", 3],
-   ["Easy Polo Christmas Edition", "Easy Polo Christmas Edition Description", 1],
+   ["Couple clothes 1", "This is one clothes", 1],
+   ["Couple clothes 2", "This is one clothes", 1],
+   ["Couple clothes 3", "This is one clothes", 1],
+   ["Couple clothes 4", "This is one clothes", 1],
+   ["Couple clothes 5", "This is one clothes", 1],
+   ["Couple clothes 6", "This is one clothes", 1],
+   ["Couple clothes 7", "This is one clothes", 1],
+   ["Couple clothes 8", "This is one clothes", 1],
+   ["Easy Polo Christmas Edition", "Easy Polo Christmas Edition Description", 2],
+   ["addidas New Hammer", "addidas New Hammer solefor Sports person", 2],
+   ["Easy Polo Black Edition", "Easy Polo Black Edition Description", 2],
+   ["Easy Polo Christmas Edition", "Easy Polo Christmas Edition Description", 2],
+   ["Equipment 1", "This is an equipment", 3],
+   ["Equipment 2", "This is an equipment", 3],
+   ["Equipment 3", "This is an equipment", 3],
+   ["Equipment 4", "This is an equipment", 3],
+   ["Equipment 5", "This is an equipment", 3],
+   ["Equipment 6", "This is an equipment", 3]
 ]
 
-products.each do |name, description, category_id, quantity|
-    Product.create(name: name, description: description, category_id: category_id)
+def img_url category_id
+    case category_id
+    when 1
+        Rails.root.join("public/images/products/couple#{rand(1..8)}.jpg")
+    when 2
+        Rails.root.join("public/images/products/p#{rand(1..8)}.jpg")
+    when 3
+        Rails.root.join("public/images/products/gym#{rand(1..10)}.jpg")
+    end
 end
 
-product_features = [
-    [1,'M','#FFFFFF',0,100000,5],
-    [1,'L','#FFFFFF',0,100000,5],
-    [1,'M','#000000',0,100000,5],
-    [1,'L','#000000',0,100000,5],
-    [1,'M','#FFFFFF',1,100000,5],
-    [1,'L','#FFFFFF',1,100000,5],
-    [1,'M','#000000',1,100000,5],
-    [1,'L','#000000',1,100000,5],
-    
-    [2,'M','#FFFFFF',0,100000,5],
-    [2,'L','#FFFFFF',0,100000,5],
-    [2,'M','#000000',0,100000,5],
-    [2,'L','#000000',0,100000,5],
-    [2,'M','#FFFFFF',1,100000,5],
-    [2,'L','#FFFFFF',1,100000,5],
-    [2,'M','#000000',1,100000,5],
-    [2,'L','#000000',1,100000,5],
-    
-    [3,'M','#FFFFFF',0,100000,5],
-    [3,'L','#FFFFFF',0,100000,5],
-    [3,'M','#000000',0,100000,5],
-    [3,'L','#000000',0,100000,5],
-    [3,'M','#FFFFFF',1,100000,5],
-    [3,'L','#FFFFFF',1,100000,5],
-    [3,'M','#000000',1,100000,5],
-    [3,'L','#000000',1,100000,5],
-    
-    [4,'M','#FFFFFF',0,100000,5],
-    [4,'L','#FFFFFF',0,100000,5],
-    [4,'M','#000000',0,100000,5],
-    [4,'L','#000000',0,100000,5],
-    [4,'M','#FFFFFF',1,100000,5],
-    [4,'L','#FFFFFF',1,100000,5],
-    [4,'M','#000000',1,100000,5],
-    [4,'L','#000000',1,100000,5]
-]
+products.each do |name, description, category_id|
+    Product.create(name: name, description: description, category_id: category_id,
+                   images: Array.new(1) { img_url(category_id).open })
+end
 
-product_features.each do |product_id, size, color, gender, price, quantity|
-    ProductFeature.create(product_id: product_id, size: size, color: color, gender: gender, price: price, quantity: quantity)
+size = ['S','M','L','XL','XXL']
+color = ['Red', 'Black', 'White', 'Blue', 'Yellow']
+price = [10, 25, 50, 100, 200]
+
+for product_id in Product.ids do
+    i = 0
+    print product_id
+    while i < 10
+        ProductFeature.create(product_id: product_id, size: size.sample, color: color.sample,
+                              gender: rand(2), price: price.sample + 10 * rand(10),
+                              quantity: rand(2..5))
+        i += 1
+    end
 end

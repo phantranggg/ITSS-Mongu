@@ -3,7 +3,7 @@ header.header_area.sticky-header
     nav.navbar.navbar-expand-lg.navbar-light.main_box
       .container
         /! Brand and toggle get grouped for better mobile display
-        a.navbar-brand.logo_h href="index.html" 
+        a.navbar-brand.logo_h href="/" 
           = image_tag("logo1.png", alt: "Logo", style: "height: 60px")
         button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
           span.icon-bar
@@ -25,10 +25,11 @@ header.header_area.sticky-header
                   a.nav-link href="/categories/3"  Equipments
             - if user_signed_in?
               li.nav-item
-                a.nav-link href="/cart"  Cart
+                a.nav-link href="/carts"  Cart
             - if user_signed_in?
               li.nav-item.submenu.dropdown
-                a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"  Account
+                a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+                  = current_user.email
                 ul.dropdown-menu
                   li.nav-item
                     a.nav-link href=""  My profile
@@ -39,12 +40,9 @@ header.header_area.sticky-header
                 a.nav-link href="/sign_in" role="button"  Login
           ul.nav.navbar-nav.navbar-right
             li.nav-item
-              a.cart href="#" 
-                span.ti-bag
-            li.nav-item
               button.search
-                span#search.lnr.lnr-magnifier
-  #search_input_box.search_input
+                span#search.lnr.lnr-magnifier style="font-size: 20px;"
+  #search_input_box.search_input style='padding: 0px !important'
     .container
       form.d-flex.justify-content-between
         input#search_input.form-control placeholder=("Search Here") type="text" /

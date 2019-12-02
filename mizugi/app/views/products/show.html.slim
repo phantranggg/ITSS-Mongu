@@ -1,19 +1,21 @@
 /! ================Single Product Area =================
+#product-id data-product_id=@product.id
 .product_image_area
   .container
     .row.s_product_inner
       .col-lg-6
-        .s_Product_carousel
+        - if @product.images.length > 1
+          .s_Product_carousel
+            - @product.images.each do |image|
+              .single-prd-item
+                = image_tag("#{image}", alt: "", class: "img-fluid")
+        - else
           .single-prd-item
-            = image_tag("category/s-p1.jpg", alt: "", class: "img-fluid")
-          .single-prd-item
-            = image_tag("category/s-p1.jpg", alt: "", class: "img-fluid")
-          .single-prd-item
-            = image_tag("category/s-p1.jpg", alt: "", class: "img-fluid")
+            = image_tag("#{@product.images[0]}", alt: "", class: "img-fluid")
       .col-lg-5.offset-lg-1
         .s_product_text
           h3 = @product.name
-          h2 $149.99
+          h2#product-price = "$#{@selected_male_product.price + @selected_female_product.price}"
           ul.list
             li
               a.active href="#" 
@@ -26,10 +28,43 @@
           p
             = @product.description
           .product_count
-            label for="qty"  Quantity:
-            input#sst.input-text.qty maxlength="12" name="qty" title="Quantity:" type="text" value="1" /
-          .card_area.d-flex.align-items-center
-            a.primary-btn href="#"  Add to Cart
+            table.product-description-table
+              tr
+                th
+                th Male
+                th Female
+              tr
+                td style='padding-right: 30px;' Color
+                td
+                  select.color-select-male
+                    - @male_product_colors.each do |color|
+                      option
+                        = color
+                td style='padding-right: 30px;'
+                  select.color-select-female
+                    - @female_product_colors.each do |color|
+                      option
+                        = color
+              tr
+                td style='padding-right: 30px;' Size
+                td style='padding-right: 30px;'
+                  select.size-select-male
+                    - @male_product_sizes.each do |size|
+                      option name="male-size"
+                        = size
+                td style='padding-right: 30px;'
+                  select.size-select-female
+                    - @female_product_sizes.each do |size|
+                      option name="female-size"
+                        = size
+            = form_for :cart, :url => carts_path do |f|
+              = f.label :quantity
+              = f.number_field :quantity, value: 1, name: "product_feature_qty", style: "padding-right: 30px;"
+              = f.hidden_field :male_product_id, value: @selected_male_product.id, name: "male_product_id"
+              = f.hidden_field :female_product_id, value: @selected_female_product.id, name: "female_product_id"
+              = f.hidden_field :btn_type, name: "btn_type", value: "add"
+              .card_area.d-flex.align-items-center style='margin-top: 30px;'
+                = f.submit 'Add to Cart', class: "primary-btn"
 /! ================End Single Product Area =================
 /! ================Product Description Area =================
 section.product_description_area
@@ -65,57 +100,56 @@ section.product_description_area
               .col-6
                 .box_total
                   h5 Overall
-                  h4 4.0
+                  h4 = @product.get_average_rating ? @product.get_average_rating : "0.0"
                   h6 (03 Reviews)
               .col-6
                 .rating_list
-                  h3 Based on 3 Reviews
                   ul.list
                     li
                       a href="#" 
-                        | 5 Star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
-                        | 01
+                        | &nbsp;
+                        = "(#{@product.ratings.where(rate: 5).count})"
                     li
                       a href="#" 
-                        | 4 Star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
+                        i.fa.fa-star.text-secondary
+                        | &nbsp;
+                        = "(#{@product.ratings.where(rate: 4).count})"
                     li
                       a href="#" 
-                        | 3 Star
                         i.fa.fa-star
                         i.fa.fa-star
                         i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        | &nbsp;
+                        = "(#{@product.ratings.where(rate: 3).count})"
                     li
                       a href="#" 
-                        | 2 Star
                         i.fa.fa-star
                         i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        | &nbsp;
+                        = "(#{@product.ratings.where(rate: 2).count})"
                     li
                       a href="#" 
-                        | 1 Star
                         i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        i.fa.fa-star
-                        | 01
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        i.fa.fa-star.text-secondary
+                        | &nbsp;
+                        = "(#{@product.ratings.where(rate: 1).count})"
             .review_list
               .review_item
                 .media
@@ -128,34 +162,26 @@ section.product_description_area
                     i.fa.fa-star
                 p
                   | Love it <3
-              .review_item
-                .media
-                  .d-flex
-                    = image_tag("product/review-2.png", alt: "")
-                  .media-body
-                    h4 Blake Ruiz
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                p
-                  | Love it <3
-              .review_item
-                .media
-                  .d-flex
-                    = image_tag("product/review-3.png", alt: "")
-                  .media-body
-                    h4 Blake Ruiz
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                p
-                  | Love it <3
           .col-lg-6
+            .row
+              .col-sm-12
+                h4 Rate this product
+                - if user_signed_in?
+                  #rate-score data-rate=current_user.ratings.where(product_id: @product.id).first&.rate 
+                  .rate
+                    input#star5.star-rating name="rate" type="radio" value="5" /
+                    label for="star5" title="text"  5 stars
+                    input#star4.star-rating name="rate" type="radio" value="4" /
+                    label for="star4" title="text"  4 stars
+                    input#star3.star-rating name="rate" type="radio" value="3" /
+                    label for="star3" title="text"  3 stars
+                    input#star2.star-rating name="rate" type="radio" value="2" /
+                    label for="star2" title="text"  2 stars
+                    input#star1.star-rating name="rate" type="radio" value="1" /
+                    label for="star1" title="text"  1 star
             .review_box
               h4 Add a Comment
+<<<<<<< HEAD
               p Your Rating:
               ul.list
                 li
@@ -175,5 +201,13 @@ section.product_description_area
                     i.fa.fa-star
               p Outstanding
               = render partial: 'form'
+=======
+              form#contactForm.row.contact_form action="contact_process.php" method="post" novalidate="novalidate"
+                .col-md-12
+                  .form-group
+                    textarea#message.form-control name="message" onblur=("this.placeholder = 'Review'") onfocus=("this.placeholder = ''") placeholder="Review" rows="1" 
+                .col-md-12.text-right
+                  button.primary-btn type="submit" value="submit"  Submit Now
+>>>>>>> 964cd461c7eb63ea3e4f56fab29179148966c27a
 /! ================End Product Description Area =================
 
