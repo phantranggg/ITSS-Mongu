@@ -41,17 +41,18 @@ ActiveRecord::Schema.define(version: 2019_11_21_094218) do
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "product_id"
     t.text "content"
-=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "credit_cards", force: :cascade do |t|
     t.string "digits"
     t.integer "month"
     t.integer "year"
->>>>>>> 964cd461c7eb63ea3e4f56fab29179148966c27a
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
