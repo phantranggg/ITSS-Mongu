@@ -30,7 +30,8 @@ class Product < ApplicationRecord
   
   def get_average_rating
     return self.ratings.average(:rate)
-
+  end
+  
   class << self
     def male_product_colors(product)
       product.product_feature.for_male.uniq{|x| x.color}.pluck(:color)
