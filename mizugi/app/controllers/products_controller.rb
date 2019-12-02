@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
     @female_product_colors = Product.female_product_colors(@product)
     @male_product_sizes = Product.male_product_sizes(@product)
     @female_product_sizes = Product.female_product_sizes(@product)
+    @all_comments = Comment.includes(:user).where(product_id: @product.id)
   end
   
   def update_price
