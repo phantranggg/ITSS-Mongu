@@ -26,8 +26,25 @@ ActiveRecord::Schema.define(version: 2019_11_21_083931) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "carts", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "product_feature_id"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "product_feature_id"], name: "index_carts_on_user_id_and_product_feature_id"
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "credit_cards", force: :cascade do |t|
+    t.string "digits"
+    t.integer "month"
+    t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -58,7 +75,7 @@ ActiveRecord::Schema.define(version: 2019_11_21_083931) do
     t.string "size"
     t.string "color"
     t.integer "gender"
-    t.float "price"
+    t.integer "price"
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -101,6 +118,7 @@ ActiveRecord::Schema.define(version: 2019_11_21_083931) do
     t.string "phone"
     t.integer "gender"
     t.datetime "birthday"
+    t.string "stripe_token"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

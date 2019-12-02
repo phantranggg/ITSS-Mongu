@@ -4,7 +4,8 @@ class Product < ApplicationRecord
   mount_uploaders :images, ImageUploader
   serialize :images, JSON
   has_many :ratings
-  
+  NUM_OF_PRODUCTS_HOMEPAGE = 8
+
   attr_accessor :delete_images
   after_validation do
     uploaders = images.delete_if do |uploader|
@@ -15,6 +16,8 @@ class Product < ApplicationRecord
     end
     write_attribute(:images, uploaders.map { |uploader| uploader.file.identifier })
   end
+  
+  scope :latest, -> { order(created_at: :desc).limit(NUM_OF_PRODUCTS_HOMEPAGE) }
 
   def images=(files)
     appended = files.map do |file|
@@ -27,5 +30,26 @@ class Product < ApplicationRecord
   
   def get_average_rating
     return self.ratings.average(:rate)
+
+  class << self
+    def male_product_colors(product)
+      product.product_feature.for_male.uniq{|x| x.color}.pluck(:color)
+    end
+    
+    def female_product_colors(product)
+      product.product_feature.for_female.uniq{|x| x.color}.pluck(:color)
+    end
+    
+    def male_product_sizes(product)
+      product.product_feature.for_male.uniq{|x| x.size}.pluck(:size)
+    end
+    
+    def female_product_sizes(product)
+      product.product_feature.for_female.uniq{|x| x.size}.pluck(:size)
+    end
+    
+    def default_price(product)
+      product.product_feature.for_male.first.price + product.product_feature.for_female.first.price 
+    end
   end
 end

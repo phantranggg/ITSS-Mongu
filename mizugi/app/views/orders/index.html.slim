@@ -1,0 +1,50 @@
+/! ================Checkout Area =================
+section.checkout_area.section_gap style="margin-top:100px;"
+  = form_for :charge, :url => charges_path do |f|
+    .container
+      .billing_details
+        .row
+          .col-lg-8
+            h3 Billing Details
+            div.row.contact_form 
+              .col-md-12.form-group.p_star
+                = f.text_field :ship_name, name: "ship_name", placeholder: "Receiver's Name", class: "form-control"
+              .col-md-6.form-group.p_star
+                = f.text_field :phone, name: "phone", placeholder: "Phone number", class: "form-control"
+              .col-md-6.form-group.p_star
+                = f.text_field :email, name: "email", placeholder: "Email Address", class: "form-control"
+              .col-md-12.form-group.p_star
+                = f.text_field :ship_address, name: "ship_address", placeholder: "Shipping Address", class: "form-control"
+          .col-lg-4
+            .order_box
+              h2 Your Order
+              ul.list
+                li
+                  a href="#" 
+                    | Product
+                    span Total
+                - @product_features.each do |product|
+                  - product_name = "#{product.product_feature.product.name} (#{product.product_feature.gender === 0 ? 'Male' : 'Female'})"
+                  li
+                    a href="#" 
+                      = product_name
+                      span.middle = "x #{product.quantity}"
+                      span.last = "$#{product.quantity * product.product_feature.price}"
+              ul.list.list_2
+                li
+                  a href="#" 
+                    | Total
+                    span = @total
+              .payment_item.active
+                - if flash[:error].present?
+                  #error_explanation
+                    p= flash[:error]
+                /! - if @total > 0 !/
+                script.stripe-button data-email="#{current_user.email}" data-key="pk_test_hMEGPBhcsIwAMQu9FVsd84bI00llPf9YqW" data-locale="auto" src="https://checkout.stripe.com/checkout.js" 
+                p
+                  | Your card information is safe with us!
+              .creat_account
+                input#f-option4 name="selector" type="checkbox" /
+                label for="f-option4"  I’ve read and accept the
+                a href="#"  terms & conditions*
+/! ================End Checkout Area =================
