@@ -31,8 +31,18 @@
             table.product-description-table
               tr
                 th
-                th Male
-                th Female
+                th Product 1
+                th Product 2
+              tr
+                td style='padding-right: 30px;' Gender
+                td
+                  select.gender-select-1
+                    option = "Male"
+                    option = "Female"
+                td style='padding-right: 30px;'
+                  select.gender-select-2
+                    option = "Female"
+                    option = "Male"
               tr
                 td style='padding-right: 30px;' Color
                 td
@@ -178,15 +188,16 @@ section.product_description_area
                     input#star1.star-rating name="rate" type="radio" value="1" /
                     label for="star1" title="text"  1 star
             .review_box
-              h4 Add a Comment
-              = form_for :comments, :url => comments_path do |f|
-                div#contactForm.row.contact_form
-                  .col-md-12
-                    .form-group
-                      = f.hidden_field :user_id, value: current_user.id
-                      = f.hidden_field :product_id, value: @product.id
-                      = f.text_area :content, id: "message", class: "form-control", placeholder: "Review", rows: "1"
-                  .col-md-12.text-right
-                    button.primary-btn type="submit" value="submit"  Submit Now
+              - if user_signed_in?
+                h4 Add a Comment
+                = form_for :comments, :url => comments_path do |f|
+                  div#contactForm.row.contact_form
+                    .col-md-12
+                      .form-group
+                        = f.hidden_field :user_id, value: current_user.id
+                        = f.hidden_field :product_id, value: @product.id
+                        = f.text_area :content, id: "message", class: "form-control", placeholder: "Review", rows: "1"
+                    .col-md-12.text-right
+                      button.primary-btn type="submit" value="submit"  Submit Now
 /! ================End Product Description Area =================
 
