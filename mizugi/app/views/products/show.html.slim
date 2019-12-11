@@ -25,6 +25,10 @@
               a href="#" 
                 span Availibility
                 | In Stock
+          - if @product.customizable
+            .card_area.d-flex.align-items-center style='margin-top: 30px;'
+              button.primary-btn data-toggle="modal" data-target="#customLogoModal"
+                = 'Upload custom logo'
           p
             = @product.description
           .product_count
@@ -201,3 +205,31 @@ section.product_description_area
                       button.primary-btn type="submit" value="submit"  Submit Now
 /! ================End Product Description Area =================
 
+div class="modal fade" id="customLogoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+  div.modal-dialog role="document"
+    div.modal-content
+      div.modal-header
+        h5.modal-title Upload your design
+        button type="button" class="close" data-dismiss="modal" aria-label="Close"
+          span aria-hidden="true" &times;
+      div.modal-body
+        input type="file" onchange="readURL(this);"
+        br
+        img id="preview" src="#" alt="your image" style="width: 100%; display: none"
+      div.modal-footer
+        button type="button" class="btn btn-secondary" data-dismiss="modal" Close
+        button type="button" class="btn btn-primary" data-dismiss="modal" Upload
+
+javascript:
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('#preview').attr('src', e.target.result);
+        $('#preview').css('display', 'block');
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }

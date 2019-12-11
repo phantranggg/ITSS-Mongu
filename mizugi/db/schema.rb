@@ -98,7 +98,6 @@ ActiveRecord::Schema.define(version: 2019_12_11_015139) do
     t.datetime "updated_at", null: false
     t.string "images"
     t.boolean "customizable"
-    t.string "custom_logo"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
